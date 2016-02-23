@@ -11,7 +11,16 @@ To run, execute the commands below in the project directory:
 
     vagrant up
 
-The app will be run on http://localhost:4567
+Then, ssh into the box:
+
+    vagrant ssh
+
+Then, launch `iron-meteor` to run the app:
+
+    cd /vagrant/boxchat-app && iron
+
+If successful, the app will run on http://localhost:4567 .  View it on your
+local browser!
 
 
 ### Re-provision Virtual Machine
@@ -35,3 +44,9 @@ Use either `vagrant suspend`, `vagrant halt`, or `vagrant destroy`
 
 `boxchat-app` contains the iron directory structure, and is automatically
 served as `iron` is called within the virtual machine.
+
+
+## What is installed
+
+`nvm`, `nodeJS v4.3.1`, `MongoDB`, `meteor-iron`, `screen`, `vim`, `gulp`,
+`bower`, `grunt-cli`

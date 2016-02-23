@@ -28,9 +28,8 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 service mongod status
 
-### Install screen
-sudo apt-get install screen
-
+### Install screen and vim
+sudo apt-get install screen vim
 
 
 ### Website stuff ###
@@ -40,6 +39,6 @@ mkdir -p $HOME/boxchat-app/app/.meteor/local
 sudo mount --bind $HOME/boxchat-app/app/.meteor/local/ /vagrant/boxchat-app/app/.meteor/local
 
 ### Launch the website
-cd /vagrant/boxchat-app
-iron
-echo "Development website running on http://localhost:4567"
+#cd /vagrant/boxchat-app
+#echo "Development website running on http://localhost:4567"
+#iron
