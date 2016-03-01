@@ -1,0 +1,20 @@
+<template name="Todos">
+  <div class="todos">
+    <div class="container">
+      <header>
+        <h1>Todo list</h1>
+
+        <form class="new-task">
+          <input type="text" name="text" value="Type to add new tasks" />
+        </form>
+      </header>
+
+      <ul>
+        {{#each tasks}}
+          {{> Task}}
+        {{/each}}
+      </ul>
+    </div>
+    <h1>Find me in app/client/templates/todos/todos</h1>
+  </div>
+</template>
