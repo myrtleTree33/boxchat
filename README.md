@@ -1,5 +1,13 @@
-ChatBox App
+ChatBox App - (Meteor Tutorial Branch)
 ==============================================
+
+
+------------------------------
+
+This branch contains a working example of using `iron` and `meteor` together.  It follows the example at https://www.meteor.com/tutorials/blaze/creating-an-app .
+
+------------------------------
+
 
 ## Development
 
