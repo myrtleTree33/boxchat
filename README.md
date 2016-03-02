@@ -48,6 +48,16 @@ In the project directory:
 Use either `vagrant suspend`, `vagrant halt`, or `vagrant destroy`
 
 
+## Git branches
+
+- `master` - Contains stable version of code.  Merge changes only from
+  `develop`
+- `develop` - Contains unstable version of code, but should be build ready.
+  Merge individual member changes here.
+  `<insert-name-here>` - Commits and work from individual members should be committed here.
+
+
+
 ## Directory Structure
 
 `boxchat-app` contains the iron directory structure, and is automatically
