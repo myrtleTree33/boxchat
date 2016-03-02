@@ -10,3 +10,15 @@ Router.route('/', {
   controller: 'HomeController',
   where: 'client'
 });
+
+Router.route('todos', {
+  name: 'todos',
+  controller: 'TodosController',
+  where: 'client'
+});
+
+Router.route('task', {
+  name: 'task',
+  controller: 'TaskController',
+  where: 'client'
+});

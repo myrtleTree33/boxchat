@@ -1,5 +1,13 @@
-ChatBox App
+ChatBox App - (Meteor Tutorial Branch)
 ==============================================
+
+
+------------------------------
+
+This branch contains a working example of using `iron` and `meteor` together.  It follows the example at https://www.meteor.com/tutorials/blaze/creating-an-app .
+
+------------------------------
+
 
 ## Development
 
@@ -38,6 +46,16 @@ In the project directory:
 ### Shutdown VM
 
 Use either `vagrant suspend`, `vagrant halt`, or `vagrant destroy`
+
+
+## Git branches
+
+- `master` - Contains stable version of code.  Merge changes only from
+  `develop`
+- `develop` - Contains unstable version of code, but should be build ready.
+  Merge individual member changes here.
+  `<insert-name-here>` - Commits and work from individual members should be committed here.
+
 
 
 ## Directory Structure
