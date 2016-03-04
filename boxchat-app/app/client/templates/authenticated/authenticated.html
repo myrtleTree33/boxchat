@@ -1,0 +1,12 @@
+<template name="Authenticated">
+  <div class="authenticated">
+    {{#unless currentUser.emails.[0].verified}}
+    <p>
+      Please verify your email address.
+    </p>
+    {{else}}
+    <h3>You are successfully verified!</h3>
+    {{/unless}}
+    <h1>Find me in app/client/templates/authenticated/authenticated</h1>
+  </div>
+</template>
