@@ -17,6 +17,12 @@ Router.route('todos', {
   where: 'client'
 });
 
+Router.route('signup', {
+  name: 'signup',
+  controller: 'SignupController',
+  where: 'client'
+});
+
 Router.route('task', {
   name: 'task',
   controller: 'TaskController',
