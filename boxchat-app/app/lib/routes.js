@@ -56,3 +56,9 @@ Router.route('login', {
   controller: 'LoginController',
   where: 'client'
 });
+
+Router.route('timeline', {
+  name: 'timeline',
+  controller: 'TimelineController',
+  where: 'client'
+});

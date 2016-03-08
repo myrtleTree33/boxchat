@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="203.1525mm"
+   height="326.64587mm"
+   viewBox="0 0 719.83168 1157.4066"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r"
+   sodipodi:docname="question.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.60262904"
+     inkscape:cx="396.9292"
+     inkscape:cy="504.80091"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     showguides="true"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4136"
+       spacingx="1.618"
+       spacingy="1.618"
+       originx="0.77428313"
+       originy="105.26663" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="bg"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.77428311,-0.22222924)"
+     sodipodi:insensitive="true">
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4168"
+       width="129.44"
+       height="129.44"
+       x="-647.20001"
+       y="-47.877773" />
+    <rect
+       style="opacity:1;fill:#2c3e50;fill-opacity:1;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4178"
+       width="80.900002"
+       height="80.900002"
+       x="-297.38867"
+       y="58.293594" />
+    <rect
+       style="opacity:1;fill:#e74c3c;fill-opacity:1;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4178-6"
+       width="80.900002"
+       height="80.900002"
+       x="-297.40622"
+       y="141.1261" />
+    <rect
+       style="opacity:1;fill:#ecf0f1;fill-opacity:1;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4178-6-7"
+       width="80.900002"
+       height="80.900002"
+       x="-297.40622"
+       y="223.94983" />
+    <rect
+       style="opacity:1;fill:#3498db;fill-opacity:1;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4178-8"
+       width="80.900002"
+       height="80.900002"
+       x="-300.39279"
+       y="307.78372" />
+    <rect
+       style="opacity:1;fill:#2980b9;fill-opacity:1;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4178-6-9"
+       width="80.900002"
+       height="80.900002"
+       x="-300.41034"
+       y="390.61621" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4248"
+       width="744.27997"
+       height="1157.0717"
+       x="0"
+       y="0.66222745" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4250"
+       width="177.98"
+       height="1035.52"
+       x="0"
+       y="0.6622268" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="bg 1"
+     transform="translate(0.77428311,-0.22222924)">
+    <rect
+       style="opacity:1;fill:#2c3e50;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4255"
+       width="49.631428"
+       height="1157.4066"
+       x="-0.77428311"
+       y="0.22222924"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="564.18402"
+       y="23.441393"
+       id="text4269"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4271"
+         x="564.18402"
+         y="23.441393"
+         style="font-size:12.5px">Home</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="626.74164"
+       y="23.234457"
+       id="text4269-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4271-0"
+         x="626.74164"
+         y="23.234457"
+         style="font-size:12.5px">Explore</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="698.64722"
+       y="23.16651"
+       id="text4301"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4303"
+         x="698.64722"
+         y="23.16651"
+         style="font-size:12.5px">You</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#2c3e50;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4305"
+       width="590.57001"
+       height="32.360001"
+       x="88.666275"
+       y="49.587589"
+       rx="4.7712107"
+       ry="4.7712107"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#2c3e50;stroke-width:1.28916728;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4309"
+       width="81.398537"
+       height="32.070835"
+       x="89.134583"
+       y="49.346809"
+       rx="4.7094164"
+       ry="4.7094164"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="105.03"
+       y="70.405952"
+       id="text4269-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         x="105.03"
+         y="70.405952"
+         style="font-size:12.5px"
+         id="tspan5427">CS3226</tspan></text>
+    <rect
+       style="opacity:1;fill:#3498db;fill-opacity:1;stroke:#2c3e50;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4329"
+       width="121.35"
+       height="16.18"
+       x="186.06999"
+       y="57.292225"
+       rx="8.0900002"
+       ry="8.0900002"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="211.03239"
+       y="69.664413"
+       id="text4269-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4271-7"
+         x="211.03239"
+         y="69.664413"
+         style="font-size:12.5px">#interesting</tspan></text>
+    <rect
+       style="opacity:1;fill:#3498db;fill-opacity:1;stroke:#2c3e50;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4349"
+       width="72.809998"
+       height="16.18"
+       x="323.60001"
+       y="57.292225"
+       rx="8.0900002"
+       ry="8.0900002"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="341.33749"
+       y="69.447037"
+       id="text4269-1-1"
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-y="-2.3467398"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4271-7-2"
+         x="341.33749"
+         y="69.447037"
+         style="font-size:12.5px">#tut1</tspan></text>
+    <circle
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#2c3e50;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4369"
+       cx="299.20639"
+       cy="65.382225"
+       r="8.0900002"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <circle
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:#2c3e50;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4369-2"
+       cx="388.08914"
+       cy="65.382225"
+       r="8.0900002"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="295.05344"
+       y="69.96701"
+       id="text4386"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4388"
+         x="295.05344"
+         y="69.96701"
+         style="font-size:12.5px">X</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="384.22955"
+       y="70.260353"
+       id="text4386-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4388-9"
+         x="384.22955"
+         y="70.260353"
+         style="font-size:12.5px">X</tspan></text>
+    <rect
+       style="opacity:1;fill:#e74c3c;fill-opacity:1;stroke:#2c3e50;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4408"
+       width="64.720001"
+       height="24.269999"
+       x="128.98999"
+       y="95.652222"
+       rx="8.0900002"
+       ry="8.0900002"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <rect
+       style="opacity:1;fill:#e74c3c;fill-opacity:1;stroke:#2c3e50;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4425"
+       width="72.809998"
+       height="24.269999"
+       x="209.89"
+       y="95.652222"
+       rx="8.0900002"
+       ry="8.0900002"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <rect
+       style="opacity:1;fill:#e74c3c;fill-opacity:1;stroke:#2c3e50;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4442"
+       width="137.53"
+       height="24.269999"
+       x="290.78998"
+       y="95.652222"
+       rx="8.0900002"
+       ry="8.0900002"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="140.6817"
+       y="112.17112"
+       id="text4269-1-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4271-7-8"
+         x="140.6817"
+         y="112.17112"
+         style="font-size:12.5px">#tut1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="224.89873"
+       y="112.79741"
+       id="text4269-1-5-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4271-7-8-2"
+         x="224.89873"
+         y="112.79741"
+         style="font-size:12.5px">#tut2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="314.71576"
+       y="111.14426"
+       id="text4269-1-5-6-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4271-7-8-2-0"
+         x="314.71576"
+         y="111.14426"
+         style="font-size:12.5px">#important</tspan></text>
+    <rect
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4498"
+       width="598.65997"
+       height="563.45435"
+       x="88.989998"
+       y="138.19223"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="97.543091"
+       y="211.07971"
+       id="text4500"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4502"
+         x="97.543091"
+         y="211.07971"
+         style="font-size:40px">21</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="101.13384"
+       y="226.16345"
+       id="text4504"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4506"
+         x="101.13384"
+         y="226.16345"
+         style="font-size:15px">votes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="183.66074"
+       y="203.54929"
+       id="text4510"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4512"
+         x="183.66074"
+         y="203.54929"
+         style="font-size:20px">When are exams due?</tspan></text>
+    <rect
+       style="opacity:1;fill:#e74c3c;fill-opacity:1;stroke:#2c3e50;stroke-width:0.72140008;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4425-4"
+       width="52.525139"
+       height="17.508379"
+       x="182.65778"
+       y="155.81299"
+       rx="5.8361268"
+       ry="5.8361268"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <rect
+       style="opacity:1;fill:#e74c3c;fill-opacity:1;stroke:#2c3e50;stroke-width:0.97116685;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4425-4-3"
+       width="96.570084"
+       height="17.258612"
+       x="248.36777"
+       y="156.40096"
+       rx="8.6293058"
+       ry="8.6293058"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="188.49832"
+       y="167.51419"
+       id="text4269-1-5-65"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4271-7-8-3"
+         x="188.49832"
+         y="167.51419"
+         style="font-size:11.25px">#exam</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="263.23813"
+       y="168.68756"
+       id="text4269-1-5-65-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4271-7-8-3-1"
+         x="263.23813"
+         y="168.68756"
+         style="font-size:11.25px">#important</tspan></text>
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4797"
+       width="32.360001"
+       height="32.360001"
+       x="8.0900002"
+       y="16.842226"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4797-6"
+       width="32.360001"
+       height="32.360001"
+       x="8.2135897"
+       y="62.81955"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4797-8"
+       width="32.360001"
+       height="32.360001"
+       x="7.503315"
+       y="107.03683"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4797-82"
+       width="32.360001"
+       height="32.360001"
+       x="7.6269045"
+       y="151.59363"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <g
+       id="g4851"
+       transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,109.41054,-22.660579)"
+       style="fill:#4d4d4d"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         y="94.476074"
+         x="76.332199"
+         height="5.1856112"
+         width="23.853811"
+         id="rect4845"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="83.89743"
+         x="80.065842"
+         height="14.727137"
+         width="15.971683"
+         id="rect4847"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="83.89743"
+         x="84.836601"
+         height="25.720633"
+         width="6.222734"
+         id="rect4849"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="93.548431"
+       y="128.90854"
+       id="text4856"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4858"
+         x="93.548431"
+         y="128.90854"
+         style="font-size:7.5px">Sticky</tspan></text>
+    <g
+       id="g4911"
+       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,-251.99584,56.782634)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         y="324.26221"
+         x="177.98"
+         height="8.0900002"
+         width="24.27"
+         id="rect4894"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-202.45609"
+         x="324.67529"
+         height="8.0900002"
+         width="24.27"
+         id="rect4894-9"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4911-3"
+       transform="matrix(-0.70710678,0.70710678,-0.70710678,-0.70710678,493.45754,349.02388)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         y="324.26221"
+         x="177.98"
+         height="8.0900002"
+         width="24.27"
+         id="rect4894-6"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-202.45609"
+         x="324.67529"
+         height="8.0900002"
+         width="24.27"
+         id="rect4894-9-2"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4946"
+       transform="translate(0,24)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         ry="4.0450001"
+         rx="4.0450001"
+         y="235.27222"
+         x="186.06999"
+         height="8.0900002"
+         width="331.69"
+         id="rect4940"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="4.0450001"
+         rx="4.0450001"
+         y="251.45222"
+         x="186.06999"
+         height="8.0900002"
+         width="364.04999"
+         id="rect4942"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="4.0450001"
+         rx="4.0450001"
+         y="267.63223"
+         x="186.06999"
+         height="8.0900002"
+         width="169.89"
+         id="rect4944"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(0.61468622,89.13128)"
+       id="g4946-9"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         ry="4.0450001"
+         rx="4.0450001"
+         y="235.27222"
+         x="186.06999"
+         height="8.0900002"
+         width="331.69"
+         id="rect4940-1"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="4.0450001"
+         rx="4.0450001"
+         y="251.45222"
+         x="186.06999"
+         height="8.0900002"
+         width="364.04999"
+         id="rect4942-8"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="4.0450001"
+         rx="4.0450001"
+         y="267.63223"
+         x="186.06999"
+         height="8.0900002"
+         width="169.89"
+         id="rect4944-5"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <rect
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4975"
+       width="355.95999"
+       height="80.900002"
+       x="186.06999"
+       y="380.62222"
+       rx="4.0450001"
+       ry="4.0450001"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <g
+       id="g5020"
+       transform="translate(-17.600549,-2.3467398)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <circle
+         r="16.18"
+         cy="512.22711"
+         cx="474.53534"
+         id="path4979"
+         style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#e74c3c;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4981"
+         y="507.45593"
+         x="503.36868"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:10px"
+           y="507.45593"
+           x="503.36868"
+           id="tspan4983"
+           sodipodi:role="line">John Smith</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4981-6"
+         y="522.18445"
+         x="500.46475"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:10px"
+           y="522.18445"
+           x="500.46475"
+           id="tspan4983-2"
+           sodipodi:role="line">33    41     3</tspan></text>
+      <circle
+         r="4.0450001"
+         cy="518.5257"
+         cx="518.6936"
+         id="path5003"
+         style="opacity:1;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         r="4.0450001"
+         cy="518.5257"
+         cx="546.90381"
+         id="path5003-5"
+         style="opacity:1;fill:#3498db;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5035"
+       transform="translate(0,-16.179107)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         ry="8.0900002"
+         rx="8.0900002"
+         y="518.6283"
+         x="185.86256"
+         height="16.18"
+         width="48.540001"
+         id="rect5029"
+         style="opacity:1;fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5031"
+         y="529.83099"
+         x="193.12288"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:10px"
+           y="529.83099"
+           x="193.12288"
+           id="tspan5033"
+           sodipodi:role="line">Upvote</tspan></text>
+    </g>
+    <g
+       transform="translate(-1.280005,56.629998)"
+       id="g5035-4"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <g
+         id="g5084"
+         transform="translate(64.71643,-73.013408)">
+        <rect
+           style="opacity:1;fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect5029-8"
+           width="48.540001"
+           height="16.18"
+           x="185.86256"
+           y="518.6283"
+           rx="8.0900002"
+           ry="8.0900002" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="193.12288"
+           y="529.83099"
+           id="text5031-3"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5033-82"
+             x="193.12288"
+             y="529.83099"
+             style="font-size:10px">Share</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g5161"
+       transform="translate(0,28)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         y="542.6922"
+         x="202.25"
+         height="23.856045"
+         width="339.78"
+         id="rect5089"
+         style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5091"
+         y="558.45734"
+         x="227.35059"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:10px"
+           y="558.45734"
+           x="227.35059"
+           id="tspan5093"
+           sodipodi:role="line">This is pretty interesting.</tspan></text>
+      <g
+         style="fill:#ff6600"
+         transform="matrix(0.18811501,-0.18811501,0.18811501,0.18811501,113.93923,521.13452)"
+         id="g4911-2">
+        <rect
+           style="opacity:1;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4894-4"
+           width="24.27"
+           height="8.0900002"
+           x="177.98"
+           y="324.26221" />
+        <rect
+           style="opacity:1;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4894-9-6"
+           width="24.27"
+           height="8.0900002"
+           x="324.67529"
+           y="-202.45609"
+           transform="matrix(0,1,-1,0,0,0)" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5137"
+         y="558.27002"
+         x="209.7787"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan5141"
+           style="font-size:8.75px;fill:#ff6600;fill-opacity:1"
+           y="558.27002"
+           x="209.7787"
+           sodipodi:role="line">4</tspan></text>
+    </g>
+    <g
+       transform="translate(0.2719067,61.00267)"
+       id="g5161-5"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         y="542.6922"
+         x="202.25"
+         height="23.856045"
+         width="339.78"
+         id="rect5089-0"
+         style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5091-6"
+         y="558.45734"
+         x="227.35059"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:10px"
+           y="558.45734"
+           x="227.35059"
+           id="tspan5093-3"
+           sodipodi:role="line">This is pretty interesting.</tspan></text>
+      <g
+         style="fill:#ff6600"
+         transform="matrix(0.18811501,-0.18811501,0.18811501,0.18811501,113.93923,521.13452)"
+         id="g4911-2-4">
+        <rect
+           style="opacity:1;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4894-4-5"
+           width="24.27"
+           height="8.0900002"
+           x="177.98"
+           y="324.26221" />
+        <rect
+           style="opacity:1;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4894-9-6-8"
+           width="24.27"
+           height="8.0900002"
+           x="324.67529"
+           y="-202.45609"
+           transform="matrix(0,1,-1,0,0,0)" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5137-1"
+         y="558.27002"
+         x="209.7787"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan5141-0"
+           style="font-size:8.75px;fill:#ff6600;fill-opacity:1"
+           y="558.27002"
+           x="209.7787"
+           sodipodi:role="line">4</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="88.78302"
+       y="732.3374"
+       id="text5210"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan5212"
+         x="88.78302"
+         y="732.3374">3 Interactions</tspan></text>
+    <rect
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4498-9"
+       width="598.65997"
+       height="140.63487"
+       x="90.627991"
+       y="749.99115"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="99.181084"
+       y="822.8786"
+       id="text4500-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4502-8"
+         x="99.181084"
+         y="822.8786"
+         style="font-size:40px">10</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="102.77184"
+       y="837.96234"
+       id="text4504-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan4506-0"
+         x="102.77184"
+         y="837.96234"
+         style="font-size:15px">votes</tspan></text>
+    <g
+       id="g4911-38"
+       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,-250.35785,668.58155)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         y="324.26221"
+         x="177.98"
+         height="8.0900002"
+         width="24.27"
+         id="rect4894-48"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-202.45609"
+         x="324.67529"
+         height="8.0900002"
+         width="24.27"
+         id="rect4894-9-1"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4911-3-7"
+       transform="matrix(-0.70710678,0.70710678,-0.70710678,-0.70710678,495.09553,960.82279)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         y="324.26221"
+         x="177.98"
+         height="8.0900002"
+         width="24.27"
+         id="rect4894-6-1"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-202.45609"
+         x="324.67529"
+         height="8.0900002"
+         width="24.27"
+         id="rect4894-9-2-5"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4946-5"
+       transform="translate(1.6379887,533.79891)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         ry="4.0450001"
+         rx="4.0450001"
+         y="235.27222"
+         x="186.06999"
+         height="8.0900002"
+         width="331.69"
+         id="rect4940-6"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="4.0450001"
+         rx="4.0450001"
+         y="251.45222"
+         x="186.06999"
+         height="8.0900002"
+         width="364.04999"
+         id="rect4942-7"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="4.0450001"
+         rx="4.0450001"
+         y="267.63223"
+         x="186.06999"
+         height="8.0900002"
+         width="169.89"
+         id="rect4944-1"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5020-1"
+       transform="translate(-16.792261,330.72654)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <circle
+         r="16.18"
+         cy="512.22711"
+         cx="474.53534"
+         id="path4979-1"
+         style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#e74c3c;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4981-8"
+         y="507.45593"
+         x="503.36868"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:10px"
+           y="507.45593"
+           x="503.36868"
+           id="tspan4983-9"
+           sodipodi:role="line">Mary Tan</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4981-6-5"
+         y="522.18445"
+         x="500.46475"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:10px"
+           y="522.18445"
+           x="500.46475"
+           id="tspan4983-2-0"
+           sodipodi:role="line">33    41     3</tspan></text>
+      <circle
+         r="4.0450001"
+         cy="518.5257"
+         cx="518.6936"
+         id="path5003-4"
+         style="opacity:1;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         r="4.0450001"
+         cy="518.5257"
+         cx="546.90381"
+         id="path5003-5-7"
+         style="opacity:1;fill:#3498db;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5035-2"
+       transform="translate(0.80829089,316.89417)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         ry="8.0900002"
+         rx="8.0900002"
+         y="518.6283"
+         x="185.86256"
+         height="16.18"
+         width="48.540001"
+         id="rect5029-81"
+         style="opacity:1;fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5031-1"
+         y="529.83099"
+         x="193.12288"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:10px"
+           y="529.83099"
+           x="193.12288"
+           id="tspan5033-6"
+           sodipodi:role="line">Upvote</tspan></text>
+    </g>
+    <g
+       transform="translate(0.80829089,333.07328)"
+       id="g5067-2"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         ry="8.0900002"
+         rx="8.0900002"
+         y="501.61948"
+         x="243.11081"
+         height="16.18"
+         width="65.133957"
+         id="rect5029-9-6"
+         style="opacity:1;fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5031-9-4"
+         y="512.8222"
+         x="250.37112"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:10px"
+           y="512.8222"
+           x="250.37112"
+           id="tspan5033-8-6"
+           sodipodi:role="line">Comment</tspan></text>
+    </g>
+    <g
+       transform="translate(65.528286,389.70328)"
+       id="g5035-4-5"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <g
+         id="g5084-7"
+         transform="translate(64.71643,-73.013408)">
+        <rect
+           style="opacity:1;fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect5029-8-6"
+           width="48.540001"
+           height="16.18"
+           x="185.86256"
+           y="518.6283"
+           rx="8.0900002"
+           ry="8.0900002" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="193.12288"
+           y="529.83099"
+           id="text5031-3-8"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5033-82-2"
+             x="193.12288"
+             y="529.83099"
+             style="font-size:10px">Share</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="414.0192"
+       y="72.074234"
+       id="text5433"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan5435"
+         x="414.0192"
+         y="72.074234">Search this forum...</tspan></text>
+    <image
+       y="922.95129"
+       x="85.480576"
+       id="image5445"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAApcAAAECCAYAAACrL/z8AAAABHNCSVQICAgIfAhkiAAAEudJREFU
+eJzt3U9olOkdwPGfGzeyZtCasmpaRUykFART0KVUC+2hmkKhi/bQy+reas1VDfRS9eqfQy/RQgtl
+3B6NvRQaPfSULLRk2QiFwjq2293WJLK6u04ak242PYSZJibqZPKbGLefDwjJ5J1530xi8p3neZ83
+a2ZmZmYCAAASvPS8DwAAgC+OtXPfGRoael7HAQDAF8Dax2/Yu3fv8zgOAABecENDQ6bFAQDIIy4B
+AEgjLgEASCMuAQBIIy4BAEgjLgEASCMuAQBIIy4BAEgjLgEASCMuAQBIIy4BAEgjLgEASCMuAQBI
+Iy4BAEizthEPevDgwQW3dXR0RGdnZxw9ejQKhUIjdltVLBbj6tWri37s4sWL0dnZ2dD9Z+rr64vB
+wcGIiOrzt1oVi8UYHByMK1euVG+rHP/Ro0eX/LwPDw/HqVOnlnVMe/bsiUuXLj11m6d9v0REbN26
+NS5cuBBbt25d1rGshJMnT8atW7fi5s2bDdtHqVSKCxcuRKFQiBMnTkRHR0faY//hD3+IX/3qV3Xf
+//XXX6/5/8if//znuvezZs2a2LdvX933b6T79+9Ha2vrF3Z/QH3u3bsX9+/fj0ePHsXk5GS0tLTE
+xo0bo62tLZqamlL31ZC4XEypVIpSqRTDw8Nx8eLFhgbmsWPH4tixY3H8+PG4c+dORERcuXIl9Zfg
+Sjh//nzcvHkz2tvbI2I2gm7fvh3nzp2r6/GGh4djdHQ0Dh069NRtImLJIXjmzJkYHBysHmtFS0tL
+3L59O06dOlVX2NcSh08yPDwcxWKxpu2edmzFYjHOnj3b8O/bDJcuXZr34u5Z4Ryx9Bdcvb29USqV
+qo9/7ty5mvZTS/BOTk7GJ598UvOxPG5iYqLmbf/zn//EmjVr6t7XanT//v14//33VzT2Pvroo3j4
+8GHs2LFjxfYJ1G5ycjL++te/xr///e95t3/66afx6aefxr/+9a/YuXNnvPrqq2n7bHhc3rx5M8rl
+chSLxbh+/XqUSqUoFovR3d3d0P2WSqVqWLa3t7+wYXnw4MHo6emJiP+FwsjISM2jaOVyOa5fvx7X
+rl2L8fHxiIgFcfn4NksNupGRkRgcHIz9+/cvCN+urq44cOBAvPHGG1EsFusOxVr19vbG6OhonD59
+OvVxS6VSNZBXe2DOtWXLltizZ89Tt1nq5zN3+5aWlpr3U4vvf//78d3vfrfu+zc3N9e87WuvvVZ3
+XM7MzNR1v0aqhGXE7P/JiNmvVSO+XycmJqJcLsf09HRMTU1FuVyOiBCYsMpMTk7G8PBwTE9PP3Gb
+6enpuH37dkREWmCuyMhloVCI7u7uuHHjRoyPj8etW7cavs9r165V3z5y5EjD95dpsbCMmB1NvHr1
+aoyOjtYUl+VyOU6dOlUdZWpvb18wQrXYNgcOHFjS8Y6OjkZEPDHgC4VCdHR0pH3d+/v7o6ura9Hb
+r1+/HhERFy5cSP+6vyiBOXdauKura9HnajlOnz4dxWIxCoVC9TnO2s+6deti3bp1ERHx+9//Pn79
+618/8z6vv/56vPnmm0ve18svv1x9+09/+lNNofnaa68teT8rYW5YRkTcvXu3+nZzc3Ns27YtNm7c
+uOz9TExMxPvvv7/oCPH9+/cjQmDCanL79u1qWG7YsCE2bNgw7+PT09MxNjZWDcwNGzZUfwYvx4pN
+i8/18OHDhj5+uVyuTsG1tLSk/3JtpN7e3kXDMmI2niJmR4lqcebMmSiVSrF58+bo6elZdOqzsk17
+e3v09PSs+hHegYGBuHz5cuzatWvBsc4N7szP4/FRuVOnTs07r3Q16e/vjzVr1jwxwDNUXiw22tTU
+VE0/Kx49erTsfX322Wcv7BT51NTUvLBc7ON37tyJHTt2LGu6fGJiIt57772njoDcv38/vvzlL6/q
+F1/w/6Iy7V2xYcOG2L59+4Ltmpqa4sMPP4yIiL/97W/x9a9/fdn7XrG47O/vr07LNnpBzY0bN6pv
+P+38wtWmMj29f//+6Onpid7e3jhy5Ehs3bq1Opp5+PDhmkYt+/v7qyOF3/jGNxb9YT93m29/+9vL
+Ou6VMjAwEOPj43HmzJm4cuXKvM+rs7MzLl68GCMjI9HV1VU9f3S5Hh+VO3nyZMrjNsKuXbti69at
+USwWGxaXIyMj1fMrT5w40bCQ+MEPfhDf+973nrnd3BHIetUyRT4zMxPT09PVuFrKFHwjNTc3x44d
+O54amBERH374YWzcuLHuE/fv3Lnz1LCMmB21FJawOoyNjc17/969e/NiMyJi9+7d895//OP1anhc
+LrZy/Ec/+lFD9/miTYmXy+UYHh6u/lA+dOhQlMvlGBgYiNHR0Th37lwMDg7GwYMHax4xmhvYN27c
+iBs3biw4J7Kvr6/6drFYjGKxuOh5k0/T29tb3dfTXjRUPref/vSncfjw4brCp1wuV1fOj46OxoUL
+FxYca2dn57JfvJw/fz46Ozujq6srSqVSXL58Oc6ePftC/NIcGRmJYrFYPbWhv7//mQtplrri+/Ll
+y9Wvw8zMTPT09NS0n4sXLz7zsT/44IPqK+h6bNu2bdFX5os5cuRIfP755/Gzn/0s3nnnnejv7499
++/bFj3/84+o5u7/5zW/i7Nmz8fe//z3eeOONaGpqit7e3tiyZUu89dZbdR9ntsqIZCUwv/rVr8ba
+tWvj4cOH8fHHH8fnn38e09PT8dFHH8XmzZuX/Pjlcjmmpqaq72/cuDEKhUKsX78+3nvvvYiYnTmw
+ahxWj8nJyQXvV25rampa9Gfl9PR0TE5OLntq/Llc5/LkyZMNG+0aGBio1vr+/ftX/eVjKuc83rhx
+Izo7O6OlpSWuX78ehUKhGjcRswHw+DT50yx2fuPg4OC81dOVBU+PbzM3OmsxPj5eXdjxJJV4qSw0
+qEdl1LJi7udTKpXizJkzdT92xfnz56NUKlXjbMuWLfHw4cM4derUio7Q1quvry/efPPNeefNzszM
+PPXfUi32PIyOjsbw8PBT/6025XI5xsfH47PPPotHjx7F+Ph4TExMxPT0dIyPj8f4+HjMzMxU356c
+nIympqZobm5eNaOWc7W2tlbPd1y/fn31/a997Wvx0kuzP+qfNfL4JHPv197eHu3t7bF58+bqC67W
+1tZoa2tb5mcArIT169fH7t27o62tLSYnJ6vnS2dakdXiEbM/yCvnE46Pj0dvb++SYqlWL9qUeOWc
+x8OHD0fE7GWUKqu2SqVS9fzKrCnOyi/5p0XewMBAzSO+3d3d0dnZGWfPno3h4eEnjhpW9vu73/1u
+iUf8P5XRsrkqC5wq4VksFuPYsWN1PX7l1IOrV69Wf2kWCoW4dOlSHD9+PI4fPx6//e1v6z7+ldDR
+0RHXrl2Ljo6O6O7ubsiCnu7u7ujt7Y1CoVB9riuX/1qu7du31zzyuFx9fX2xZs2aWLduXezbty9+
+8pOfxEsvvRTNzc3V79NXXnklfvGLX8TMzEy8/PLL0dzcHD/84Q9X5PjqsdjI4SuvvBJtbW3xz3/+
+s+7HrcRla2vrgoVBc6MWWD2eNPq4efPmmJ6ejrt378YHH3yw4EXnC7Wgp1AoRE9PTwwODjZsxXjl
+kjgRs0/eUlc9r7TKOY9Hjx6tBkAl6s6fPx+Dg4PLvoj4k2SO6K7EdPHcr+3j5r6guHr1ahw4cKCu
+BT3d3d1RKpUWXNOyt7c3xsfHG34ZpQxdXV01jSQvR0dHx4o8F7VOkS9lKnyuud+3tV5Q/Vvf+taS
+97PSFgvM9evXR0TUfb5lZaR2sRFbYQmrU2tra9y7d2/B7WNjY7F27dpFz6/ctGlTyr6f259/bMR1
+4uZO5zb6vM4MlUv4PD5KOPdSRPWOOj3pmoNzRxZr2Wa1eFJYLubChQt17aMySrlly5Z5I7yjo6Px
+1ltvrfqV9BGzl5149913o7e3t2H7KJfL0dfXt+TTJ3j+vvSlL9V1v0KhsCpPBQCerLW1tfrCcq6d
+O3cuWMhT8ZWvfCVl3yt6KaJisdjQFeMv2pR4RalUqj4fT7rG5VKdPn06Tp48OW+1WHt7+7yQ7e7u
+jp///OfzttmzZ8+SF0FVRoCedk7iyMjIsi6yvdT7DwwM1DWiWigU5i0S2rp16wsxYjnX3FXPw8PD
+z5wlOHjw4JJGsiunt0TMfs2PHTtW036W+qdLV3KK/EUYkVyOhw8fxquvvrqsQNy2bVt8/PHHiUcF
+NNquXbviL3/5y7yp77GxsUVHLdva2hZcB7Nez2W1eEtLS/p18uZe6ujgwYMvxMreI0eORF9fX5w5
+c6a6eGd4eHjZYRkxG0W//OUvqyvOOzo6Fpwm0NHR8cxtatHR0RF79uyJ69evV1e3V4yMjMTFixdj
+bGxsWaPJ9Xy/rMZFJI1WuRTRu+++GxGzz8Gz/izjnj17lhSXlRH3iKguOKtlP7XE5UquFn/77bfr
+3k/EixOkU1NTMT09Hdu2bVvW42zcuDGmp6ejXC6/ED9fgdne2r1797zAXGyqvN7Ti55kRUcuW1pa
+orOzM/XaeIv9TeObN2/GzZs34+jRoymLDBqlMg1bLBajr68vNm/eHCdOnEi7fFJlxflyt6nFuXPn
+ore3d8H09ejoaNy9e7fuz+vWrVuLvkCpVS2jnVu2bFnSua31XMplpfT398+7CkDWQpu5jhw5Uo3K
+ymMfOnRoVZ5O8f9uYmIipqamlh2WFa2trdXHbGpqqvscTmDltLS0xN69e2NsbCzGxsaqf2O8qakp
+WltbY/v27SmLeOZaMzPn5MehoaHYu3dv6g4AAPj/MDQ09PwW9AAA8MUjLgEASCMuAQBIIy4BAEgj
+LgEASCMuAQBIIy4BAEgjLgEASCMuAQBIIy4BAEgjLgEASCMuAQBIIy4BAEgjLgEASLP28RuGhoae
+x3EAAPAFsCAu9+7d+zyOAwCAF9zQ0JBpcQAA8ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA
+0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKI
+SwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsA
+ANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADS
+iEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohL
+AADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA
+0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKI
+SwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsA
+ANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADS
+iEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohL
+AADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA
+0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKI
+SwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsA
+ANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADS
+iEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohL
+AADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA
+0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKI
+SwAA0ohLAADSiEsAANKISwAA0ohLAADSiEsAANKISwAA0ohLAADSrH38hqGhoedxHAAAfAHMi8tN
+mzbFpk2bntexAADwAnvw4IFpcQAA8ohLAADSLDjnEoD5/vjHP8Ynn3wS3/nOd+adOvT222/H6Oho
+fPOb34y2tra6b3/nnXfiH//4R3R2dsbOnTtX5pMCaBAjlwAApFkzMzMzU3nnzp07FvQAAFCXBw8e
+mBYHWIonTZFn3Q7wojMtDgBAGtPiAACkWHRa/MGDB8/jWAAA+AKYN3IJAADL8V+gPU7sEB2lbQAA
+AABJRU5ErkJggg==
+"
+       style="image-rendering:optimizeQuality"
+       preserveAspectRatio="none"
+       height="234.49725"
+       width="602.60339"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303" />
+    <g
+       id="g5454"
+       transform="translate(2.37238,122.99853)"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303">
+      <rect
+         y="532.32013"
+         x="408.84387"
+         height="32.360001"
+         width="129.44"
+         id="rect5448"
+         style="opacity:1;fill:#2980b9;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5450"
+         y="554.51495"
+         x="436.22479"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="fill:#ffffff"
+           y="554.51495"
+           x="436.22479"
+           id="tspan5452"
+           sodipodi:role="line">Answer</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="541.01318"
+       y="642.51947"
+       id="text5483"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joel/repos/cs3226/boxchat/doc/mockups/exptd/question.png"
+       inkscape:export-xdpi="99.949303"
+       inkscape:export-ydpi="99.949303"><tspan
+         sodipodi:role="line"
+         id="tspan5485"
+         x="541.01318"
+         y="642.51947"
+         style="font-size:10px;text-align:end;text-anchor:end">Add a comment</tspan></text>
+  </g>
+</svg>
