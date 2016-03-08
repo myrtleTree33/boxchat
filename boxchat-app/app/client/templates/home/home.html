@@ -1,8 +1,10 @@
 <template name="Home">
   <div class="home">
-    <button class="ui button">This button tests Semantic UI works</button>
-    <h1>Find me in app/client/templates/home/home</h1>
-    {{#Todos}}
-    {{/Todos}}
+    {{> Sidebar}}
+    <div class="ui grid container">
+      <div class="sixteen wide column">
+        {{#Todos}} {{/Todos}}
+      </div>
+    </div>
   </div>
 </template>
