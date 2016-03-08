@@ -49,3 +49,10 @@ Router.route('verify-email/:token', function() {
     }
   });
 });
+
+
+Router.route('login', {
+  name: 'login',
+  controller: 'LoginController',
+  where: 'client'
+});

@@ -22,3 +22,5 @@ iron:router
 accounts-password
 themeteorchef:bert
 email
+accounts-facebook
+service-configuration
