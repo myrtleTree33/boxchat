@@ -1,30 +1,23 @@
 /*****************************************************************************/
-/* Sidebar: Event Handlers */
+/* Lander: Event Handlers */
 /*****************************************************************************/
-Template.Sidebar.events({
-  'click #btn-logout': function(event) {
-    Meteor.logout(function(err) {
-      if (err) {
-        throw new Meteor.error("Logout failed");
-      }
-    })
-  }
+Template.Lander.events({
 });
 
 /*****************************************************************************/
-/* Sidebar: Helpers */
+/* Lander: Helpers */
 /*****************************************************************************/
-Template.Sidebar.helpers({
+Template.Lander.helpers({
 });
 
 /*****************************************************************************/
-/* Sidebar: Lifecycle Hooks */
+/* Lander: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Sidebar.onCreated(function () {
+Template.Lander.onCreated(function () {
 });
 
-Template.Sidebar.onRendered(function () {
+Template.Lander.onRendered(function () {
 });
 
-Template.Sidebar.onDestroyed(function () {
+Template.Lander.onDestroyed(function () {
 });
