@@ -16,6 +16,14 @@ Meteor.startup(function() {
     secret: config.facebook.SECRET
   });
 
-  
+  ServiceConfiguration.configurations.remove({
+    service: 'twitter'
+  });
+
+  ServiceConfiguration.configurations.insert({
+    service: 'twitter',
+    consumerKey: config.twitter.CONSUMER_KEY,
+    secret: config.twitter.SECRET
+  });
 
 });
