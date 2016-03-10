@@ -27,7 +27,7 @@ Then, launch `iron-meteor` to run the app:
 
     cd /vagrant/boxchat-app && iron
 
-If successful, the app will run on http://localhost:4567 .  View it on your
+If successful, the app will run on http://localhost:3000.  View it on your
 local browser!
 
 
