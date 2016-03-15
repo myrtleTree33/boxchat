@@ -1,5 +1,9 @@
 <template name="Home">
   <div class="home">
-        {{#Todos}} {{/Todos}}
+    {{#if currentUser}}
+      {{> Lander}}
+    {{else}}
+      {{> Login}}
+    {{/if}}
   </div>
 </template>

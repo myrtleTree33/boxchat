@@ -10,6 +10,14 @@ Template.Login.events({
     });
   },
 
+  'click #twitter-login': function(event) {
+    Meteor.loginWithTwitter({}, function(err) {
+      if (err) {
+        throw new Meteor.error("Login failed");
+      }
+    });
+  },
+
   'click #logut': function(event) {
     Meteor.logout(function(err) {
       if (err) {
