@@ -1,3 +1,9 @@
 <template name="MasterLayout">
-  {{> yield}}
+    {{#unless currentUser}}
+      {{> Login}}
+    {{else}}
+      {{> Sidebar}}
+      {{> Topbar}}
+      {{> yield}}
+    {{/unless}}
 </template>

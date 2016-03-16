@@ -1,0 +1,19 @@
+<template name="Topbar">
+  <div class="topbar">
+    <div class="ui grid container">
+      <div class="sixteen wide column right aligned">
+        <div class="ui inline dropdown">
+          <div class="text">
+            <img class="ui avatar image" src="{{currentUser.profileImg}}">
+            <span>{{currentUser.name}}</span>
+          </div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item" id="btn-logout">Signout</div>
+            <div class="item" id="btn-logout">Settings</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
