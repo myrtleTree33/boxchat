@@ -62,3 +62,9 @@ Router.route('timeline', {
   controller: 'TimelineController',
   where: 'client'
 });
+
+Router.route('profile', {
+  name: 'profile',
+  controller: 'ProfileController',
+  where: 'client'
+});
