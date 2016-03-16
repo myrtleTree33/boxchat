@@ -1,0 +1,21 @@
+<template name="Forum">
+  <div class="forum">
+    <div class="ui grid container">
+
+      <div class="sixteen wide column left aligned">
+        <button class="ui orange button right floated" id="btn-ask">Ask a question</button>
+      </div>
+
+      <div class="sixteen wide column left aligned">
+        {{> Search}}
+      </div>
+
+      <div class="sixteen wide column left aligned">
+        <div class="ui segments">
+          {{#each questions}} {{> Question}} {{/each}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</template>

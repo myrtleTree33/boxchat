@@ -68,3 +68,9 @@ Router.route('profile', {
   controller: 'ProfileController',
   where: 'client'
 });
+
+Router.route('forum', {
+  name: 'forum',
+  controller: 'ForumController',
+  where: 'client'
+});

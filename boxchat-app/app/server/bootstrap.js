@@ -26,4 +26,10 @@ Meteor.startup(function() {
     secret: config.twitter.SECRET
   });
 
+
+
+  // clear the mongoDB collections
+
+
+
 });

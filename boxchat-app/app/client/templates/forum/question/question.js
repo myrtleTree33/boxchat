@@ -1,30 +1,23 @@
 /*****************************************************************************/
-/* Search: Event Handlers */
+/* Question: Event Handlers */
 /*****************************************************************************/
-Template.Search.events({});
-
-/*****************************************************************************/
-/* Search: Helpers */
-/*****************************************************************************/
-Template.Search.helpers({});
-
-/*****************************************************************************/
-/* Search: Lifecycle Hooks */
-/*****************************************************************************/
-Template.Search.onCreated(function() {
+Template.Question.events({
 });
 
-Template.Search.onRendered(function() {
-  $('#input-tags').selectize({
-    delimiter: ',',
-    persist: false,
-    create: function(input) {
-      return {
-        value: input,
-        text: input
-      }
-    }
-  });
+/*****************************************************************************/
+/* Question: Helpers */
+/*****************************************************************************/
+Template.Question.helpers({
 });
 
-Template.Search.onDestroyed(function() {});
+/*****************************************************************************/
+/* Question: Lifecycle Hooks */
+/*****************************************************************************/
+Template.Question.onCreated(function () {
+});
+
+Template.Question.onRendered(function () {
+});
+
+Template.Question.onDestroyed(function () {
+});

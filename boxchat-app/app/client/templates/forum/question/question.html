@@ -1,0 +1,39 @@
+<template name="Question">
+  <div class="question ui segment">
+
+    <div class="ui two column stackable grid container">
+      <div class="four wide column middle aligned content">
+        <div class="ui statistics">
+
+          <div class="statistic">
+            <div class="value">
+              {{votes}}
+            </div>
+            <div class="label">
+              Votes
+            </div>
+          </div>
+
+          <div class="statistic">
+            <div class="value">
+              {{views}}
+            </div>
+            <div class="label">
+              Views
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="twelve wide column middle aligned content">
+        <div class="ui medium header">
+          {{text}}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</template>
