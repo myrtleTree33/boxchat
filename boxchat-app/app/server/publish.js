@@ -17,3 +17,8 @@ Meteor.publish(null, function() {
     profileImg: 1
   }});
 });
+
+
+Meteor.publish('forum', function () {
+  return Forum.find();
+});
