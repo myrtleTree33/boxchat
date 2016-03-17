@@ -13,7 +13,7 @@ Template.Ask.events({
 /* Ask: Helpers */
 /*****************************************************************************/
 Template.Ask.helpers({
-  helloHelper: function() {
+  qnContent: function() {
     return {
       'text': Template.instance().input.get()
     }
@@ -24,7 +24,7 @@ Template.Ask.helpers({
 /* Ask: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Ask.onCreated(function() {
-  this.input = new ReactiveVar('hello world');
+  this.input = new ReactiveVar('');
 });
 
 Template.Ask.onRendered(function() {});
