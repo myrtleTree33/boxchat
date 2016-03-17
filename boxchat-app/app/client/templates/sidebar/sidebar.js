@@ -22,11 +22,7 @@ Template.Sidebar.events({
       admin: [],
       title: 'CS3226 Forum',
       questionIds: []
-    }, function(err) {
-      console.log(err);
-    console.log('clicked');
     });
-    // Router.go('/profile');
   },
 
   'click #btn-profile': function(event) {
