@@ -1,23 +1,23 @@
 /*****************************************************************************/
-/* Question: Event Handlers */
+/* QuestionMain: Event Handlers */
 /*****************************************************************************/
-Template.Question.events({
+Template.QuestionMain.events({
 });
 
 /*****************************************************************************/
-/* Question: Helpers */
+/* QuestionMain: Helpers */
 /*****************************************************************************/
-Template.Question.helpers({
+Template.QuestionMain.helpers({
 });
 
 /*****************************************************************************/
-/* Question: Lifecycle Hooks */
+/* QuestionMain: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Question.onCreated(function () {
+Template.QuestionMain.onCreated(function () {
 });
 
-Template.Question.onRendered(function () {
+Template.QuestionMain.onRendered(function () {
 });
 
-Template.Question.onDestroyed(function () {
+Template.QuestionMain.onDestroyed(function () {
 });

@@ -6,8 +6,8 @@
 
 <template name="Ask">
   <div class="ask">
-    <div class="ui grid container">
-      <div class="sixteen wide column left aligned">
+    <div class="ui centered grid container">
+      <div class="ten wide column left aligned">
 
         <div class="left aligned ui header">
           <h2>Post a question</h2>
@@ -18,34 +18,41 @@
         <form class="ui form" id="form-ask">
 
           <div class="inline fields">
-            <div class="ten wide field">
+            <div class="sixteen wide field">
               <label>Title</label>
               <input type="text" name="title" value="" placeholder="What is your question?">
             </div>
           </div>
 
           <div class="field">
-            <div class="ten wide field">
-              <textarea name="content" id="qn-content" rows="8">
-              </textarea>
+            <div class="sixteen wide field">
+              <textarea name="content" id="qn-content" rows="8"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="sixteen wide field">
+              <p>
+                <b>Markdown-enabled: </b>Format your question with <a href="http://assemble.io/docs/Cheatsheet-Markdown.html">Markdown</a>.  Try it out!
+              </p>
             </div>
           </div>
 
           <div class="inline fields">
-            <div class="ten wide field">
+            <div class="sixteen wide field">
               <label>Topic</label>
               <input type="text" name="topics" value="" placeholder="Topics..">
             </div>
           </div>
 
           <div class="field">
-            <div class="ten wide field">
+            <div class="sixteen wide field">
               <div class="ui divider"></div>
             </div>
           </div>
 
           <div class="field">
-            <div class="ten wide field">
+            <div class="sixteen wide field">
             {{#with qnContent}}
             {{> markdownField}}
             {{/with}}
@@ -55,7 +62,7 @@
           <div class="ui hidden divider"></div>
 
           <div class="inline fields">
-            <div class="ten wide field">
+            <div class="sixteen wide field">
               <button class="ui animated fade orange big button" type="submit">
                 <div class="visible content">
                   Post your question

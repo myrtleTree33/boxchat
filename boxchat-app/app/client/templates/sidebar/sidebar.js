@@ -15,14 +15,6 @@ Template.Sidebar.events({
   },
 
   'click #btn-forums': function(event) {
-    Forums.insert({
-      createdAt: new Date(),
-      all: [],
-      students: [],
-      admin: [],
-      title: 'CS3226 Forum',
-      questionIds: []
-    });
   },
 
   'click #btn-profile': function(event) {

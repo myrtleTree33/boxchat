@@ -26,27 +26,9 @@
       <div class="sixteen wide column left aligned">
         <h2 class="ui header">Forums</h2>
         <div class="ui relaxed divided list">
-          <div class="item">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <a class="header">CS3226 - Web Programming</a>
-              <div class="description">Updated 10 mins ago</div>
-            </div>
-          </div>
-          <div class="item">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <a class="header">HR2002 - Introduction to Human Resources </a>
-              <div class="description">Updated 22 mins ago</div>
-            </div>
-          </div>
-          <div class="item">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <a class="header">NM2213 - Introduction to Human-Computer Interaction</a>
-              <div class="description">Updated 34 mins ago</div>
-            </div>
-          </div>
+          {{#each forums}}
+            {{> ProfileForum}}
+          {{/each}}
         </div>
       </div>
 

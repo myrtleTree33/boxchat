@@ -35,3 +35,4 @@ houston:admin
 simple:highlight.js
 markdown
 reactive-var
+dburles:collection-helpers

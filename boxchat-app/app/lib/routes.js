@@ -80,3 +80,17 @@ Router.route('forum/ask/:forumId', {
   controller: 'AskController',
   where: 'client'
 });
+
+
+Router.route('forum/create', {
+  name: 'forumCreate',
+  controller: 'ForumCreateController',
+  where: 'client'
+});
+
+
+Router.route('question/view/:id', {
+  name: 'question',
+  controller: 'QuestionController',
+  where: 'client'
+});
