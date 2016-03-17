@@ -74,3 +74,9 @@ Router.route('forum', {
   controller: 'ForumController',
   where: 'client'
 });
+
+Router.route('forum/ask', {
+  name: 'ask',
+  controller: 'AskController',
+  where: 'client'
+});

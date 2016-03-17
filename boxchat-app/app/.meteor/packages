@@ -32,3 +32,6 @@ accounts-twitter
 u2622:persistent-session
 jeremy:selectize
 houston:admin
+simple:highlight.js
+markdown
+reactive-var

@@ -1,0 +1,41 @@
+<template name="hello">
+  {{#markdown}}
+  {{text}}
+  {{/markdown}}
+</template>
+
+<template name="Ask">
+  <div class="ask">
+    <div class="ui grid container">
+      <div class="sixteen wide column left aligned">
+
+        <form class="ui form">
+
+          <div class="inline fields">
+            <div class="ten wide field">
+              <label>Name</label>
+              <input type="text" name="title" value="" placeholder="What is your question?">
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="ten wide field">
+              <textarea name="content" id="qn-content" rows="8">
+              </textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="ten wide field">
+              {{#with helloHelper}}
+                {{> hello}}
+              {{/with}}
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</template>
