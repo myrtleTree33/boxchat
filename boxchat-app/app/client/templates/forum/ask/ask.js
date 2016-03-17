@@ -4,8 +4,32 @@
 Template.Ask.events({
   'input #qn-content': function(event, template) {
     template.input.set($('#qn-content').val());
-    // console.log($('#qn-content').val());
-    // console.log(template.input.get());
+  },
+  'submit #form-ask': function(event) {
+    event.preventDefault();
+    var obj = event.target;
+    var title = obj.title.value;
+    var content = obj.content.value;
+    var tags = obj.topics.value.split(',');
+    var forumId = Router.current().params.forumId;
+
+    Questions.insert({
+      authorId: Meteor.user()._id,
+      createdAt: new Date(),
+      forumId: forumId,
+      title: title,
+      content: content,
+      votes: 0,
+      views: 0,
+      tags: tags
+    }, function(err, result) {
+      if (err) {
+        Bert.alert('Oops, something went wrong', 'danger');
+        return;
+      }
+      Bert.alert('Question successfully posted!', 'success');
+      Router.go('forum', {id: forumId});
+    });
   }
 });
 

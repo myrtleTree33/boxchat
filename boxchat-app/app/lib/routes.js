@@ -69,13 +69,13 @@ Router.route('profile', {
   where: 'client'
 });
 
-Router.route('forum', {
+Router.route('forum/:id', {
   name: 'forum',
   controller: 'ForumController',
   where: 'client'
 });
 
-Router.route('forum/ask', {
+Router.route('ask/:forumId', {
   name: 'ask',
   controller: 'AskController',
   where: 'client'

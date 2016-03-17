@@ -1,22 +1,8 @@
-Forum = new Mongo.Collection('forum');
+Forums = new Mongo.Collection('forums');
 
 
 if (Meteor.isServer) {
-  Forum.allow({
-    insert: function (userId, doc) {
-      return false;
-    },
-
-    update: function (userId, doc, fieldNames, modifier) {
-      return false;
-    },
-
-    remove: function (userId, doc) {
-      return false;
-    }
-  });
-
-  Forum.deny({
+  Forums.allow({
     insert: function (userId, doc) {
       return true;
     },
@@ -29,4 +15,18 @@ if (Meteor.isServer) {
       return true;
     }
   });
+
+  // Forums.deny({
+  //   insert: function (userId, doc) {
+  //     return true;
+  //   },
+  //
+  //   update: function (userId, doc, fieldNames, modifier) {
+  //     return true;
+  //   },
+  //
+  //   remove: function (userId, doc) {
+  //     return true;
+  //   }
+  // });
 }
