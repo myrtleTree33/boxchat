@@ -87,3 +87,10 @@ Router.route('forum/create', {
   controller: 'ForumCreateController',
   where: 'client'
 });
+
+
+Router.route('question/view/:id', {
+  name: 'question',
+  controller: 'QuestionController',
+  where: 'client'
+});

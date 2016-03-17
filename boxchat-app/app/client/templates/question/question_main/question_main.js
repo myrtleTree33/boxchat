@@ -1,27 +1,23 @@
 /*****************************************************************************/
-/* Question: Event Handlers */
+/* QuestionMain: Event Handlers */
 /*****************************************************************************/
-Template.ForumQuestion.events({
-  'click .forum-question-title': function(event, template) {
-    event.preventDefault();
-    Router.go('question', {id: template.data._id});
-  }
+Template.QuestionMain.events({
 });
 
 /*****************************************************************************/
-/* Question: Helpers */
+/* QuestionMain: Helpers */
 /*****************************************************************************/
-Template.ForumQuestion.helpers({
+Template.QuestionMain.helpers({
 });
 
 /*****************************************************************************/
-/* Question: Lifecycle Hooks */
+/* QuestionMain: Lifecycle Hooks */
 /*****************************************************************************/
-Template.ForumQuestion.onCreated(function () {
+Template.QuestionMain.onCreated(function () {
 });
 
-Template.ForumQuestion.onRendered(function () {
+Template.QuestionMain.onRendered(function () {
 });
 
-Template.ForumQuestion.onDestroyed(function () {
+Template.QuestionMain.onDestroyed(function () {
 });
