@@ -1,0 +1,75 @@
+<template name="markdownField">
+{{#markdown}}
+{{text}}
+{{/markdown}}
+</template>
+
+<template name="Ask">
+  <div class="ask">
+    <div class="ui grid container">
+      <div class="sixteen wide column left aligned">
+
+        <div class="left aligned ui header">
+          <h2>Post a question</h2>
+        </div>
+
+        <div class="ui hidden divider"></div>
+
+        <form class="ui form" id="form-ask">
+
+          <div class="inline fields">
+            <div class="ten wide field">
+              <label>Title</label>
+              <input type="text" name="title" value="" placeholder="What is your question?">
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="ten wide field">
+              <textarea name="content" id="qn-content" rows="8">
+              </textarea>
+            </div>
+          </div>
+
+          <div class="inline fields">
+            <div class="ten wide field">
+              <label>Topic</label>
+              <input type="text" name="topics" value="" placeholder="Topics..">
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="ten wide field">
+              <div class="ui divider"></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="ten wide field">
+            {{#with qnContent}}
+            {{> markdownField}}
+            {{/with}}
+            </div>
+          </div>
+
+          <div class="ui hidden divider"></div>
+
+          <div class="inline fields">
+            <div class="ten wide field">
+              <button class="ui animated fade orange big button" type="submit">
+                <div class="visible content">
+                  Post your question
+                </div>
+                <div class="hidden content">
+                  Go for it!
+                </div>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</template>

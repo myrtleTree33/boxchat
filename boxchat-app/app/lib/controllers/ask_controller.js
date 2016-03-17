@@ -1,4 +1,4 @@
-ForumController = RouteController.extend({
+AskController = RouteController.extend({
 
   // A place to put your subscriptions
   // this.subscribe('items');
@@ -23,9 +23,10 @@ ForumController = RouteController.extend({
   // return Posts.findOne({_id: this.params._id});
 
   data: function () {
-    return Forums.findOne({
-      _id: this.params.id
-    });
+    console.log(this.params.forumId);
+    return {
+      forumId: this.params.forumId
+    };
   },
 
   // You can provide any of the hook options

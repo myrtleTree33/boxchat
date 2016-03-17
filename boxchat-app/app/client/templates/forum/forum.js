@@ -2,15 +2,9 @@
 /* Forum: Event Handlers */
 /*****************************************************************************/
 Template.Forum.events({
-  'click #btn-ask': function(event) {
-    Questions.insert({
-      authorId: Meteor.user()._id,
-      createdAt: new Date(),
-      text: 'Where do I go to login?',
-      votes: 5,
-      views: 10,
-      tags: ['CS3226', 'interesting', 'exams']
-    });
+  'click #btn-ask': function(event, template) {
+    var forumId = Router.current().params.id;
+    Router.go('ask', {forumId: forumId});
   }
 });
 
@@ -19,7 +13,10 @@ Template.Forum.events({
 /*****************************************************************************/
 Template.Forum.helpers({
   questions: function() {
-    return Questions.find({}, {
+    var forumId = Router.current().params.id;
+    return Questions.find({
+      forumId: forumId
+    }, {
       sort: {
         createdAt: -1
       }
