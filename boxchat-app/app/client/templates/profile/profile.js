@@ -2,6 +2,9 @@
 /* Profile: Event Handlers */
 /*****************************************************************************/
 Template.Profile.events({
+  'click #btn-create-forum': function(event, template) {
+    Router.go('forumCreate');
+  }
 });
 
 /*****************************************************************************/
