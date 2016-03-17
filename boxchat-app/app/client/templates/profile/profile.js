@@ -11,6 +11,15 @@ Template.Profile.events({
 /* Profile: Helpers */
 /*****************************************************************************/
 Template.Profile.helpers({
+  forums: function() {
+    return Forums.find({
+      all: Meteor.user()._id
+    }, {
+      sort: {
+        createdAt: -1
+      }
+    });
+  }
 });
 
 /*****************************************************************************/
