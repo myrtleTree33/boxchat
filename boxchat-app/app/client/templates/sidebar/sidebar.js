@@ -16,7 +16,7 @@ Template.Sidebar.events({
     if (forumId) {
     Router.go('forum', {id: forumId});
     } else {
-    Router.go('/');
+    Router.go('/profile');
     }
   },
 
