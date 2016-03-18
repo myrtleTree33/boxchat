@@ -13,7 +13,11 @@ Template.Sidebar.events({
   'click #btn-home': function(event) {
     console.log(Meteor.user().profile);
     var forumId = Meteor.user().profile.currForum;
+    if (forumId) {
     Router.go('forum', {id: forumId});
+    } else {
+    Router.go('/');
+    }
   },
 
   'click #btn-forums': function(event) {
