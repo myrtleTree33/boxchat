@@ -14,14 +14,15 @@ Template.Sidebar.events({
     console.log(Meteor.user().profile);
     var forumId = Meteor.user().profile.currForum;
     if (forumId) {
-    Router.go('forum', {id: forumId});
-    } else {
-    Router.go('/profile');
+      Router.go('forum', {
+        id: forumId
+      });
+    } else { // handle case for new user
+      Router.go('/profile');
     }
   },
 
-  'click #btn-forums': function(event) {
-  },
+  'click #btn-forums': function(event) {},
 
   'click #btn-profile': function(event) {
     Router.go('/profile');
@@ -36,8 +37,7 @@ Template.Sidebar.helpers({});
 /*****************************************************************************/
 /* Sidebar: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Sidebar.onCreated(function() {
-});
+Template.Sidebar.onCreated(function() {});
 
 Template.Sidebar.onRendered(function() {});
 
