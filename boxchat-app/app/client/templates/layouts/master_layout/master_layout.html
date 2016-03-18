@@ -2,8 +2,11 @@
     {{#unless currentUser}}
       {{> Login}}
     {{else}}
-      {{> Sidebar}}
-      {{> Topbar}}
-      {{> yield}}
+      {{> Forumbar}}
+      <div class="pusher">
+        {{> Sidebar}}
+        {{> Topbar}}
+        {{> yield}}
+      </div>
     {{/unless}}
 </template>

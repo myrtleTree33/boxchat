@@ -5,6 +5,7 @@ Template.ProfileForum.events({
   'click .forum-header': function(event, template) {
     Router.go('forum', {id: template.data._id});
   }
+
 });
 
 /*****************************************************************************/
