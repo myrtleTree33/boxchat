@@ -10,8 +10,11 @@ Template.Sidebar.events({
     })
   },
 
-  'click #btn-home': function(event) {
-    console.log(Meteor.user().profile);
+  'click #btn-profile': function(event) {
+      Router.go('/profile');
+  },
+
+  'click #btn-forum': function(event) {
     var forumId = Meteor.user().profile.currForum;
     if (forumId) {
       Router.go('forum', {
@@ -22,17 +25,22 @@ Template.Sidebar.events({
     }
   },
 
-  'click #btn-forums': function(event) {},
+  'click #btn-forums': function(event) {
+    // Toggle forum bar in another template to show
+    $('.forumbar.sidebar')
+      .sidebar('setting', 'transition', 'push')
+      .sidebar('toggle');
+  },
 
-  'click #btn-profile': function(event) {
-    Router.go('/profile');
+  'click #btn-settings': function(event) {
   }
 });
 
 /*****************************************************************************/
 /* Sidebar: Helpers */
 /*****************************************************************************/
-Template.Sidebar.helpers({});
+Template.Sidebar.helpers({
+});
 
 /*****************************************************************************/
 /* Sidebar: Lifecycle Hooks */
