@@ -11,7 +11,9 @@ Template.Sidebar.events({
   },
 
   'click #btn-home': function(event) {
-    Router.go('/');
+    console.log(Meteor.user().profile);
+    var forumId = Meteor.user().profile.currForum;
+    Router.go('forum', {id: forumId});
   },
 
   'click #btn-forums': function(event) {
@@ -30,7 +32,8 @@ Template.Sidebar.helpers({});
 /*****************************************************************************/
 /* Sidebar: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Sidebar.onCreated(function() {});
+Template.Sidebar.onCreated(function() {
+});
 
 Template.Sidebar.onRendered(function() {});
 
