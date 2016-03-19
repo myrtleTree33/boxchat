@@ -1,33 +1,32 @@
 /*****************************************************************************/
 /* Question: Event Handlers */
 /*****************************************************************************/
-Template.Question.events({
-  'click .btn-upvote': function(event, template) {
-    event.preventDefault();
-    var questionId = template.data._id;
-    Questions.findOne({_id: questionId}).upvote(Meteor.user()._id);
-  },
-  'click .btn-downvote': function(event, template) {
-    event.preventDefault();
-    var questionId = template.data._id;
-    Questions.findOne({_id: questionId}).downvote(Meteor.user()._id);
-  }
-});
+Template.Question.events({});
 
 /*****************************************************************************/
 /* Question: Helpers */
 /*****************************************************************************/
 Template.Question.helpers({
+  question: function() {
+    return Template.instance().data;
+  },
+  interactions: function() {
+    var questionId = Router.current().params.id;
+    return Interactions.find({
+      questionId: questionId
+    }, {
+      sort: {
+        createdAt: -1
+      }
+    });
+  }
 });
 
 /*****************************************************************************/
 /* Question: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Question.onCreated(function () {
-});
+Template.Question.onCreated(function() {});
 
-Template.Question.onRendered(function () {
-});
+Template.Question.onRendered(function() {});
 
-Template.Question.onDestroyed(function () {
-});
+Template.Question.onDestroyed(function() {});

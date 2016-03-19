@@ -1,0 +1,64 @@
+<template name="InteractionEditor">
+  <div class="interaction-editor ui segment grid">
+
+    <div class="row">
+      <div class="sixteen wide column left aligned">
+        <div class="ui header">
+          <h3>Post a response</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="sixteen wide column left aligned">
+        <form class="ui form" id="form-response-editor">
+
+          <div class="field">
+            <div class="sixteen wide field">
+              <textarea name="content" id="response-content" rows="8" placeholder="Type your question here.."></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="sixteen wide field">
+              <p>
+                <b>Markdown-enabled: </b>Format your response with <a href="http://assemble.io/docs/Cheatsheet-Markdown.html">Markdown</a>.  Try it out!
+              </p>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="sixteen wide field">
+              <div class="ui divider"></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="sixteen wide field">
+            {{#with responseContent}}
+              {{> markdownField}}
+            {{/with}}
+            </div>
+          </div>
+
+          <div class="ui hidden divider"></div>
+
+          <div class="inline fields">
+            <div class="sixteen wide field">
+              <button class="ui animated fade orange big button" type="submit">
+                <div class="visible content">
+                  Submit your response
+                </div>
+                <div class="hidden content">
+                  Go for it!
+                </div>
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</template>

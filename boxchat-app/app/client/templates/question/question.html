@@ -2,60 +2,16 @@
   <div class="question">
     <div class="ui grid container">
       <div class="twelve wide column centered">
-        <div class="ui segment grid">
+        <!-- Main question title -->
+        {{#with question}} {{> QuestionMainTitle}} {{/with}}
+        <!-- Main question -->
+        {{#with question}} {{> QuestionMain}} {{/with}}
+        <!-- interactions -->
+        {{#each interactions}} {{> Interaction}} {{/each}}
 
-          <div class="row">
-            <div class="sixteen wide column left aligned">
-              <div class="ui header">
-                <h2>
-                  {{title}}
-                </h2>
-              </div>
-            </div>
-          </div>
+        <!-- Editor -->
+        {{> InteractionEditor}}
 
-          <div class="row">
-            <div class="two wide column center aligned">
-
-              <div class="row">
-                <div class="sixteen wide column">
-                  <a class="btn-upvote" href="#">
-                    <i class="large chevron up icon"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="sixteen wide column">
-                  <div class="ui small statistic">
-                    <div class="value">
-                      {{votes}}
-                    </div>
-                    <div class="label">
-                      Votes
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="sixteen wide column">
-                  <a class="btn-downvote">
-                    <i class="large chevron down icon" href="#"></i>
-                  </a>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="fourteen wide column left aligned">
-              <div class="ui content">
-                {{#markdown}}{{content}}{{/markdown}}
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
     </div>
   </div>
