@@ -1,0 +1,45 @@
+<template name="Interaction">
+  <div class="interaction ui segment grid">
+    <div class="row">
+
+        <div class="two wide column center aligned">
+
+          <div class="row">
+            <div class="sixteen wide column">
+              <a class="btn-interaction-upvote" href="#">
+                <i class="large chevron up icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="sixteen wide column">
+              <div class="ui small statistic">
+                <div class="value">
+                  {{votes}}
+                </div>
+                <div class="label">
+                  Votes
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="sixteen wide column">
+              <a class="btn-interaction-downvote">
+                <i class="large chevron down icon" href="#"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      <div class="fourteen wide column left aligned">
+        <div class="ui content">
+          {{#markdown}}{{content}}{{/markdown}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
