@@ -1,6 +1,6 @@
 <template name="Login">
   <div class="login ui middle aligned center aligned grid container">
-<!-- {{#if currentUser}}
+    <!-- {{#if currentUser}}
       {{currentUser.services.facebook.name}} -
       {{currentUser.services.facebook.gender}}
       <button id="logout">Logout</button>
@@ -19,22 +19,19 @@
 
             <div class="column">
               <button class="ui facebook button fluid huge" id="facebook-login">
-                <i class="facebook icon"></i>
-                Sign in with Facebook
+                <i class="facebook icon"></i> Sign in with Facebook
               </button>
             </div>
 
             <div class="column">
               <button class="ui google plus button fluid huge">
-                <i class="google plus icon"></i>
-                Sign in with Google+
+                <i class="google plus icon"></i> Sign in with Google+
               </button>
             </div>
 
             <div class="column">
               <button class="ui twitter button fluid huge" id="twitter-login">
-                <i class="twitter icon"></i>
-                Sign in with Twitter
+                <i class="twitter icon"></i> Sign in with Twitter
               </button>
             </div>
 
@@ -44,13 +41,13 @@
           <div class="ui section horizontal divider">
             Or
           </div>
-          <form class="ui large form">
+          <form class="ui large form" id="form-login-password">
             <div class="ui stacked element">
 
               <div class="field">
                 <div class="ui left icon input">
                   <i class="user icon"></i>
-                  <input name="email" placeholder="E-mail address" type="text">
+                  <input name="emailAddress" placeholder="E-mail address" type="text">
                 </div>
               </div>
 
@@ -61,9 +58,7 @@
                 </div>
               </div>
 
-              <div class="ui fluid large teal submit button">
-                Login
-              </div>
+              <input type="submit" value="Login" class="ui fluid large teal submit button">
 
               <div class="error message"></div>
 
@@ -76,8 +71,6 @@
         </div>
       </div>
     </div>
-    {{else}}
-      {{> Signup}}
-    {{/unless}}
+    {{else}} {{> Signup}} {{/unless}}
   </div>
 </template>

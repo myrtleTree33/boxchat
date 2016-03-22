@@ -29,6 +29,15 @@ Template.Login.events({
   'click #btn-sign-up': function(event, template) {
     var curr = template.stateCreateUser.get();
     template.stateCreateUser.set(!curr);
+  },
+
+  'submit #form-login-password': function(event, template) {
+    event.preventDefault();
+    var user = {
+      email: template.find('[name="emailAddress"]').value,
+      password: template.find('[name="password"]').value
+    };
+    Meteor.loginWithPassword(user.email, user.password);
   }
 });
 
