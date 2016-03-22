@@ -21,6 +21,9 @@ Accounts.onCreateUser(function(options, user) {
     } else if (service === 'facebook') {
       user.name = user.services.facebook.name;
       user.profileImg = 'https://graph.facebook.com/v2.5/' + user.services.facebook.id + '/picture';
+    } else if (service === 'password') {
+      user.name = user.emails[0].address;
+      user.profileImg = undefined; //TODO fill in
     }
   }
 
