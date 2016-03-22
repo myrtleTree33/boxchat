@@ -24,18 +24,29 @@ Template.Login.events({
         throw new Meteor.error("Logout failed");
       }
     })
+  },
+
+  'click #btn-sign-up': function(event, template) {
+    var curr = template.stateCreateUser.get();
+    template.stateCreateUser.set(!curr);
   }
 });
 
 /*****************************************************************************/
 /* Login: Helpers */
 /*****************************************************************************/
-Template.Login.helpers({});
+Template.Login.helpers({
+  stateCreateUser: function() {
+    return Template.instance().stateCreateUser.get()
+  }
+});
 
 /*****************************************************************************/
 /* Login: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Login.onCreated(function() {});
+Template.Login.onCreated(function() {
+  this.stateCreateUser = new ReactiveVar(false);
+});
 
 Template.Login.onRendered(function() {});
 
