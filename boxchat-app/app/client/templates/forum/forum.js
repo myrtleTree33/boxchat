@@ -46,6 +46,12 @@ Template.Forum.helpers({
           },
           forumId: forumId
         });
+        query.push({
+          content:{
+            '$in': topics
+          },
+          forumId: forumId
+        });
       }
 
       if (query.length == 0) {
