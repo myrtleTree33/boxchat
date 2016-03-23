@@ -11,7 +11,7 @@
 
     <div class="row">
       <div class="ten wide column left aligned">
-        <form class="ui form">
+        <form class="ui form" id="form-forum-settings">
 
           <div class="fields">
             <div class="sixteen wide field">
@@ -40,6 +40,13 @@
                 <input type="text" name="topics" value="{{tagsString}}" placeholder="Topics..">
                 <i class="edit icon"></i>
               </div>
+            </div>
+          </div>
+
+          <div class="fields">
+            <div class="sixteen wide field">
+              <label>Admin</label>
+              <input name="admin" id="forum-admin" placeholder="Add admin by name or email..">
             </div>
           </div>
 
