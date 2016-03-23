@@ -1,80 +1,82 @@
 <template name="ForumSettings">
-  <div class="forum-settings ui grid container">
+  <div class="forum-settings">
+    <div class="ui grid container segment">
 
-    <div class="row">
-      <div class="sixteen wide column left aligned">
-        <div class="ui header">
-          <h2>Forum Settings</h2>
+      <div class="row">
+        <div class="sixteen wide column left aligned">
+          <div class="ui header">
+            <h2>Forum Settings</h2>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="ten wide column left aligned">
-        <form class="ui form" id="form-forum-settings">
+      <div class="row">
+        <div class="ten wide column left aligned">
+          <form class="ui form" id="form-forum-settings">
 
-          <div class="fields">
-            <div class="sixteen wide field">
-              <label>Title</label>
-              <div class="ui icon input">
-                <input type="text" name="title" value="{{title}}" placeholder="Title of your forum.">
-                <i class="edit icon"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="fields">
-            <div class="sixteen wide field">
-              <label>Description</label>
-              <div class="ui icon input">
-                <textarea name="description" id="forum-description" rows="2" placeholder="Elaborate on what your forum does." value="{{description}}"></textarea>
-                <i class="edit icon"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="fields">
-            <div class="sixteen wide field">
-              <label>Topic</label>
-              <div class="ui icon input">
-                <input type="text" name="topics" value="{{tagsString}}" placeholder="Topics..">
-                <i class="edit icon"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="fields">
-            <div class="sixteen wide field">
-              <label>Admin</label>
-              <input name="admin" id="forum-admin" placeholder="Add admin by name or email..">
-            </div>
-          </div>
-
-          <div class="fields">
-            <div class="sixteen wide field">
-              <label>Users</label>
-              <input name="users" id="forum-users" placeholder="Add users by name or email..">
-            </div>
-          </div>
-
-          <div class="ui hidden divider"></div>
-
-          <div class="inline fields">
-            <div class="sixteen wide field">
-              <button class="ui animated fade orange big button" type="submit">
-                <div class="visible content">
-                  Save changes
+            <div class="fields">
+              <div class="sixteen wide field">
+                <label>Title</label>
+                <div class="ui icon input">
+                  <input type="text" name="title" value="{{title}}" placeholder="Title of your forum.">
+                  <i class="edit icon"></i>
                 </div>
-                <div class="hidden content">
-                  Go for it!
-                </div>
-              </button>
+              </div>
             </div>
-          </div>
 
-        </form>
+            <div class="fields">
+              <div class="sixteen wide field">
+                <label>Description</label>
+                <div class="ui icon input">
+                  <textarea name="description" id="forum-description" rows="2" placeholder="Elaborate on what your forum does." value="{{description}}"></textarea>
+                  <i class="edit icon"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="fields">
+              <div class="sixteen wide field">
+                <label>Topic</label>
+                <div class="ui icon input">
+                  <input type="text" name="topics" value="{{tagsString}}" placeholder="Topics..">
+                  <i class="edit icon"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="fields">
+              <div class="sixteen wide field">
+                <label>Admin</label>
+                <input name="admin" id="forum-admin" placeholder="Add admin by name or email..">
+              </div>
+            </div>
+
+            <div class="fields">
+              <div class="sixteen wide field">
+                <label>Users</label>
+                <input name="users" id="forum-users" placeholder="Add users by name or email..">
+              </div>
+            </div>
+
+            <div class="ui hidden divider"></div>
+
+            <div class="inline fields">
+              <div class="sixteen wide field">
+                <button class="ui animated fade orange big button" type="submit">
+                  <div class="visible content">
+                    Save changes
+                  </div>
+                  <div class="hidden content">
+                    Go for it!
+                  </div>
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
       </div>
-
     </div>
   </div>
 </template>
