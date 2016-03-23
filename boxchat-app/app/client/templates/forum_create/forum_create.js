@@ -25,7 +25,9 @@ Template.ForumCreate.events({
         return;
       }
       Bert.alert('Forum successfully created!', 'success');
-      Router.go('forum', {id: result});
+      Router.go('forum', {
+        id: result
+      });
     });
   }
 });
@@ -33,17 +35,55 @@ Template.ForumCreate.events({
 /*****************************************************************************/
 /* ForumCreate: Helpers */
 /*****************************************************************************/
-Template.ForumCreate.helpers({
-});
+Template.ForumCreate.helpers({});
 
 /*****************************************************************************/
 /* ForumCreate: Lifecycle Hooks */
 /*****************************************************************************/
-Template.ForumCreate.onCreated(function () {
+Template.ForumCreate.onCreated(function() {
 });
 
-Template.ForumCreate.onRendered(function () {
+Template.ForumCreate.onRendered(function() {
+  $('#forum-users').selectize({
+    delimiter: ',',
+    persist: false,
+    create: function(input) {
+      return {
+        'profile.name': input
+      };
+    },
+    valueField: '_id',
+    labelField: 'profile.email',
+    searchField: ['profile.email'],
+    render: {
+      item: function(item, escape) {
+        var email = escape(item.profile.email);
+        return '<div>' +
+          ('<span class="forum-search-title">' + email + '</span>') +
+          '</div>';
+      },
+      option: function(item, escape) {
+        var email = escape(item.profile.email);
+        return '<div>' +
+          ('<span class="forum-search-title">' + email + '</span>') +
+          '</div>';
+      }
+    },
+    load: function(query, callback) {
+      console.log(query);
+      console.log(Meteor.users.find({}).fetch());
+      var results = Meteor.users.find({
+        'profile.name': {
+          $regex: '.*' + query + '.*',
+          $options: 'i'
+        }
+      }, {
+        limit: 7
+      }).fetch();
+      console.log(results);
+      callback(results);
+    }
+  });
 });
 
-Template.ForumCreate.onDestroyed(function () {
-});
+Template.ForumCreate.onDestroyed(function() {});

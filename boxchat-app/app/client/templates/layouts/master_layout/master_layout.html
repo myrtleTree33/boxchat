@@ -2,11 +2,15 @@
     {{#unless currentUser}}
       {{> Login}}
     {{else}}
+      {{#unless hasEmail}}
+        {{> AddEmail}}
+      {{else}}
       {{> Forumbar}}
-      <div class="pusher">
-        {{> Sidebar}}
-        {{> Topbar}}
-        {{> yield}}
-      </div>
+        <div class="pusher">
+          {{> Sidebar}}
+          {{> Topbar}}
+          {{> yield}}
+        </div>
+      {{/unless}}
     {{/unless}}
 </template>
