@@ -30,19 +30,33 @@ Template.Forum.helpers({
     var forumId = Router.current().params.id;
 
     function formatQuery(forumId, tags, topics) {
-      var query = {};
-      query.forumId = forumId;
+      var query = [];
       if (tags.length > 0) {
-        query.tags = {
-          '$in': tags
-        };
+        query.push({
+          tags:{
+            '$in': tags
+          },
+          forumId: forumId
+        });
       }
       if (topics.length > 0) {
-        query.title = {
-          '$in': topics
+        query.push({
+          title:{
+            '$in': topics
+          },
+          forumId: forumId
+        });
+      }
+
+      if (query.length == 0) {
+        return {
+          forumId: forumId
+        };
+      } else {
+        return {
+          $or: query
         };
       }
-      return query;
     }
 
     return Questions.find(formatQuery(forumId, tags, topics), {
