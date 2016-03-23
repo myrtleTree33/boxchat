@@ -16,17 +16,23 @@ Template.ForumSettings.events({
     var description = obj.description.value;
     var tags = obj.topics.value.split(',');
 
-    Forums.update({
-      _id: forumId
-    }, {$set: {
-      title: title,
-      description: description,
-      tags: tags,
-      all: all,
-      admin: admin,
-      students: students
-    }});
-
+    try {
+      Forums.update({
+        _id: forumId
+      }, {
+        $set: {
+          title: title,
+          description: description,
+          tags: tags,
+          all: all,
+          admin: admin,
+          students: students
+        }
+      });
+      Bert.alert('Forum successfully updated.', 'success');
+    } catch (e) {
+      Bert.alert('Oops!  Unable to update forum.', 'danger');
+    }
   }
 });
 
