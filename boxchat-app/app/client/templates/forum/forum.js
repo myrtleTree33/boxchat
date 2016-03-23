@@ -79,10 +79,7 @@ Template.Forum.helpers({
 Template.Forum.onCreated(function() {
   Session.set("forumQuery", '');
   var forumId = Router.current().params.id;
-  var userId = Meteor.user()._id;
-  Meteor.users.update({
-    _id: userId
-  }, {
+  Meteor.users.update(Meteor.userId(), {
     $set: {
       'profile.currForum': forumId
     }

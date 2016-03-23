@@ -1,23 +1,26 @@
 /*****************************************************************************/
 /* Home: Event Handlers */
 /*****************************************************************************/
-Template.Home.events({
-});
+Template.Home.events({});
 
 /*****************************************************************************/
 /* Home: Helpers */
 /*****************************************************************************/
-Template.Home.helpers({
-});
+Template.Home.helpers({});
 
 /*****************************************************************************/
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Home.onCreated(function () {
+Template.Home.onCreated(function() {});
+
+Template.Home.onRendered(function() {
+  // go to last opened forum page
+  var currForum = Meteor.user().profile[currForum];
+  if (currForum) {
+    Router.go('forum', {
+      id: currForum
+    });
+  }
 });
 
-Template.Home.onRendered(function () {
-});
-
-Template.Home.onDestroyed(function () {
-});
+Template.Home.onDestroyed(function() {});

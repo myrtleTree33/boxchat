@@ -10,7 +10,7 @@ Template.Forumbar.events({
 Template.Forumbar.helpers({
   forums: function() {
     var forums = Forums.find({
-      all: Meteor.user()._id
+      all: Meteor.userId()
     });
     return forums;
   }

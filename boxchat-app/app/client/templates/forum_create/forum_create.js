@@ -6,13 +6,15 @@ Template.ForumCreate.events({
     event.preventDefault();
     var obj = event.target;
     var title = obj.title.value;
+    // empty or array: S/O http://stackoverflow.com/questions/10346722/how-can-i-split-a-javascript-string-by-white-space-or-comma
+    var users = obj.users.value.split(/[ ,]+/).filter(Boolean);
     var description = obj.description.value;
     var tags = obj.topics.value.split(',');
 
     Forums.insert({
       createdAt: new Date(),
-      all: [Meteor.user()._id],
-      students: [],
+      all: [Meteor.user()._id].concat(users),
+      students: users,
       admin: [Meteor.user()._id],
       title: title,
       description: description,
@@ -49,29 +51,27 @@ Template.ForumCreate.onRendered(function() {
     persist: false,
     create: function(input) {
       return {
-        'profile.name': input
+        'name': input
       };
     },
     valueField: '_id',
-    labelField: 'profile.email',
-    searchField: ['profile.email'],
+    labelField: 'name',
+    searchField: ['name'],
     render: {
       item: function(item, escape) {
-        var email = escape(item.profile.email);
+        var name = escape(item.name);
         return '<div>' +
-          ('<span class="forum-search-title">' + email + '</span>') +
+          ('<span class="forum-search-title">' + name + '</span>') +
           '</div>';
       },
       option: function(item, escape) {
-        var email = escape(item.profile.email);
+        var name = escape(item.name);
         return '<div>' +
-          ('<span class="forum-search-title">' + email + '</span>') +
+          ('<span class="forum-search-title">' + name + '</span>') +
           '</div>';
       }
     },
     load: function(query, callback) {
-      console.log(query);
-      console.log(Meteor.users.find({}).fetch());
       var results = Meteor.users.find({
         'profile.name': {
           $regex: '.*' + query + '.*',
@@ -80,8 +80,13 @@ Template.ForumCreate.onRendered(function() {
       }, {
         limit: 7
       }).fetch();
-      console.log(results);
-      callback(results);
+      var _results = _.map(results, function(user) {
+        return {
+          _id: user._id,
+          name: user.profile['name']
+        }
+      });
+      callback(_results);
     }
   });
 });
