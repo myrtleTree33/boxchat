@@ -37,7 +37,7 @@
             <div class="sixteen wide field">
               <label>Topic</label>
               <div class="ui icon input">
-                <input type="text" name="topics" value="" placeholder="Topics..">
+                <input type="text" name="topics" value="{{tagsString}}" placeholder="Topics..">
                 <i class="edit icon"></i>
               </div>
             </div>
@@ -46,10 +46,7 @@
           <div class="fields">
             <div class="sixteen wide field">
               <label>Users</label>
-              <div class="ui icon input">
-                <textarea name="users" id="forum-users" rows="5" placeholder="Add users by name or email.."></textarea>
-                <i class="edit icon"></i>
-              </div>
+              <input name="users" id="forum-users" placeholder="Add users by name or email..">
             </div>
           </div>
 
