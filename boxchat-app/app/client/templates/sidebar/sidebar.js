@@ -33,6 +33,14 @@ Template.Sidebar.events({
   },
 
   'click #btn-settings': function(event) {
+    var forumId = Meteor.user().profile.currForum;
+    if (forumId) {
+      Router.go('forumSettings', {
+        id: forumId
+      });
+    } else { // handle case for new user
+      Router.go('/profile');
+    }
   }
 });
 

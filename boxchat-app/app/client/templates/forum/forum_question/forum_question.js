@@ -12,6 +12,9 @@ Template.ForumQuestion.events({
 /* Question: Helpers */
 /*****************************************************************************/
 Template.ForumQuestion.helpers({
+  userName: function() {
+    console.log(Template.instance().data);
+  }
 });
 
 /*****************************************************************************/
