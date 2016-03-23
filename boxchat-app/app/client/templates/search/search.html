@@ -2,10 +2,12 @@
   <div class="search">
     <div class="ui segment">
       <!-- Text input using Selectize JS -->
-      <form class="ui form">
+      <form class="ui form" id="forum-search">
         <div class="field">
-          <input type="text" id="input-tags" placeholder="Search for questions..">
+          <input type="text" id="input-tags" placeholder="Search for questions.." name="query">
         </div>
+        <!-- hack for auto submit on enter -->
+        <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />
       </form>
     </div>
   </div>

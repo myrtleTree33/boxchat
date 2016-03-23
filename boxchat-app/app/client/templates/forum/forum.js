@@ -15,11 +15,37 @@ Template.Forum.events({
 /*****************************************************************************/
 Template.Forum.helpers({
   questions: function() {
+    var queries = Session.get('forumQuery').split(',');
+    var tags = [];
+    var topics = [];
+    for (var i = 0; i < queries.length; i++) {
+      var q = queries[i];
+      if (q.charAt(0) === '#') {
+        tags.push(q);
+      } else if (q !== '') {
+        topics.push(q);
+      }
+    }
+
     var forumId = Router.current().params.id;
 
-    return Questions.find({
-      forumId: forumId
-    }, {
+    function formatQuery(forumId, tags, topics) {
+      var query = {};
+      query.forumId = forumId;
+      if (tags.length > 0) {
+        query.tags = {
+          '$in': tags
+        };
+      }
+      if (topics.length > 0) {
+        query.title = {
+          '$in': topics
+        };
+      }
+      return query;
+    }
+
+    return Questions.find(formatQuery(forumId, tags, topics), {
       sort: {
         createdAt: -1
       }
@@ -31,6 +57,7 @@ Template.Forum.helpers({
 /* Forum: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Forum.onCreated(function() {
+  Session.set("forumQuery", '');
   var forumId = Router.current().params.id;
   var userId = Meteor.user()._id;
   Meteor.users.update({
@@ -42,7 +69,6 @@ Template.Forum.onCreated(function() {
   });
 });
 
-Template.Forum.onRendered(function() {
-});
+Template.Forum.onRendered(function() {});
 
 Template.Forum.onDestroyed(function() {});

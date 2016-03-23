@@ -1,7 +1,13 @@
 /*****************************************************************************/
 /* Search: Event Handlers */
 /*****************************************************************************/
-Template.Search.events({});
+Template.Search.events({
+  'submit #forum-search': function(event, template) {
+    event.preventDefault();
+    var query = event.target.query.value;
+    Session.set('forumQuery', query);
+  }
+});
 
 /*****************************************************************************/
 /* Search: Helpers */
