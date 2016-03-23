@@ -10,10 +10,6 @@ Template.Sidebar.events({
     })
   },
 
-  'click #btn-profile': function(event) {
-      Router.go('/profile');
-  },
-
   'click #btn-forum': function(event) {
     var forumId = Meteor.user().profile.currForum;
     if (forumId) {
