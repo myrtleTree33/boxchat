@@ -13,6 +13,20 @@ Template.Ask.events({
     var tags = obj.topics.value.split(',');
     var forumId = Router.current().params.forumId;
 
+    _(tags).each(function(_tag) {
+      var tag = _tag;
+      if (_tag.charAt(0) !== '#') {
+        tag = '#' + _tag;
+      }
+      var existingTags = Tags.find({tag: tag, forumId: forumId}).fetch();
+      if (existingTags.length === 0) { // unique tag
+        Tags.insert({
+          tag: tag,
+          forumId: forumId
+        });
+      }
+    })
+
     Questions.insert({
       authorId: Meteor.user()._id,
       createdAt: new Date(),
