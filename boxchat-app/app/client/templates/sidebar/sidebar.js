@@ -10,10 +10,6 @@ Template.Sidebar.events({
     })
   },
 
-  'click #btn-profile': function(event) {
-      Router.go('/profile');
-  },
-
   'click #btn-forum': function(event) {
     var forumId = Meteor.user().profile.currForum;
     if (forumId) {
@@ -33,6 +29,14 @@ Template.Sidebar.events({
   },
 
   'click #btn-settings': function(event) {
+    var forumId = Meteor.user().profile.currForum;
+    if (forumId) {
+      Router.go('forumSettings', {
+        id: forumId
+      });
+    } else { // handle case for new user
+      Router.go('/profile');
+    }
   }
 });
 

@@ -8,7 +8,12 @@ Template.Topbar.events({
         throw new Meteor.error("Logout failed");
       }
     })
+  },
+
+  'click #btn-profile': function(event) {
+      Router.go('/profile');
   }
+
 });
 
 /*****************************************************************************/

@@ -94,3 +94,10 @@ Router.route('question/view/:id', {
   controller: 'QuestionController',
   where: 'client'
 });
+
+
+Router.route('forum/settings/:id', {
+  name: 'forumSettings',
+  controller: 'ForumSettingsController',
+  where: 'client'
+});
