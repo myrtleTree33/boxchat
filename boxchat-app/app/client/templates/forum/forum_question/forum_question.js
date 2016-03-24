@@ -12,6 +12,13 @@ Template.ForumQuestion.events({
 /* Question: Helpers */
 /*****************************************************************************/
 Template.ForumQuestion.helpers({
+  userName: function() {
+    return Meteor.users.findOne({_id: Template.instance().data.authorId}).profile['name'];
+  }
+  
+/*  createdDate: function(){
+    return Meteor.users.findOne({_id: Template.instance().data.createdAt}).profile['name'];
+  }*/
 });
 
 /*****************************************************************************/

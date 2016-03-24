@@ -94,3 +94,16 @@ Router.route('question/view/:id', {
   controller: 'QuestionController',
   where: 'client'
 });
+
+
+Router.route('side_menu', {
+  name: 'sideMenu',
+  controller: 'SideMenuController',
+  where: 'client'
+});
+
+Router.route('forum_menu', {
+  name: 'forumMenu',
+  controller: 'ForumMenuController',
+  where: 'client'
+});

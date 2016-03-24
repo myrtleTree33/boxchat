@@ -1,0 +1,51 @@
+<template name="SideMenu">
+  <div class="ui vertical menu">
+  
+  <div class="item">
+    <a class="ui logo icon image" href="/">
+      <img src="/images/logo.png">
+    </a>
+    <a href="/">
+      <b>NUS FORUM</b>
+    </a>
+  </div>
+  
+  <div class="item" id="currentForum">
+    <b>{{currentForum}}</b>
+  </div>
+  
+  <div class="item">
+    <b>Forums</b>
+    <div class="menu">
+    {{> Forumbar}}
+    <div class="dropdown item">
+      More
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  <div class="item zc_clickable" id="profile">
+    <b>Me</b>
+  </div>
+  
+  <div class="item zc_clickable">
+    <b>Settings</b>
+  </div>
+ 
+ <!--
+  <div class="ui dropdown item">
+    More
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <a class="item"><i class="edit icon"></i> Edit Profile</a>
+      <a class="item"><i class="globe icon"></i> Choose Language</a>
+      <a class="item"><i class="settings icon"></i> Account Settings</a>
+    </div>
+  </div>
+  -->
+</div>
+</template>

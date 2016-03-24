@@ -22,3 +22,11 @@ Meteor.publish(null, function() {
 Meteor.publish('forum', function () {
   return Forum.find();
 });
+
+Meteor.publish('sideMenu', function () {
+  return SideMenu.find();
+});
+
+Meteor.publish('forumMenu', function () {
+  return ForumMenu.find();
+});

@@ -5,11 +5,15 @@
       {{#unless hasEmail}}
         {{> AddEmail}}
       {{else}}
-      {{> Forumbar}}
-        <div class="pusher">
-          {{> Sidebar}}
-          {{> Topbar}}
-          {{> yield}}
+      <!--{{> Forumbar}}-->
+        <div class="ui grid">
+          <div class="three wide column left aligned">  
+            {{> SideMenu}}
+          </div>
+          <div class="pusher eleven wide column left aligned">
+            {{> Topbar}}
+            {{> yield}}
+          </div>
         </div>
       {{/unless}}
     {{/unless}}

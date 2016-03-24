@@ -2,7 +2,8 @@
   <div class="forum-question ui segment">
 
     <div class="ui two column stackable grid container">
-      <div class="four wide column middle aligned content">
+      <div class="one wide column middle aligned content">
+        
         <div class="ui small statistics">
 
           <div class="statistic">
@@ -30,9 +31,29 @@
       <div class="twelve wide column middle aligned content">
         <div class="ui medium header">
           <a class="forum-question-title">
-            {{title}}
+            <h3 class="canOverflow">{{title}}</h3>
           </a>
         </div>
+      </div>
+      
+      <div class="three wide column middle aligned content">
+        <div class="row">
+          <div class="ui medium header">
+            <h4 class="forum-question-title canOverflow">
+              {{userName}}
+            </h4>
+          </div>
+        </div>
+        <div class = "row">
+        </div>
+        <div class="row">
+          <div class="ui medium header">
+            <h4 class="forum-question-title canOverflow">
+              {{createdAt}}
+            </h4>
+          </div>
+        </div>
+        
       </div>
 
     </div>
