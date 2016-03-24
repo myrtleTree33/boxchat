@@ -13,7 +13,7 @@ Template.ForumQuestion.events({
 /*****************************************************************************/
 Template.ForumQuestion.helpers({
   userName: function() {
-    console.log(Template.instance().data);
+    // console.log(Template.instance().data);
   }
 });
 

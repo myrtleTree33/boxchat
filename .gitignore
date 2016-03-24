@@ -1,3 +1,4 @@
 .vagrant
 .git
 config.private.json
+mup.json
