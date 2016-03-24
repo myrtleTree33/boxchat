@@ -1,76 +1,78 @@
 <template name="Login">
-  <div class="login ui middle aligned center aligned grid container">
-    <!-- {{#if currentUser}}
+  <div class="login ui middle aligned grid">
+    <div class="ui middle aligned center aligned grid container">
+      <!-- {{#if currentUser}}
       {{currentUser.services.facebook.name}} -
       {{currentUser.services.facebook.gender}}
       <button id="logout">Logout</button>
     {{else}}
       <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
     {{/if}} -->
-    {{#unless stateCreateUser}}
-    <div class="column">
-      <div class="ui sixteen wide column">
-        <h2 class="center aligned ui header">Sign in</h2>
-      </div>
-      <div class="ui section divider"></div>
-      <div class="content">
+      {{#unless stateCreateUser}}
+      <div class="column">
         <div class="ui sixteen wide column">
-          <div class="ui three column stackable grid">
-
-            <div class="column">
-              <button class="ui facebook button fluid huge" id="facebook-login">
-                <i class="facebook icon"></i> Sign in with Facebook
-              </button>
-            </div>
-
-            <div class="column">
-              <button class="ui google plus button fluid huge">
-                <i class="google plus icon"></i> Sign in with Google+
-              </button>
-            </div>
-
-            <div class="column">
-              <button class="ui twitter button fluid huge" id="twitter-login">
-                <i class="twitter icon"></i> Sign in with Twitter
-              </button>
-            </div>
-
-          </div>
+          <h2 class="center aligned ui header">Sign in</h2>
         </div>
-        <div class="ui sixteen wide column">
-          <div class="ui section horizontal divider">
-            Or
-          </div>
-          <form class="ui large form" id="form-login-password">
-            <div class="ui stacked element">
+        <div class="ui section divider"></div>
+        <div class="content">
+          <div class="ui sixteen wide column">
+            <div class="ui three column stackable grid">
 
-              <div class="field">
-                <div class="ui left icon input">
-                  <i class="user icon"></i>
-                  <input name="emailAddress" placeholder="E-mail address" type="text">
-                </div>
+              <div class="column">
+                <button class="ui facebook button fluid huge" id="facebook-login">
+                  <i class="facebook icon"></i> Sign in with Facebook
+                </button>
               </div>
 
-              <div class="field">
-                <div class="ui left icon input">
-                  <i class="lock icon"></i>
-                  <input name="password" placeholder="Password" type="password">
-                </div>
+              <div class="column">
+                <button class="ui google plus button fluid huge">
+                  <i class="google plus icon"></i> Sign in with Google+
+                </button>
               </div>
 
-              <input type="submit" value="Login" class="ui fluid large teal submit button">
-
-              <div class="error message"></div>
+              <div class="column">
+                <button class="ui twitter button fluid huge" id="twitter-login">
+                  <i class="twitter icon"></i> Sign in with Twitter
+                </button>
+              </div>
 
             </div>
-          </form>
-          <div class="ui message">
-            New to us?
-            <a href="#" id="btn-sign-up">Sign up with a password.</a>
+          </div>
+          <div class="ui sixteen wide column">
+            <div class="ui section horizontal divider">
+              Or
+            </div>
+            <form class="ui large form" id="form-login-password">
+              <div class="ui stacked element">
+
+                <div class="field">
+                  <div class="ui left icon input">
+                    <i class="user icon"></i>
+                    <input name="emailAddress" placeholder="E-mail address" type="text">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="ui left icon input">
+                    <i class="lock icon"></i>
+                    <input name="password" placeholder="Password" type="password">
+                  </div>
+                </div>
+
+                <input type="submit" value="Login" class="ui fluid large teal submit button">
+
+                <div class="error message"></div>
+
+              </div>
+            </form>
+            <div class="ui message">
+              New to us?
+              <a href="#" id="btn-sign-up">Sign up with a password.</a>
+            </div>
           </div>
         </div>
       </div>
+      {{else}} {{> Signup}} {{/unless}}
     </div>
-    {{else}} {{> Signup}} {{/unless}}
   </div>
 </template>

@@ -10,14 +10,25 @@ Template.Ask.events({
     var obj = event.target;
     var title = obj.title.value;
     var content = obj.content.value;
-    var tags = obj.topics.value.split(',');
+    var tags = obj.topics.value.split(/[ ,]+/).filter(Boolean);
     var forumId = Router.current().params.forumId;
 
-    _(tags).each(function(_tag) {
-      var tag = _tag;
-      if (_tag.charAt(0) !== '#') {
-        tag = '#' + _tag;
+    var escapeTags = function(tags) {
+      var output = [];
+      for (var i = 0; i < tags.length; i++) {
+        var t = tags[i];
+        console.log(t)
+        if (t.charAt(0) !== '#') {
+          console.log('here');
+          t = '#' + t;
+        }
+        output.push(t);
       }
+      return output;
+    }
+    tags = escapeTags(tags); // properly format hashtag
+
+    _(tags).each(function(tag) {
       var existingTags = Tags.find({tag: tag, forumId: forumId}).fetch();
       if (existingTags.length === 0) { // unique tag
         Tags.insert({

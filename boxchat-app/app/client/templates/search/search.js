@@ -6,6 +6,16 @@ Template.Search.events({
     event.preventDefault();
     var query = event.target.query.value;
     Session.set('forumQuery', query);
+  },
+
+  'click .btn-sticky-tag': function(event, template) {
+    var tag = event.target.value;
+    var searchFieldSelect = template.searchFieldSelect.get();
+    searchFieldSelect.addOption({
+      title: tag
+    });
+    searchFieldSelect.refreshOptions();
+    searchFieldSelect.addItem(tag, false);
   }
 });
 
@@ -17,10 +27,12 @@ Template.Search.helpers({});
 /*****************************************************************************/
 /* Search: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Search.onCreated(function() {});
+Template.Search.onCreated(function() {
+  this.blabla = new ReactiveVar('');
+});
 
 Template.Search.onRendered(function() {
-  $('#input-tags').selectize({
+  var searchField = $('#input-tags').selectize({
     delimiter: ',',
     persist: false,
     create: function(input) {
@@ -88,6 +100,9 @@ Template.Search.onRendered(function() {
       callback(results);
     }
   });
+
+  // expose select bar as reactive field
+  this.searchFieldSelect = new ReactiveVar(searchField[0].selectize);
 });
 
 Template.Search.onDestroyed(function() {});

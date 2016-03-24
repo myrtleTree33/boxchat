@@ -19,6 +19,12 @@ Template.Question.helpers({
         createdAt: -1
       }
     });
+  },
+  interactionsCount: function() {
+    var questionId = Router.current().params.id;
+    return Interactions.find({
+      questionId: questionId
+    }).count();
   }
 });
 

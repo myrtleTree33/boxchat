@@ -7,6 +7,12 @@
         <!-- Main question -->
         {{#with question}} {{> QuestionMain}} {{/with}}
         <!-- interactions -->
+        <div class="ui hidden divider"></div>
+        <div class="ui hidden divider"></div>
+        <div class="ui horizontal divider">
+          <h3 class="ui header">{{interactionsCount}} Interactions</h3>
+        </div>
+        <div class="ui hidden divider"></div>
         {{#each interactions}} {{> Interaction}} {{/each}}
 
         <!-- Editor -->
