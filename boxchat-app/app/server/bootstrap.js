@@ -2,6 +2,9 @@ Meteor.startup(function() {
   // load the config file
   var config = JSON.parse(Assets.getText('config.private.json'));
 
+  console.log('SETTINGS ---------------------------');
+  console.log(Meteor.settings);
+
   // sendGrid
   process.env.MAIL_URL = config.sendGrid.MAIL_URL;
 
