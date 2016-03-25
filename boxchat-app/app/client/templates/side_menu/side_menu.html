@@ -1,25 +1,25 @@
 <template name="SideMenu">
-  <div class="ui vertical menu">
+  <div class="ui vertical menu" id="sideMenu">
   
-  <div class="item">
+  <div class="item" id="nusforum">
     <a class="ui logo icon image" href="/">
-      <img src="/images/logo.png">
-    </a>
-    <a href="/">
+      <img src="http://icons.iconarchive.com/icons/arrioch/halloween/256/skull-icon.png" id="logo">
+    </a>&nbsp;
+    <a href="/" style="color:black">
       <b>NUS FORUM</b>
     </a>
   </div>
   
-  <div class="item" id="currentForum">
+  <div class="item zc_clickable" id="currentForum">
     <b>{{currentForum}}</b>
   </div>
   
-  <div class="item">
+  <div class="item" id="forums">
     <b>Forums</b>
     <div class="menu">
     {{> Forumbar}}
     <div class="dropdown item">
-      More
+      <b>More</b>
       <i class="dropdown icon"></i>
       <div class="menu">
         

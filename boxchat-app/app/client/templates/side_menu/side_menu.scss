@@ -4,6 +4,24 @@
 .side-menu {
 }
 
-.zc_clickable:hover {
-    cursor:pointer;
+#sideMenu {
+    height:100vh;
+    position:fixed;
+    color:white;
+    border:none !important;
+    //background-color:orange;
+}
+
+.item {
+    border:none !important;
+    box-shadow:none !important;
+}
+
+#nusforum {
+    
+}
+
+#logo {
+    width:20px;
+    height:20px;
 }

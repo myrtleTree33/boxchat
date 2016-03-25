@@ -1,12 +1,12 @@
 <template name="ForumQuestion">
   <div class="forum-question ui segment">
 
-    <div class="ui two column stackable grid container">
-      <div class="one wide column middle aligned content">
-        
-        <div class="ui small statistics">
-
-          <div class="statistic">
+<!-- First Row -->
+    <div class="row ui grid">
+      <!-- Stats -->
+      <div class="two wide column middle aligned content">
+        <div class="ui mini horizontal statistics">
+          <div class="red statistic">
             <div class="value">
               {{votes}}
             </div>
@@ -14,8 +14,38 @@
               Votes
             </div>
           </div>
-
-          <div class="statistic">
+        </div>
+      </div>
+      <!-- Title -->
+      <div class="ten wide column middle aligned content">
+        <div class="ui medium header">
+          <a class="forum-question-title canOverflow">
+            {{title}}
+          </a>
+        </div>
+      </div>
+      <!-- Created by/at -->
+      <div class="four wide column middle aligned content">
+        <div class="ui grid">
+        <div class="two wide column">
+          <i class="user icon"></i>
+        </div>
+        <div class="eight wide column">
+          <p class="zc_name canOverflow">{{userName}}</p>
+        </div>
+        <div class="six wide column">
+          <p class="zc_time">{{creationTime}}</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+<!-- Second Row -->
+    <div class="row ui grid">
+      <!-- Stats -->
+      <div class="two wide column middle aligned content">
+        <div class="ui mini horizontal statistics">
+          <div class="yellow statistic">
             <div class="value">
               {{views}}
             </div>
@@ -23,9 +53,57 @@
               Views
             </div>
           </div>
-
         </div>
-
+      </div>
+      <!-- Description -->
+      <div class="ten wide column middle aligned content">
+        <p class="canOverflow">Question description</p>
+      </div>
+      <!-- Last replied by/at -->
+      <div class="four wide column middle aligned content">
+        <div class="ui grid">
+        <div class="two wide column">
+          <i class="reply icon"></i>
+        </div>
+        <div class="eight wide column">
+          <!--
+          <p class="zc_name canOverflow">{{lastRepliedBy}}</p>
+          -->
+        </div>
+        <div class="six wide column">
+          <!--
+          <p class="zc_time">{{lastReplyTime}}</p>
+          -->
+        </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</template>
+    
+<!--
+    <div class="ui two column stackable grid container">
+      
+      <div class="two wide column middle aligned content zc_stats_wrapper">
+        <div class="ui mini horizontal statistics">
+          <div class="red statistic">
+            <div class="value">
+              {{votes}}
+            </div>
+            <div class="label">
+              Votes
+            </div>
+          </div>
+          <div class="yellow statistic">
+            <div class="value">
+              {{views}}
+            </div>
+            <div class="label">
+              Views
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="twelve wide column middle aligned content">
@@ -34,11 +112,14 @@
             <h3 class="canOverflow">{{title}}</h3>
           </a>
         </div>
+        <div>
+          <p>Testing<br>Testing<br>Testing</p>
+        </div>
       </div>
       
-      <div class="three wide column middle aligned content">
+      <div class="two wide column middle aligned content">
         <div class="row">
-          <div class="ui medium header">
+          <div class="ui mini header">
             <h4 class="forum-question-title canOverflow">
               {{userName}}
             </h4>
@@ -47,7 +128,7 @@
         <div class = "row">
         </div>
         <div class="row">
-          <div class="ui medium header">
+          <div class="ui mini header">
             <h4 class="forum-question-title canOverflow">
               {{createdAt}}
             </h4>
@@ -60,3 +141,4 @@
 
   </div>
 </template>
+-->

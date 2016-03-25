@@ -2,7 +2,7 @@
 /* ForumbarItem: Event Handlers */
 /*****************************************************************************/
 Template.ForumbarItem.events({
-  'click .forumbar.item': function(event, template) {
+  'click .item': function(event, template) {
     // Close the forum bar on click
     /*
     $('.forumbar.sidebar')

@@ -15,7 +15,8 @@ Template.MasterLayout.helpers({
     
     // success
     return true;
-  }
+  },
+
 });
 
 Template.MasterLayout.events({

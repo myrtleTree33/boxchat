@@ -16,6 +16,9 @@ Template.SideMenu.events({
     'click #profile': function(event) {
         Router.go('/profile');
     },
+    
+    'click #forums': function() {
+    }
 });
 
 /*****************************************************************************/
@@ -23,7 +26,10 @@ Template.SideMenu.events({
 /*****************************************************************************/
 Template.SideMenu.helpers({
     currentForum: function() {
-        return Meteor.user().profile.currForum;
+        var forumId = Meteor.user().profile.currForum;
+        var title = Forums.findOne({_id: forumId}).title;
+        console.log(title);
+        return title;
     }
 });
 
