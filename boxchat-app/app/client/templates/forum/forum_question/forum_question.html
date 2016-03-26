@@ -2,7 +2,7 @@
   <div class="forum-question ui segment">
 
     <div class="ui two column stackable grid container">
-      <div class="four wide column middle aligned content">
+      <div class="three wide column middle aligned content">
         <div class="ui small statistics">
 
           <div class="statistic">
@@ -27,12 +27,18 @@
 
       </div>
 
-      <div class="twelve wide column middle aligned content">
+      <div class="ten wide column middle aligned content">
         <div class="ui medium header">
           <a class="forum-question-title">
             {{title}}{{userName}}
           </a>
         </div>
+      </div>
+
+      <div class="three wide column middle aligned content">
+        {{#with questionAuthor}}
+          {{> ForumQuestionRight}}
+        {{/with}}
       </div>
 
     </div>
