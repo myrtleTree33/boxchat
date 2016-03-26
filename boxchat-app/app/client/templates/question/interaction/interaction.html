@@ -1,6 +1,9 @@
 <template name="Interaction">
-  <div class="interaction ui segment grid">
-    <div class="row">
+  <div class="interaction ui segment">
+    <a class="ui orange right ribbon label">Interaction</a>
+    <div class="ui grid">
+
+      <div class="row">
 
         <div class="two wide column center aligned">
 
@@ -35,9 +38,11 @@
 
         </div>
 
-      <div class="fourteen wide column left aligned">
-        <div class="ui content">
-          {{#markdown}}{{content}}{{/markdown}}
+        <div class="fourteen wide column left aligned">
+          {{#with interactionAuthor}} {{> InteractionAuthor}} {{/with}}
+          <div class="ui content">
+            {{#markdown}}{{content}}{{/markdown}}
+          </div>
         </div>
       </div>
     </div>

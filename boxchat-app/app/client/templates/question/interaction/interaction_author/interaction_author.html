@@ -1,0 +1,23 @@
+<template name="InteractionAuthor">
+  <div class="interaction-author ui grid">
+
+    <div class="sixteen wide column">
+      <div class="ui comments">
+        <div class="comment">
+          <a class="avatar">
+            <img class="ui small circular image" src="{{author.profile.profileImg}}" alt="" />
+          </a>
+          <div class="content">
+            <a class="author">{{author.profile.name}}</a>
+            <div class="text tiny">
+              Posted {{creationTime}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui hidden divider">
+    </div>
+  </div>
+</template>
