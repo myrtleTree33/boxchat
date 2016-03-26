@@ -1,29 +1,31 @@
 /*****************************************************************************/
-/* ForumbarItem: Event Handlers */
+/* ForumbarItemCreate: Event Handlers */
 /*****************************************************************************/
-Template.ForumbarItem.events({
-  'click .forumbar.item': function(event, template) {
+Template.ForumbarItemCreate.events({
+  'click .forumbar-create': function(event, template) {
     // Close the forum bar on click
     $('.forumbar.sidebar')
       .sidebar('setting', 'transition', 'push')
       .sidebar('toggle');
-    Router.go('forum', {
-      id: template.data._id
-    });
+    console.log('hello world');
+    Router.go('forumCreate');
   }
 });
 
 /*****************************************************************************/
-/* ForumbarItem: Helpers */
+/* ForumbarItemCreate: Helpers */
 /*****************************************************************************/
-Template.ForumbarItem.helpers({});
-
-/*****************************************************************************/
-/* ForumbarItem: Lifecycle Hooks */
-/*****************************************************************************/
-Template.ForumbarItem.onCreated(function() {
+Template.ForumbarItemCreate.helpers({
 });
 
-Template.ForumbarItem.onRendered(function() {});
+/*****************************************************************************/
+/* ForumbarItemCreate: Lifecycle Hooks */
+/*****************************************************************************/
+Template.ForumbarItemCreate.onCreated(function () {
+});
 
-Template.ForumbarItem.onDestroyed(function() {});
+Template.ForumbarItemCreate.onRendered(function () {
+});
+
+Template.ForumbarItemCreate.onDestroyed(function () {
+});
