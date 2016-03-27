@@ -16,6 +16,7 @@ Template.InteractionEditor.events({
       authorId: Meteor.user()._id,
       createdAt: new Date(),
       questionId: questionId,
+      forumId: Template.instance().data.forumId,
       content: content,
       votes: 0
     }, function(err, result) {
