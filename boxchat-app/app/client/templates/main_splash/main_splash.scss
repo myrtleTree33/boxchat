@@ -29,11 +29,17 @@ $flat-grey: #2C3E50;
 
 .main-splash {
   height: 100vh;
+  background: url('img/bg/gplaypattern.png') !important;
+}
+
+.div-0 {
+  min-height: 10%;
+  max-height: 10%;
 }
 
 .div-1 {
-  min-height: 20%;
-  max-height: 20%;
+  min-height: 10%;
+  max-height: 10%;
 }
 
 .div-2 {
@@ -48,6 +54,8 @@ $flat-grey: #2C3E50;
 }
 
 .div-4 {
+  visibility: hidden;
+  display: none;
   min-height: 100vh;
   background: $flat-grey !important;
 }

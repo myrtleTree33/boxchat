@@ -37,7 +37,19 @@ Template.Sidebar.events({
     } else { // handle case for new user
       Router.go('/profile');
     }
+  },
+
+  'click #btn-analytics': function(event) {
+    var forumId = Meteor.user().profile.currForum;
+    if (forumId) {
+      Router.go('forumAnalytics', {
+        id: forumId
+      });
+    } else { // handle case for new user
+      Router.go('/profile');
+    }
   }
+
 });
 
 /*****************************************************************************/
