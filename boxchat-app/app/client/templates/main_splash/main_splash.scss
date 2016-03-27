@@ -1,0 +1,69 @@
+/*****************************************************************************/
+/* MainSplash: Style */
+/*****************************************************************************/
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+$flat-red: #E74C3C;
+$flat-grey: #2C3E50;
+
+.main-splash {
+  height: 100vh;
+  background: url('img/bg/gplaypattern.png') !important;
+}
+
+.div-0 {
+  min-height: 10%;
+  max-height: 10%;
+}
+
+.div-1 {
+  min-height: 10%;
+  max-height: 10%;
+}
+
+.div-2 {
+  min-height: 70%;
+  max-height: 70%;
+}
+
+.div-3 {
+  min-height: 10%;
+  max-height: 10%;
+  background: $flat-grey !important;
+}
+
+.div-4 {
+  visibility: hidden;
+  display: none;
+  min-height: 100vh;
+  background: $flat-grey !important;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.splash-tagline {
+  font-size: 2em;
+}

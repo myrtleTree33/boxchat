@@ -1,7 +1,7 @@
 <template name="MasterLayout">
     {{#unless currentUser}}
       <div class="pusher">
-        {{> Login}}
+        {{> MainSplash}}
       </div>
     {{else}}
       {{#unless hasEmail}}

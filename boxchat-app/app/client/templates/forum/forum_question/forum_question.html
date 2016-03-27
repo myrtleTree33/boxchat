@@ -2,10 +2,10 @@
   <div class="forum-question ui segment">
 
     <div class="ui two column stackable grid container">
-      <div class="four wide column middle aligned content">
-        <div class="ui small statistics">
+      <div class="three wide column middle aligned content">
+        <div class="ui tiny middle aligned content statistics">
 
-          <div class="statistic">
+          <div class="middle aligned content statistic">
             <div class="value">
               {{votes}}
             </div>
@@ -14,7 +14,7 @@
             </div>
           </div>
 
-          <div class="statistic">
+          <div class="middle aligned content statistic">
             <div class="value">
               {{views}}
             </div>
@@ -27,12 +27,20 @@
 
       </div>
 
-      <div class="twelve wide column middle aligned content">
-        <div class="ui medium header">
+      <div class="ten wide column middle aligned">
+        <div class="ui medium small header">
           <a class="forum-question-title">
+            <!-- <p> -->
             {{title}}{{userName}}
+            <!-- </p> -->
           </a>
         </div>
+      </div>
+
+      <div class="three wide column middle aligned content">
+        {{#with questionAuthor}}
+          {{> ForumQuestionRight}}
+        {{/with}}
       </div>
 
     </div>

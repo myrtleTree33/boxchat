@@ -18,6 +18,14 @@ Template.Interaction.events({
 /* Interaction: Helpers */
 /*****************************************************************************/
 Template.Interaction.helpers({
+  interactionAuthor: function() {
+    var author = Meteor.users.findOne({_id: Template.instance().data.authorId}),
+    interaction = Template.instance().data;
+    return {
+      author: author,
+      interaction: interaction
+    };
+  }
 });
 
 /*****************************************************************************/

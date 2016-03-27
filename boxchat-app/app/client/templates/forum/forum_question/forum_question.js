@@ -12,8 +12,13 @@ Template.ForumQuestion.events({
 /* Question: Helpers */
 /*****************************************************************************/
 Template.ForumQuestion.helpers({
-  userName: function() {
-    // console.log(Template.instance().data);
+  questionAuthor: function() {
+    var author = Meteor.users.findOne({_id: Template.instance().data.authorId}),
+    question = Template.instance().data;
+    return {
+      author: author,
+      question: question
+    };
   }
 });
 

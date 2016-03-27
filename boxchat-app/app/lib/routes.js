@@ -101,3 +101,10 @@ Router.route('forum/settings/:id', {
   controller: 'ForumSettingsController',
   where: 'client'
 });
+
+
+Router.route('forum/analytics/:id', {
+  name: 'forumAnalytics',
+  controller: 'ForumAnalyticsController',
+  where: 'client'
+});
