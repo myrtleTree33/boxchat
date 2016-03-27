@@ -2,9 +2,6 @@ Meteor.startup(function() {
   // load the config file
   var config = Meteor.settings;
 
-  console.log('SETTINGS ---------------------------');
-  console.log(Meteor.settings);
-
   // sendGrid
   process.env.MAIL_URL = config.sendGrid.MAIL_URL;
 

@@ -15,7 +15,7 @@ Template.Home.onCreated(function() {});
 
 Template.Home.onRendered(function() {
   // go to last opened forum page
-  var currForum = Meteor.user().profile[currForum];
+  var currForum = Meteor.user().profile['currForum'];
   if (currForum) {
     Router.go('forum', {
       id: currForum
