@@ -18,12 +18,16 @@ Template.QuestionMain.events({
 /* QuestionMain: Helpers */
 /*****************************************************************************/
 Template.QuestionMain.helpers({
+    creationTime: function() {
+    return moment(Template.instance().data.question.createdAt).fromNow();
+  }
 });
 
 /*****************************************************************************/
 /* QuestionMain: Lifecycle Hooks */
 /*****************************************************************************/
 Template.QuestionMain.onCreated(function () {
+  console.log(Template.instance().data);
 });
 
 Template.QuestionMain.onRendered(function () {
