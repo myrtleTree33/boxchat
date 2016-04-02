@@ -19,7 +19,28 @@ Template.Profile.helpers({
         createdAt: -1
       }
     });
+  },
+  
+  displayedName: function() {
+    return Meteor.user().profile.displayedName;
+  },
+  
+  self_description: function() {
+    return Meteor.user().profile.self_description;
+  },
+  
+  enrolledForums: function() {
+    return Meteor.user().profile.enrolledForums;
+  },
+  
+  askedQuestions: function() {
+    return Meteor.user().profile.askedQuestions;
+  },
+  
+  answeredQuestions: function() {
+    return Meteor.user().profile.answeredQuestions;
   }
+  
 });
 
 /*****************************************************************************/

@@ -18,6 +18,11 @@ Accounts.onCreateUser(function(options, user) {
     user.profile = user.profile || {};
     user.profile['currForum'] = undefined;
     user.profile['emails'] = [];
+    user.profile['displayedName'] = undefined;
+    user.profile['self_description'] = undefined;
+    user.profile['enrolledForums'] = [];
+    user.profile['answeredQuestions'] = [];
+    user.profile['askedQuestions'] = [];
 
     if (service === 'twitter') {
       user.profile['name'] = user.services.twitter.screenName;
