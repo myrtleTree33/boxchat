@@ -1,7 +1,23 @@
 <template name="Profile">
-  <div class="profile">
+  <br />
+  <div class="profile ui grid">
+    <div class="two wide column">
+    </div>
+    <div class="eight wide computer fourteen wide tablet column centered grid">
+      <div class="column">
+        {{#each forums}}
+          <div class="forums">{{this.title}}</div>
+        {{/each}}
+      </div>
+    </div>
+    <div class="computer only six wide column">
+    </div>
+  </div>
+</template>
+    
 
 
+<!--
     <div class="ui grid container">
 
       <div class="sixteen wide column left aligned">
@@ -16,13 +32,13 @@
       </div>
 
       <!-- Insert grid for past contributions to forums -->
-
+<!--
       <div class="sixteen wide column left aligned">
         Past contributions to forums grid goes here (similar to GitHub)
       </div>
 
       <!-- Forums -->
-
+<!--
       <div class="sixteen wide column left aligned">
         <h2 class="ui header">Forums</h2>
         <div class="ui relaxed divided list">
@@ -35,7 +51,7 @@
       <div class="ui hidden divider"></div>
 
       <!-- Posts -->
-
+<!--
       <div class="sixteen wide column left aligned">
         <h2 class="ui header">Posts</h2>
         <div class="ui relaxed divided list">
@@ -67,3 +83,4 @@
 
   </div>
 </template>
+-->
