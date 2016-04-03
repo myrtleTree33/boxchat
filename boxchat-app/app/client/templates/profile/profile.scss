@@ -6,7 +6,10 @@
     //border:1px solid #BBBBBB;
     border-radius:3px;
     margin-bottom:40px;
-    padding:20px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:10px;
+    padding-top:10px;
     box-shadow:0px 0px 2px #AAAAAA;
 }
 
@@ -33,17 +36,14 @@ hr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-h3 {
+.package h3 {
     display:inline-block;
+    margin:0px !important;
 }
 
 .zc_menu {
     display:inline-block !important;
     margin-right:40px;
-}
-
-.zc_menu h3 {
-    font-weight:normal;
 }
 
 .profile a {
@@ -53,4 +53,5 @@ h3 {
 
 .profile a:hover {
     color:darkblue !important;
+    text-decoration:underline;
 }

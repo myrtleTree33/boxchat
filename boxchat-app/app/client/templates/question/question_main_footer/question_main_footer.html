@@ -1,22 +1,27 @@
 <template name="QuestionMainFooter">
   <div class="question-main-footer">
-    <div class="ui comments">
+<div class="ui comments">
   <div class="comment">
-<a><img class="ui mini image" src="{{author.profile.profileImg}}" alt="" /></a>
     <div class="content">
-      <a class="author">{{author.profile.name}}</a>
+      
+      <div class="picture">
+          <a><img class="ui left floated mini image" src="http://semantic-ui.com/images/avatar/small/joe.jpg" alt="" /></a>
+      </div>
+      
+      <div class="name">
+        <a class="author">{{author.profile.name}}</a>
+      </div>
+      
       <div class="metadata">
-        <div class="date"> Posted {{creationTime}}</div>
+        <div class="date">Posted {{creationTime}}</div>
         <div class="rating">
           <i class="star icon"></i>
           5 Faves
         </div>
       </div>
-      <div class="text">
-        Hey guys, I hope this example comment is helping you read this documentation.
-      </div>
+
     </div>
   </div>
 </div>
-  </div>
+</div>
 </template>

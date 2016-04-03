@@ -17,21 +17,6 @@ Template.Profile.events({
 /* Profile: Helpers */
 /*****************************************************************************/
 Template.Profile.helpers({
-  forums: function() {
-    return Forums.find({
-      all: Meteor.user()._id
-    }, {
-      sort: {
-        createdAt: -1
-      }
-    });
-  },
-  
-  forumNum: function() {
-    var length = Meteor.user().profile.enrolledForums.length;
-    return length == 0 ? length : false;
-  },
-  
   name: function() {
     return Meteor.user().profile.name;
   },
@@ -44,17 +29,34 @@ Template.Profile.helpers({
     return Meteor.user().profile.self_description;
   },
   
-  enrolledForums: function() {
-    return Meteor.user().profile.enrolledForums;
+  forums: function() {
+    return Forums.find({
+      all: Meteor.user()._id
+    }, {
+      sort: {createdAt: -1}
+    });
+  },
+  
+  forumNum: function() {
+    var length = Forums.find({
+      all: Meteor.user()._id
+    }).count();
+    return length;
   },
   
   askedQuestions: function() {
-    return Meteor.user().profile.askedQuestions;
+    return Questions.find({
+      authorId:Meteor.user()._id
+    }, {
+      sort: {createdAt: -1}
+    });
   },
   
   askNum: function() {
-    var length = Meteor.user().profile.askedQuestions.length;
-    return length == 0 ? length : false;
+    var length = Questions.find({
+      authorId:Meteor.user()._id
+    }).count();
+    return length > 0 ? length : false;
   },
   
   answeredQuestions: function() {
@@ -63,7 +65,7 @@ Template.Profile.helpers({
   
   answerNum: function() {
     var length = Meteor.user().profile.answeredQuestions.length;
-    return length == 0 ? length : false;
+    return length > 0 ? length : false;
   },
   
   followedQuestions: function() {
@@ -72,7 +74,7 @@ Template.Profile.helpers({
   
   followNum: function() {
     var length = Meteor.user().profile.followedQuestions.length;
-    return length == 0 ? length : false;
+    return length > 0 ? length : false;
   }
   
 });

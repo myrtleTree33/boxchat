@@ -5,8 +5,8 @@
       <!--Left padding-->
     </div>
     
-    <div class="eight wide computer fourteen wide tablet fourteen wide mobile column">
-      <div class="column package" >
+    <div class="seven wide computer fourteen wide tablet fourteen wide mobile column">
+      <div class="column package zc_personal" >
         <h2 class="canOverflow" id="name">{{name}}</h2>
         <h3 class="canOverflow" id="description">{{description}}</h3>
         <hr />
@@ -24,21 +24,25 @@
           </div>
       </div>
       
-      <!--{{#if followNum}}-->
+      {{#if forumNum}}
       <section id="enrolledForums">
       <div class="column package">
+        <h3>Forums</h3>
+        <hr />
         {{#each forums}}
           {{> ProfileForum}}
         {{/each}}
       </div>
       </section>
-      <!--{{/if}}-->
+      {{/if}}
       
       {{#if askNum}}
       <section id="askedQuestions">
       <div class="column package">
-        {{#each forums}}
-          {{> askedQuestions}}
+        <h3>Questions</h3>
+        <hr />
+        {{#each askedQuestions}}
+          {{> ForumQuestion}}
         {{/each}}
       </div>
       </section>
@@ -47,6 +51,8 @@
       {{#if answerNum}}
       <section id="answeredQuestions">
       <div class="column package">
+        <h3>Answers</h3>
+        <hr />
         {{#each forums}}
           {{> answeredQuestions}}
         {{/each}}
@@ -57,6 +63,8 @@
       {{#if followNum}}
       <section id="followedQuestions">
       <div class="column package">
+        <h3>Follows</h3>
+        <hr />
         {{#each forums}}
           {{> followedQuestions}}
         {{/each}}
@@ -65,7 +73,7 @@
       {{/if}}
     </div>
     
-    <div class="six wide computer only column">
+    <div class="seven wide computer only column">
     </div>
   </div>
 </template>
