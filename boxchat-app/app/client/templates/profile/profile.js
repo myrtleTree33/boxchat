@@ -5,6 +5,12 @@ Template.Profile.events({
   'click #btn-create-forum': function(event, template) {
     Router.go('forumCreate');
   }
+/*
+  'click .btn-forum': function(event, this) {
+    Router.go('forum', {
+        id: this._id;
+    });
+  }*/
 });
 
 /*****************************************************************************/
@@ -19,6 +25,10 @@ Template.Profile.helpers({
         createdAt: -1
       }
     });
+  },
+  
+  name: function() {
+    return Meteor.user().profile.name;
   },
   
   displayedName: function() {

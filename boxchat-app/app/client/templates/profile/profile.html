@@ -2,14 +2,38 @@
   <br />
   <div class="profile ui grid">
     <div class="two wide column">
+      <!--Left padding-->
     </div>
-    <div class="eight wide computer fourteen wide tablet column centered grid">
-      <div class="column">
+    
+    <div class="eight wide computer fourteen wide tablet column grid">
+      <div class="column package" >
+        <h2 class="canOverflow" id="name">{{name}}</h2>
+        <h3 class="canOverflow" id="description">{{description}}</h3>
+        <hr />
+      </div>
+      
+      <!--Enrolled Forums-->
+      <div class="column package">
         {{#each forums}}
-          <div class="forums">{{this.title}}</div>
+          {{> ProfileForum}}
+        {{/each}}
+      </div>
+      
+      <!--Asked Questions-->
+      <div class="column package">
+        {{#each forums}}
+          {{> askedQuestions}}
+        {{/each}}
+      </div>
+      
+      <!--Answered Questions-->
+      <div class="column package">
+        {{#each forums}}
+          {{> answeredQuestions}}
         {{/each}}
       </div>
     </div>
+    
     <div class="computer only six wide column">
     </div>
   </div>

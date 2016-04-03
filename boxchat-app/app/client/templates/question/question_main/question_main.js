@@ -18,8 +18,13 @@ Template.QuestionMain.events({
 /* QuestionMain: Helpers */
 /*****************************************************************************/
 Template.QuestionMain.helpers({
-    creationTime: function() {
-    return moment(Template.instance().data.question.createdAt).fromNow();
+    questionAuthor: function() {
+    var author = Meteor.users.findOne({_id: Template.instance().data.authorId}),
+    question = Template.instance().data;
+    return {
+      author: author,
+      question: question
+    };
   }
 });
 
@@ -27,7 +32,6 @@ Template.QuestionMain.helpers({
 /* QuestionMain: Lifecycle Hooks */
 /*****************************************************************************/
 Template.QuestionMain.onCreated(function () {
-  console.log(Template.instance().data);
 });
 
 Template.QuestionMain.onRendered(function () {

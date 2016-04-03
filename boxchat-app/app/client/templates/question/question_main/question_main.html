@@ -1,19 +1,35 @@
 <template name="QuestionMain">
-  <div class="forum-question ui segment">
+  <div class="question-main ui segment grid">
 
-    <div class="ui two column stackable grid container">
-      <div class="three wide column middle aligned content">
-        <div class="ui tiny middle aligned content statistics">
+      <div class="two wide column center aligned">
 
-          <div class="middle aligned content statistic">
-            <div class="value">
-              {{votes}}
-            </div>
-            <div class="label">
-              Votes
+        <div class="row">
+          <div class="sixteen wide column">
+            <a class="btn-upvote" href="#">
+              <i class="large chevron up icon"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="sixteen wide column">
+            <div class="ui small statistic">
+              <div class="value">
+                {{votes}}
+              </div>
+              <div class="label">
+                Votes
+              </div>
             </div>
           </div>
+        </div>
 
+        <div class="row">
+          <div class="sixteen wide column">
+            <a class="btn-downvote">
+              <i class="large chevron down icon" href="#"></i>
+            </a>
+          </div>
         </div>
 
       </div>
@@ -28,13 +44,11 @@
         </div>
       </div>
 
-      <div class="three wide column middle aligned content">
+      <div class="four wide column middle aligned content">
         {{#with questionAuthor}}
           {{> ForumQuestionRight}}
         {{/with}}
       </div>
-
-    </div>
 
   </div>
 </template>

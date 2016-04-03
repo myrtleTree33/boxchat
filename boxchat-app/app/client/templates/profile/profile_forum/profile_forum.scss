@@ -3,3 +3,21 @@
 /*****************************************************************************/
 .profile-forum {
 }
+
+.forums {
+    display:inline-block;
+    padding:8px;
+    border:1px solid gray;
+    border-radius:10px;
+    margin-top:8px;
+    margin-bottom:8px;
+    margin:8px;
+    max-width:25ch;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.forum:hover {
+    cursor:pointer;
+}
