@@ -1,54 +1,38 @@
 <template name="QuestionMain">
-  <div class="question-main ui segment grid">
+  <div class="question-main ui grid">
+    
 
-      <div class="two wide column center aligned">
 
-        <div class="row">
-          <div class="sixteen wide column">
-            <a class="btn-upvote" href="#">
-              <i class="large chevron up icon"></i>
-            </a>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="sixteen wide column">
-            <div class="ui small statistic">
-              <div class="value">
-                {{votes}}
-              </div>
-              <div class="label">
-                Votes
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="sixteen wide column">
-            <a class="btn-downvote">
-              <i class="large chevron down icon" href="#"></i>
-            </a>
-          </div>
-        </div>
-
+    <div class="row">
+    <div class="sixteen wide column left aligned">
+      <div class="ui content">
+        <p>
+          {{content}}{{userName}}
+        </p>
       </div>
-
-      <div class="ten wide column middle aligned">
-        <div class="ui medium small header">
-          <a class="forum-question-title">
-            <!-- <p> -->
-            {{title}}{{userName}}
-            <!-- </p> -->
-          </a>
-        </div>
+    </div>
+    </div>
+    
+    <div class="ui divider"></div>
+    
+    <div class="row">
+      <div class="sixteen wide column left aligned">
+       {{#with questionAuthor}}
+      {{> QuestionMainFooter}}
+      {{/with}}
       </div>
+    </div>
 
-      <div class="four wide column middle aligned content">
-        {{#with questionAuthor}}
-          {{> ForumQuestionRight}}
-        {{/with}}
-      </div>
+    
 
-  </div>
+
+</div>
+  
+  
+  
+  
+  
+  
 </template>

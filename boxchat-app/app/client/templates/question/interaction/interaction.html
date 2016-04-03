@@ -38,13 +38,22 @@
 
         </div>
 
-        <div class="fourteen wide column left aligned">
-          {{#with interactionAuthor}} {{> InteractionAuthor}} {{/with}}
-          <div class="ui content">
-            {{#markdown}}{{content}}{{/markdown}}
-          </div>
+
+      <div class="ten wide column left aligned">
+        <div class="ui medium small header">
+          <a class="forum-question-title">
+            <!-- <p> -->
+           
+           {{#markdown}}{{content}}{{/markdown}}
+            <!-- </p> -->
+          </a>
         </div>
+      </div>
+
+      <div class="four wide column right aligned content">
+          {{#with interactionAuthor}} {{> InteractionAuthor}} {{/with}}
       </div>
     </div>
   </div>
+</div>
 </template>

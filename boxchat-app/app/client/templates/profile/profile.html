@@ -5,36 +5,67 @@
       <!--Left padding-->
     </div>
     
-    <div class="eight wide computer fourteen wide tablet column grid">
+    <div class="eight wide computer fourteen wide tablet fourteen wide mobile column">
       <div class="column package" >
         <h2 class="canOverflow" id="name">{{name}}</h2>
         <h3 class="canOverflow" id="description">{{description}}</h3>
         <hr />
+          <div class="zc_menu">
+            <a href="#enrolledForums">Forums&nbsp;&nbsp;&nbsp;{{forumNum}}</a>
+          </div>
+          <div class="zc_menu">
+            <a href="#askedQuestions">Asked&nbsp;&nbsp;&nbsp;{{askNum}}</a>
+          </div>
+          <div class="zc_menu">
+            <a href="#answeredQuestions">Answered&nbsp;&nbsp;&nbsp;{{answerNum}}</a>
+          </div>
+          <div class="zc_menu">
+            <a href="#followedQuestions">Followed&nbsp;&nbsp;&nbsp;{{followNum}}</a>
+          </div>
       </div>
       
-      <!--Enrolled Forums-->
+      <!--{{#if followNum}}-->
+      <section id="enrolledForums">
       <div class="column package">
         {{#each forums}}
           {{> ProfileForum}}
         {{/each}}
       </div>
+      </section>
+      <!--{{/if}}-->
       
-      <!--Asked Questions-->
+      {{#if askNum}}
+      <section id="askedQuestions">
       <div class="column package">
         {{#each forums}}
           {{> askedQuestions}}
         {{/each}}
       </div>
+      </section>
+      {{/if}}
       
-      <!--Answered Questions-->
+      {{#if answerNum}}
+      <section id="answeredQuestions">
       <div class="column package">
         {{#each forums}}
           {{> answeredQuestions}}
         {{/each}}
       </div>
+      </section>
+      {{/if}}
+      
+      {{#if followNum}}
+      <section id="followedQuestions">
+      <div class="column package">
+        {{#each forums}}
+          {{> followedQuestions}}
+        {{/each}}
+      </div>
+      </section>
+      {{/if}}
     </div>
     
-    <div class="computer only six wide column">
+    <div class="six wide computer only column">
     </div>
   </div>
 </template>

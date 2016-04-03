@@ -23,6 +23,7 @@ Accounts.onCreateUser(function(options, user) {
     user.profile['enrolledForums'] = [];
     user.profile['answeredQuestions'] = [];
     user.profile['askedQuestions'] = [];
+    user.profile['followedQuestions'] = [];
 
     if (service === 'twitter') {
       user.profile['name'] = user.services.twitter.screenName;

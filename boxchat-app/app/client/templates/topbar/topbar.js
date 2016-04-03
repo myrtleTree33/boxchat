@@ -20,6 +20,10 @@ Template.Topbar.events({
 /* Topbar: Helpers */
 /*****************************************************************************/
 Template.Topbar.helpers({
+  name: function() {
+    console.log(Meteor.user().profile.name);
+    return Meteor.user().profile.name;
+  }
 });
 
 /*****************************************************************************/

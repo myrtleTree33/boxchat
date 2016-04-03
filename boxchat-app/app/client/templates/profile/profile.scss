@@ -32,3 +32,25 @@ hr {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+h3 {
+    display:inline-block;
+}
+
+.zc_menu {
+    display:inline-block !important;
+    margin-right:40px;
+}
+
+.zc_menu h3 {
+    font-weight:normal;
+}
+
+.profile a {
+    color:black !important;
+    font-weight:bold !important;
+}
+
+.profile a:hover {
+    color:darkblue !important;
+}

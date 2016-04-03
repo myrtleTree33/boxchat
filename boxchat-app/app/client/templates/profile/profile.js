@@ -27,6 +27,11 @@ Template.Profile.helpers({
     });
   },
   
+  forumNum: function() {
+    var length = Meteor.user().profile.enrolledForums.length;
+    return length == 0 ? length : false;
+  },
+  
   name: function() {
     return Meteor.user().profile.name;
   },
@@ -47,8 +52,27 @@ Template.Profile.helpers({
     return Meteor.user().profile.askedQuestions;
   },
   
+  askNum: function() {
+    var length = Meteor.user().profile.askedQuestions.length;
+    return length == 0 ? length : false;
+  },
+  
   answeredQuestions: function() {
     return Meteor.user().profile.answeredQuestions;
+  },
+  
+  answerNum: function() {
+    var length = Meteor.user().profile.answeredQuestions.length;
+    return length == 0 ? length : false;
+  },
+  
+  followedQuestions: function() {
+    return Meteor.user().profile.followedQuestions;
+  },
+  
+  followNum: function() {
+    var length = Meteor.user().profile.followedQuestions.length;
+    return length == 0 ? length : false;
   }
   
 });

@@ -1,7 +1,8 @@
 <template name="Question">
   <div class="question">
-    <div class="ui grid container">
-      <div class="twelve wide column centered">
+    <div class="ui grid">
+      <div class="three wide column"></div>
+      <div class="seven wide column centered">
         <!-- Main question title -->
         {{#with question}} {{> QuestionMainTitle}} {{/with}}
         <!-- Main question -->
@@ -19,6 +20,7 @@
         {{> InteractionEditor}}
 
       </div>
+      <div class="six wide column"></div>
     </div>
   </div>
 </template>
