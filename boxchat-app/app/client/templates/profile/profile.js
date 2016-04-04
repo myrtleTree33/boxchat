@@ -60,12 +60,18 @@ Template.Profile.helpers({
   },
   
   answeredQuestions: function() {
-    return Meteor.user().profile.answeredQuestions;
+    return Interactions.find({
+      authorId:Meteor.user()._id
+    }, {
+      sort: {createdAt: -1}
+    });
   },
   
   answerNum: function() {
-    var length = Meteor.user().profile.answeredQuestions.length;
-    return length > 0 ? length : false;
+    var length = Interactions.find({
+      authorId:Meteor.user()._id
+    }).count();
+    return length;
   },
   
   followedQuestions: function() {
