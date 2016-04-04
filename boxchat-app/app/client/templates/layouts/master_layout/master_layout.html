@@ -7,11 +7,17 @@
       {{#unless hasEmail}}
         {{> AddEmail}}
       {{else}}
-      {{> Forumbar}}
+      <div>
+        {{> Topmenu}}
+      </div>
+        <div id="main_content">
         <div class="pusher">
+          <!--
           {{> Sidebar}}
           {{> Topbar}}
+          -->
           {{> yield}}
+        </div>
         </div>
       {{/unless}}
     {{/unless}}

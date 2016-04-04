@@ -1,8 +1,9 @@
 <template name="Forum">
   <div class="forum">
-    <div class="ui grid container">
+    <div class="container ui grid">
+      <div class="ten wide computer sixteen wide mobile column">
 
-      <div class="sixteen wide column left aligned">
+      <div class="left aligned">
         <div class="ui grid">
           <div class="twelve wide column left aligned">
             <h2>{{title}}</h2>
@@ -13,16 +14,19 @@
         </div>
       </div>
 
-      <div class="sixteen wide column left aligned">
+      <div class="left aligned">
         {{> Search}}
       </div>
 
-      <div class="sixteen wide column left aligned">
+      <div class="left aligned">
         <div class="ui segments">
           {{#each questions}} {{> ForumQuestion}} {{/each}}
         </div>
       </div>
-
+    </div>
+    
+    <div class="computer only one wide column"></div>
+    <div class="computer only tablet only five wide column"></div>
     </div>
   </div>
 </template>

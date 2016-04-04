@@ -1,4 +1,14 @@
 .pusher {
   min-height: 100%;
-  background: #fff url('img/bg/square_bg.png') !important;
+  //background: #fff url('img/bg/square_bg.png') !important;
+}
+
+#main_content {
+  display:block;
+  max-width:960px;
+  margin-top:40px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:0px !important;
+  border:none;
 }
