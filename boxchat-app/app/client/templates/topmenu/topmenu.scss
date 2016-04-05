@@ -2,14 +2,8 @@
 /* Topmenu: Style */
 /*****************************************************************************/
 .topmenu {
-    background-color:black;
-}
-
-.topmenu_wrapper {
-    background-color:black;
-    max-width:960px;
-    margin-left:auto;
-    margin-right:auto;
+    //background-color:black;
+    
 }
 
 .item:hover:not(#logo) {
@@ -17,12 +11,11 @@
 }
 
 .menu {
-    background-color:black;
+    //background-color:black;
 }
 
 .main_menu div {
-    padding-right:12px !important;
-    padding-left:12px !important;
+    text-align:center;
 }
 
 #info {

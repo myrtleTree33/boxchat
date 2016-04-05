@@ -1,49 +1,48 @@
 <template name="Topmenu">
   <div class="topmenu">
-    <div class="topmenu_wrapper">
-    <div class="ui inverted menu stackable main_menu">
+    <div class="ui secondary menu main_menu stackable">
       
       <div class="item" id="logo">
-        NUS FORUM
-      </div>
-      
-      <div class="ui inverted category search item">
-        <div class="ui input">
-          <input class="prompt" type="text" placeholder="Search topics...">
-          <i class="search link icon"></i>
-        </div>
+        NUS FORM
       </div>
       
       <div class="item">
-        <i class="big home icon" id="btn-home"></i>
+      <div class="ui icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+      </div>
+      
+      <div class="item">
+        <i class="large home icon" id="btn-home"></i>
       </div>
       
       <div class="item" id="btn-currentForum">
-        Current Forum: {{currentForum}}
+        Forum
       </div>
       
-      <div class="red item" id="btn-settings">
+      <div class="item" id="btn-settings">
         Settings
       </div>
       
-      <div class="red item" id="btn-analytics">
+      <div class="item" id="btn-analytics">
         Analytics
       </div>
       
       <div class="item" id="btn-createForum">
-        Create Forum
+        Create
       </div>
       
-      <div class="ui dropdown red item" id="info">
+      <div class="right menu">
+      <div class="ui dropdown item" id="info">
         <img class="ui avatar image" src="{{currentUser.profile.profileImg}}">
         &nbsp;&nbsp;&nbsp;{{name}}
         <i class="dropdown icon"></i>
-        <div class="inverted menu">
+        <div class="menu">
             <div class="item" id="btn-settings">User settings</div>
             <div class="item" id="btn-logout">Signout</div>
         </div>
       </div>
-      
       </div>
     </div>
   </div>
