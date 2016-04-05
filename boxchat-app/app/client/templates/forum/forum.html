@@ -1,23 +1,66 @@
 <template name="Forum">
   <div class="forum">
     <div class="ui grid">
-      <div class="ten wide computer eleven wide tablet sixteen wide mobile column main_forum">
-          <h1>{{title}}</h1>
-        <div class="container" id="forum_description">
-          {{description}}
+
+      <div class="twelve wide computer twelve wide tablet sixteen wide mobile column main_forum">
+
+        <div class="row">
+          <div class="ui grid">
+            <div class="sixteen wide column">
+              <div class="ui content">
+                <h1>{{title}}</h1>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="ui grid">
+            <div class="sixteen wide column">
+              <div class="ui content">
+                {{description}}
+                <div class="ui hidden divider">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="">
-        {{> Search}}
+          {{> Search}}
         </div>
         <div class="ui segments">
           {{#each questions}} {{> ForumQuestion}} {{/each}}
         </div>
-        
-        
-        
+
+
+
       </div>
-      <div class="computer only one wide column"></div>
-      <div class="computer only tablet only five wide column">
+      <div class="computer only tablet only four wide column">
+        <div class="ui column">
+          <div class="ui segment">
+
+            <div class="ui header">
+              <h4>My stats</h4>
+            </div>
+
+            <div class="ui olive tiny progress" data-present="72">
+              <div class="bar">
+                <div class="progress"></div>
+              </div>
+              <div class="label">Number of posts</div>
+            </div>
+
+            <div class="ui blue tiny progress" data-percent="59">
+              <div class="bar">
+                <div class="progress"></div>
+              </div>
+              <div class="label">Number of likes</div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
