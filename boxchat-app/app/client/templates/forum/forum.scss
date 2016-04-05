@@ -5,3 +5,53 @@
 .main_forum h1 {
     display:inline-block;
 }
+
+.forum table {
+    width:100%;
+}
+
+.forum table thead {
+    //font-weight:bold;
+}
+
+.forum table .votes {
+    width:7%;
+}
+
+.forum table .posts {
+    width:63%;
+}
+
+.forum table tr .author {
+    width:12%;
+}
+
+.forum table tr .views {
+    width:7%;
+}
+
+.forum table tr .date {
+    width:11%;
+}
+
+.forum table td {
+    border-bottom:1px dashed #CCCCCC;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.forum.canOverflow {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.forum a:hover {
+    cursor:pointer;
+}
+
+#forumDescription {
+    background-color:#FFEAD7;
+    border-radius:7px;
+    padding:20px;
+}

@@ -14,6 +14,25 @@ Template.Forum.events({
 /* Forum: Helpers */
 /*****************************************************************************/
 Template.Forum.helpers({
+  description: function() {
+    return Template.instance().data.description;
+  },
+  
+  forumCreationDate: function() {
+    var time = Template.instance().data.createdAt;
+    var date = new Date(time);
+    var day = ("0" + date.getDate()).slice(-2);
+    var month = ("0" + date.getMonth()).slice(-2);
+    var year = date.getFullYear();
+    return day + "-" + month + "-" + year;
+  },
+  
+  forumOwner: function() {
+    var adminId = Template.instance().data.admin;
+    var admin = Meteor.users.findOne({_id: adminId[0]});
+    return admin.profile.name;
+  },
+  
   questions: function() {
     var queries = Session.get('forumQuery').split(',');
     var tags = [];
