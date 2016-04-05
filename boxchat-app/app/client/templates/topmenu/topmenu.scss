@@ -2,8 +2,6 @@
 /* Topmenu: Style */
 /*****************************************************************************/
 .topmenu {
-    //background-color:black;
-    
 }
 
 .item:hover:not(#logo) {
@@ -20,4 +18,15 @@
 
 #info {
     float:right !important;
+}
+
+.topmenu.main_menu {
+    //background-color:#EB7F00 !important;
+}
+
+#logo {
+    color:#EB7F00 !important;
+    font-size:130%;
+    font-weight:bold;
+    margin-right:0px !important;
 }
