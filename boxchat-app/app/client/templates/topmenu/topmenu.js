@@ -10,10 +10,17 @@ Template.Topmenu.events({
     })
   },
 
+  'click #btn-logo': function(event) {
+    // Toggle forum bar in another template to show
+    $('.forumbar.sidebar')
+      .sidebar('setting', 'transition', 'push')
+      .sidebar('toggle');
+  },
+
   'click #btn-home': function(event) {
       Router.go('/profile');
   },
-  
+
   'click #btn-createForum': function(event) {
       Router.go('forumCreate');
   },
@@ -61,13 +68,13 @@ Template.Topmenu.helpers({
     name: function() {
         return Meteor.user().profile.name;
     },
-    
+
     currentForum: function() {
         return Forums.findOne({
           _id: Meteor.user().profile.currForum
         }).title;
     },
-    
+
     forums: function() {
         return Forums.find({
             all: Meteor.userId()
