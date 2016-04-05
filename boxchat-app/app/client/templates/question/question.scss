@@ -1,5 +1,14 @@
 /*****************************************************************************/
 /* Question: Style */
 /*****************************************************************************/
-.question {
+.question #questionRightSidebar {
+    margin-top:40px;
+}
+
+.question #questionRightSidebar h2 {
+    font-weight:normal;
+}
+
+.question #questionRightSidebar h3 {
+    font-weight:normal;
 }
