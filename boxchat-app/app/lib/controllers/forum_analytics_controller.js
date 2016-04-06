@@ -37,6 +37,9 @@ ForumAnalyticsController = RouteController.extend({
     this.next();
   },
   onBeforeAction: function () {
+    var forumId = this.params.id;
+    Meteor.call('userPermissions/checkPermissions',
+      Meteor.userId(), 'admin', forumId);
     this.next();
   },
 

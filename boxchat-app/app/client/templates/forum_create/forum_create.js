@@ -28,25 +28,24 @@ Template.ForumCreate.events({
     var _tags = escapeTags(tags); // properly format hashtag
 
     var allUsers = [Meteor.user()._id].concat(users);
-
-    var forumId
+    var adminUsers = [Meteor.user()._id];
 
     try {
       var forumId = Forums.insert({
         createdAt: new Date(),
         all: allUsers,
         students: users,
-        admin: [Meteor.user()._id],
+        admin: adminUsers,
         title: title,
         description: description,
         questionIds: [],
         tags: _tags
       });
 
-      console.log(allUsers);
-
       Meteor.call('userPermissions/addForum',
         allUsers, ['all'], forumId);
+      Meteor.call('userPermissions/addForum',
+        adminUsers, ['admin'], forumId);
 
       try {
         Router.go('forum', {

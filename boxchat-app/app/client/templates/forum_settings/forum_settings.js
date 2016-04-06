@@ -29,7 +29,14 @@ Template.ForumSettings.events({
           students: students
         }
       });
+
+      Meteor.call('userPermissions/addForum',
+        all, ['all'], forumId);
+      Meteor.call('userPermissions/addForum',
+        admin, ['admin'], forumId);
+
       Bert.alert('Forum successfully updated.', 'success');
+
     } catch (e) {
       Bert.alert('Oops!  Unable to update forum.', 'danger');
     }
