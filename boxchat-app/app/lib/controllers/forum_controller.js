@@ -37,6 +37,11 @@ ForumController = RouteController.extend({
     this.next();
   },
   onBeforeAction: function () {
+    var forumId = this.params.id;
+    if (!Roles.userIsInRole(Meteor.userId(), 'student', forumId)) {
+      console.log('disallowed');
+      Router.go('todos', {});
+    }
     this.next();
   },
 

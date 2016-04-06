@@ -27,26 +27,42 @@ Template.ForumCreate.events({
 
     var _tags = escapeTags(tags); // properly format hashtag
 
-    Forums.insert({
-      createdAt: new Date(),
-      all: [Meteor.user()._id].concat(users),
-      students: users,
-      admin: [Meteor.user()._id],
-      title: title,
-      description: description,
-      questionIds: [],
-      tags: _tags
+    var allUsers = [Meteor.user()._id].concat(users);
 
-    }, function(err, result) {
-      if (err) {
-        Bert.alert('Oops, error creating forum', 'danger');
-        return;
-      }
-      Bert.alert('Forum successfully created!', 'success');
-      Router.go('forum', {
-        id: result
+    var forumId
+
+    try {
+      var forumId = Forums.insert({
+        createdAt: new Date(),
+        all: allUsers,
+        students: users,
+        admin: [Meteor.user()._id],
+        title: title,
+        description: description,
+        questionIds: [],
+        tags: _tags
       });
-    });
+
+      console.log(allUsers);
+
+      Meteor.call('userPermissions/addForum',
+        allUsers, ['student'], forumId);
+
+      try {
+        Router.go('forum', {
+          id: forumId
+        });
+      } catch (e) {
+        // NOP
+      }
+
+      Bert.alert( 'Created forum successfully!', 'success', 'growl-top-right' );
+
+    } catch (err) {
+      Bert.alert( 'Oops, error creating forum!', 'danger', 'growl-top-right' );
+      return;
+    }
+
   }
 });
 

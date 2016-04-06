@@ -13,9 +13,17 @@ Meteor.methods({
     // server method logic
   },
 
+  'userPermissions/addForum': function(userIds, roles, forumId) {
+    Roles.addUsersToRoles(userIds, roles, forumId);
+  },
+
   'topMenu/toggleMenuItem': function(selector) {
-    $('.main_menu .item').removeClass('active');
-    $('.main_menu ' + selector).addClass('active');
+    try {
+      $('.main_menu .item').removeClass('active');
+      $('.main_menu ' + selector).addClass('active');
+    } catch (err) {
+      // nop, fail silently
+    }
   },
 
   'analytics/getUserContrib': function(forumId) {
