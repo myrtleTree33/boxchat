@@ -19,18 +19,13 @@ Template.Forum.helpers({
   },
 
   forumCreationDate: function() {
-    var time = Template.instance().data.createdAt;
-    var date = new Date(time);
-    var day = ("0" + date.getDate()).slice(-2);
-    var month = ("0" + date.getMonth()).slice(-2);
-    var year = date.getFullYear();
-    return day + "-" + month + "-" + year;
+    return moment(Template.instance().data.createdAt).fromNow();
   },
 
   forumOwner: function() {
     var adminId = Template.instance().data.admin;
     var admin = Meteor.users.findOne({_id: adminId[0]});
-    return admin.profile.name;
+    return admin;
   },
 
   questions: function() {
@@ -52,7 +47,7 @@ Template.Forum.helpers({
       var query = [];
       if (tags.length > 0) {
         query.push({
-          tags:{
+          tags: {
             '$in': tags
           },
           forumId: forumId
@@ -60,13 +55,13 @@ Template.Forum.helpers({
       }
       if (topics.length > 0) {
         query.push({
-          title:{
+          title: {
             '$in': topics
           },
           forumId: forumId
         });
         query.push({
-          content:{
+          content: {
             '$in': topics
           },
           forumId: forumId
@@ -106,8 +101,8 @@ Template.Forum.onCreated(function() {
 });
 
 Template.Forum.onRendered(function() {
-    $('.ui.dropdown').dropdown();
-    Meteor.call('topMenu/toggleMenuItem', '#btn-currentForum');
+  $('.ui.dropdown').dropdown();
+  Meteor.call('topMenu/toggleMenuItem', '#btn-currentForum');
 });
 
 Template.Forum.onDestroyed(function() {});

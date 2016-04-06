@@ -1,24 +1,27 @@
 <template name="ForumQuestionRight">
   <div class="forum-question-right ui grid column stackable bottom aligned">
     <div class="ui row">
+
       <div class="metadata">
-          <a><img class="ui right floated mini image" src="{{author.profile.profileImg}}" alt="" /></a>
+        <a>
+          <img class="ui right floated mini image" src="{{author.profile.profileImg}}" alt="" />
+        </a>
 
-          <div class="name">
+        <div class="name">
           <a class="ui author">{{author.profile.name}}</a>
-          </div>
+        </div>
 
-          <div class="date">
+        <div class="date">
           Posted {{creationTime}}
-          </div>
-          
+        </div>
       </div>
+
       <div class="five wide column right aligned">
 
       </div>
       <div class="nine wide column right aligned">
 
       </div>
+    </div>
   </div>
-</div>
 </template>
