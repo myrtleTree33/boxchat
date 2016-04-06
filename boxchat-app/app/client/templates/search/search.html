@@ -1,20 +1,23 @@
 <template name="Search">
-  <div class="search">
-      <div class="sixteen wide column">
+  <div class="ui segment forum-search">
+
+    <!-- Text input using Selectize JS -->
+    <form class="ui form" id="forum-search">
+      <input type="text" id="input-tags" placeholder="Search for something.  E.g. #project #tut some topic" name="query">
+      <!-- hack for auto submit on enter -->
+      <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />
+    </form>
+
+    <div class="ui hidden divider"></div>
+
+    <div class="sixteen wide column">
       <div class="ui column">
-      Forum tags: &nbsp;&nbsp;&nbsp;
-      {{#each tags}}
-        <button class="ui tiny lightblue button btn-sticky-tag" value="{{this}}">{{this}}</button>
-      {{/each}}
+        Forum tags: &nbsp;&nbsp;&nbsp; {{#each tags}}
+        <button class="ui mini blue button btn-sticky-tag" value="{{this}}">{{this}}</button>
+        {{/each}}
       </div>
-      </div>
-      <!-- Text input using Selectize JS -->
-      <form class="ui form" id="forum-search">
-        <div class="ui search">
-          <input type="text" id="input-tags" placeholder="Example:   #project   #tut" name="query" class="prompt">
-        </div>
-        <!-- hack for auto submit on enter -->
-        <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />
-      </form>
     </div>
+
+
+  </div>
 </template>
