@@ -25,6 +25,7 @@ Template.InteractionEditor.events({
         return;
       }
       Bert.alert('Question successfully posted!', 'success');
+      obj.content.value = "";  // clear the form if successful
     });
   }
 });
