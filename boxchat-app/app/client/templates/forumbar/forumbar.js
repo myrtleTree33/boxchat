@@ -1,8 +1,7 @@
 /*****************************************************************************/
 /* Forumbar: Event Handlers */
 /*****************************************************************************/
-Template.Forumbar.events({
-});
+Template.Forumbar.events({});
 
 /*****************************************************************************/
 /* Forumbar: Helpers */
@@ -10,8 +9,12 @@ Template.Forumbar.events({
 Template.Forumbar.helpers({
   forums: function() {
     var forums = Forums.find({
-      all: Meteor.userId()
-    });
+        all: Meteor.userId()
+      },
+      sort: {
+        createdAt: -1
+      }
+    );
     return forums;
   }
 });
@@ -19,11 +22,8 @@ Template.Forumbar.helpers({
 /*****************************************************************************/
 /* Forumbar: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Forumbar.onCreated(function () {
-});
+Template.Forumbar.onCreated(function() {});
 
-Template.Forumbar.onRendered(function () {
-});
+Template.Forumbar.onRendered(function() {});
 
-Template.Forumbar.onDestroyed(function () {
-});
+Template.Forumbar.onDestroyed(function() {});
