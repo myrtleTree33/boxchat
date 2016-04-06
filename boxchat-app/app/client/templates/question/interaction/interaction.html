@@ -1,4 +1,27 @@
 <template name="Interaction">
+  <div class="interaction ui grid">
+    <div class="two wide column">
+      <img src="author.profile.profileImg" />
+    </div>
+    
+    <div class="fourteen wide column">
+      <div class="column">
+        <div id="profileBar">{{author}}&nbsp;&nbsp;{{time}}</div>
+      </div>
+      <div class="column">
+        <div class="contentBox">{{content}}</div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+<!--
   <div class="interaction ui segment">
     <a class="ui orange right ribbon label">Interaction</a>
     <div class="ui grid">
@@ -42,10 +65,8 @@
       <div class="ten wide column left aligned">
         <div class="ui medium small header">
           <a class="forum-question-title">
-            <!-- <p> -->
            
            {{#markdown}}{{content}}{{/markdown}}
-            <!-- </p> -->
           </a>
         </div>
       </div>
@@ -56,4 +77,6 @@
     </div>
   </div>
 </div>
+
+-->
 </template>

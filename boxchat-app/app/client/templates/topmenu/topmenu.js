@@ -18,8 +18,13 @@ Template.Topmenu.events({
       .sidebar('toggle');
   },
 
+<<<<<<< Updated upstream
   'click #btn-home': function(event) {
     Router.go('/profile');
+=======
+  'click #btn-profile': function(event) {
+      Router.go('/profile');
+>>>>>>> Stashed changes
   },
 
   'click #btn-createForum': function(event) {

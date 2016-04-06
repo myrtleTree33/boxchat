@@ -1,7 +1,11 @@
 /*****************************************************************************/
 /* Question: Event Handlers */
 /*****************************************************************************/
-Template.Question.events({});
+Template.Question.events({
+  'click #backToForum': function(event, template) {
+    Router.go('forum', {id: template.data.forumId});
+  }
+});
 
 /*****************************************************************************/
 /* Question: Helpers */
@@ -10,6 +14,7 @@ Template.Question.helpers({
   question: function() {
     return Template.instance().data;
   },
+  
   interactions: function() {
     var questionId = Router.current().params.id;
     return Interactions.find({

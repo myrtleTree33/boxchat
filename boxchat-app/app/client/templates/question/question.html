@@ -21,9 +21,8 @@
       </div>
       <div class="computer only five wide column">
         <div id="questionRightSidebar">
-        <div class="ui segment">
-          <h2>{{currentForum}}</h2>
-          <hr />
+        <div class="latestTopics">
+          <h2><a id="backToForum">{{currentForum}}</a></h2>
           <h3>Latest Topics</h3>
           {{#each questions}}
             {{> RightSideLatestTopics}}
