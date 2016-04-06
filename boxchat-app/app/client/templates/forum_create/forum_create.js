@@ -62,6 +62,9 @@ Template.ForumCreate.onCreated(function() {});
 
 Template.ForumCreate.onRendered(function() {
 
+  $('.ui.dropdown').dropdown();
+  Meteor.call('topMenu/toggleMenuItem', '#btn-createForum');
+
   $('#forum-tags').selectize({
     delimiter: ',',
     persist: false,

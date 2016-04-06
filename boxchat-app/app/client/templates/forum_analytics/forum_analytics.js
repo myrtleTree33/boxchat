@@ -17,6 +17,8 @@ Template.ForumAnalytics.onCreated(function () {
 });
 
 Template.ForumAnalytics.onRendered(function () {
+  $('.ui.dropdown').dropdown();
+  Meteor.call('topMenu/toggleMenuItem', '#btn-analytics');
 });
 
 Template.ForumAnalytics.onDestroyed(function () {

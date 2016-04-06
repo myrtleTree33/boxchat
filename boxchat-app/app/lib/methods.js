@@ -13,6 +13,13 @@ Meteor.methods({
     // server method logic
   },
 
+  'topMenu/toggleMenuItem': function(selector) {
+    //TODO debug this method
+    console.log('toggled');
+    $('.main_menu .item').removeClass('active');
+    $('.main_menu ' + selector).addClass('active');
+  },
+
   'analytics/getUserContrib': function(forumId) {
     var output = [];
     var all = Forums.findOne({_id: forumId}).all;

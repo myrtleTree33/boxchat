@@ -17,7 +17,7 @@ Template.Forum.helpers({
   description: function() {
     return Template.instance().data.description;
   },
-  
+
   forumCreationDate: function() {
     var time = Template.instance().data.createdAt;
     var date = new Date(time);
@@ -26,13 +26,13 @@ Template.Forum.helpers({
     var year = date.getFullYear();
     return day + "-" + month + "-" + year;
   },
-  
+
   forumOwner: function() {
     var adminId = Template.instance().data.admin;
     var admin = Meteor.users.findOne({_id: adminId[0]});
     return admin.profile.name;
   },
-  
+
   questions: function() {
     var queries = Session.get('forumQuery').split(',');
     var tags = [];
@@ -105,6 +105,9 @@ Template.Forum.onCreated(function() {
   });
 });
 
-Template.Forum.onRendered(function() {});
+Template.Forum.onRendered(function() {
+    $('.ui.dropdown').dropdown();
+    Meteor.call('topMenu/toggleMenuItem', '#btn-currentForum');
+});
 
 Template.Forum.onDestroyed(function() {});

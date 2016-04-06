@@ -59,6 +59,10 @@ Template.ForumSettings.helpers({
 Template.ForumSettings.onCreated(function() {});
 
 Template.ForumSettings.onRendered(function() {
+
+  $('.ui.dropdown').dropdown();
+  Meteor.call('topMenu/toggleMenuItem', '#btn-settings');
+
   var setupUsersField = function(selector, field) {
     var select = $(selector).selectize({
       plugins: {

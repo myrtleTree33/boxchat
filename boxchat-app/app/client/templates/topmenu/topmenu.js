@@ -1,6 +1,7 @@
 /*****************************************************************************/
 /* Topmenu: Event Handlers */
 /*****************************************************************************/
+
 Template.Topmenu.events({
   'click #btn-logout': function(event) {
     Meteor.logout(function(err) {
@@ -18,11 +19,11 @@ Template.Topmenu.events({
   },
 
   'click #btn-home': function(event) {
-      Router.go('/profile');
+    Router.go('/profile');
   },
 
   'click #btn-createForum': function(event) {
-      Router.go('forumCreate');
+    Router.go('forumCreate');
   },
 
   'click #btn-currentForum': function(event) {
@@ -65,21 +66,21 @@ Template.Topmenu.events({
 /* Sidebar: Helpers */
 /*****************************************************************************/
 Template.Topmenu.helpers({
-    name: function() {
-        return Meteor.user().profile.name;
-    },
+  name: function() {
+    return Meteor.user().profile.name;
+  },
 
-    currentForum: function() {
-        return Forums.findOne({
-          _id: Meteor.user().profile.currForum
-        }).title;
-    },
+  currentForum: function() {
+    return Forums.findOne({
+      _id: Meteor.user().profile.currForum
+    }).title;
+  },
 
-    forums: function() {
-        return Forums.find({
-            all: Meteor.userId()
-        });
-    }
+  forums: function() {
+    return Forums.find({
+      all: Meteor.userId()
+    });
+  }
 });
 
 /*****************************************************************************/
@@ -87,8 +88,6 @@ Template.Topmenu.helpers({
 /*****************************************************************************/
 Template.Topmenu.onCreated(function() {});
 
-Template.Topmenu.onRendered(function() {
-    $('.ui.dropdown').dropdown();
-});
+Template.Topmenu.onRendered(function() {});
 
 Template.Topmenu.onDestroyed(function() {});
