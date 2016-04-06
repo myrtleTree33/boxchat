@@ -4,59 +4,70 @@
 
       <div class="eleven wide computer eleven wide tablet sixteen wide mobile column main_forum">
 
-        <div class="row">
+        <div class="ui sixteen wide column segment">
           <div class="ui grid">
-            <div class="sixteen wide column">
-              <div class="ui content">
-                <h1>{{title}}</h1>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="ui grid">
-            <div class="sixteen wide column">
-              <div class="ui column">
-                <div id="forumDescription">
-                  Created at: {{forumCreationDate}} &nbsp;&nbsp;&nbsp; Owner: {{forumOwner}} <br /><br />
-                  <p>{{description}}</p><br />
-                  {{> Search}}
+            <div class="row">
+              <div class="sixteen wide column">
+                <div class="ui content">
+                  <h1>{{title}}</h1>
                 </div>
               </div>
             </div>
+
+            <div class="row">
+              <div class="sixteen wide column">
+                <div id="forumDescription">
+                  Created at: {{forumCreationDate}} &nbsp;&nbsp;&nbsp; Owner: {{forumOwner}}
+                  <br />
+                  <br />
+                  <p>{{description}}</p>
+                  <br /> {{> Search}}
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
         <div class="row">
           <div class="ui two column grid">
             <div class="column">
-              <h3 class="ui header">Latest Topics</h3>
-            </div>
-            <div class="column">
-              <div class="ui buttons right floated">
-                <button class="ui red basic button" id="btn-ask">New Post</button>
-              </div>
+              <h3 class="ui header">What's new</h3>
+              <div class="ui hidden divider"></div>
             </div>
           </div>
         </div>
 
         <div>
 
-          <table>
-            <thead><td class="votes">Votes</td><td class="posts">Posts</td><td class="author">Author</td><td class="views">Views</td><td class="date">Posted At</td></thead>
+          <!-- <table>
+            <thead>
+              <td class="votes">Votes</td>
+              <td class="posts">Posts</td>
+              <td class="author">Author</td>
+              <td class="views">Views</td>
+              <td class="date">Posted At</td>
+            </thead>
             {{#each questions}} {{> ForumPosts}} {{/each}}
-          </table>
-
-          <!-- {{#each questions}} {{> ForumQuestion}} {{/each}} -->
+          </table> -->
+          <div class="ui segments">
+          {{#each questions}} {{> ForumQuestion}} {{/each}}
+        </div>
         </div>
 
       </div>
 
       <div class="computer only tablet only five wide column">
         <div class="ui column">
-          <div class="ui segment">
 
+          <button class="fluid ui huge orange button" id="btn-ask">
+            Post a question
+          </button>
+
+          <div class="ui hidden divider"></div>
+
+          <div class="ui segment">
             <div class="ui header">
               <h4>My stats</h4>
             </div>
