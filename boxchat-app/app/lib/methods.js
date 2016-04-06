@@ -14,8 +14,6 @@ Meteor.methods({
   },
 
   'topMenu/toggleMenuItem': function(selector) {
-    //TODO debug this method
-    console.log('toggled');
     $('.main_menu .item').removeClass('active');
     $('.main_menu ' + selector).addClass('active');
   },
