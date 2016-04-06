@@ -108,3 +108,10 @@ Router.route('forum/analytics/:id', {
   controller: 'ForumAnalyticsController',
   where: 'client'
 });
+
+
+Router.route('unauthorized', {
+  name: 'unauthorized',
+  controller: 'UnauthorizedController',
+  where: 'client'
+});

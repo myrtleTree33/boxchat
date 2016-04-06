@@ -17,6 +17,12 @@ Meteor.methods({
     Roles.addUsersToRoles(userIds, roles, forumId);
   },
 
+  'userPermissions/checkPermissions': function(userId, roles, groupId) {
+    if (!Roles.userIsInRole(userId, roles, groupId)) {
+      Router.go('unauthorized', {});
+    }
+  },
+
   'topMenu/toggleMenuItem': function(selector) {
     try {
       $('.main_menu .item').removeClass('active');

@@ -46,7 +46,7 @@ Template.ForumCreate.events({
       console.log(allUsers);
 
       Meteor.call('userPermissions/addForum',
-        allUsers, ['student'], forumId);
+        allUsers, ['all'], forumId);
 
       try {
         Router.go('forum', {
