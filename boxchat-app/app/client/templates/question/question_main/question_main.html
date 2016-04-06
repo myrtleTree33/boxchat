@@ -1,38 +1,25 @@
 <template name="QuestionMain">
-  <div class="question-main ui grid">
-    
+  <div class="ui segment">
+    <div class="question-main ui grid">
 
-
-
-
-    <div class="row">
-    <div class="sixteen wide column left aligned">
-      <div class="ui content">
-        <p>
-          {{content}}{{userName}}
-        </p>
+      <div class="row">
+        <div class="sixteen wide column left aligned">
+          <div class="ui content">
+            <p>
+              {{content}}{{userName}}
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
-    
-    <div class="ui divider"></div>
-    
-    <div class="row">
-      <div class="sixteen wide column left aligned">
-       {{#with questionAuthor}}
-      {{> QuestionMainFooter}}
-      {{/with}}
+
+      <div class="ui hidden divider"></div>
+
+      <div class="row">
+        <div class="sixteen wide column left aligned">
+          {{#with questionAuthor}} {{> QuestionMainFooter}} {{/with}}
+        </div>
       </div>
+
     </div>
-
-    
-
-
-</div>
-  
-  
-  
-  
-  
-  
+  </div>
 </template>
