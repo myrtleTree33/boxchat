@@ -7,8 +7,15 @@
 
 .question #questionRightSidebar h2 {
     font-weight:normal;
+    margin-bottom:10px;
 }
 
 .question #questionRightSidebar h3 {
     font-weight:normal;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.question a:hover {
+    cursor:pointer;
 }

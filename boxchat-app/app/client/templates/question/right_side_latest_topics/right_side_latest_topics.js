@@ -12,6 +12,10 @@ Template.RightSideLatestTopics.events({
 /* RightSideLatestTopics: Helpers */
 /*****************************************************************************/
 Template.RightSideLatestTopics.helpers({
+    author: function() {
+        var author = Meteor.users.findOne({_id: Template.instance().data.authorId});
+        return author.profile.name;
+    }
 });
 
 /*****************************************************************************/

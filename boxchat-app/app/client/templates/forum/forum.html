@@ -28,13 +28,25 @@
           </div>
         </div>
 
-        <div class="">
+        <div class="row">
+          <div class="ui two column grid">
+            <div class="column">
+              <h3 class="ui header">Latest Topics</h3>
+            </div>
+            <div class="column">
+              <div class="ui buttons right floated">
+                <button class="ui red basic button" id="btn-ask">New Post</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
 
           <table>
             <thead><td class="votes">Votes</td><td class="posts">Posts</td><td class="author">Author</td><td class="views">Views</td><td class="date">Posted At</td></thead>
             {{#each questions}} {{> ForumPosts}} {{/each}}
           </table>
-
 
           <!-- {{#each questions}} {{> ForumQuestion}} {{/each}} -->
         </div>
