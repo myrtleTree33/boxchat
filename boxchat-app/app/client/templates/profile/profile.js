@@ -93,6 +93,7 @@ Template.Profile.onCreated(function () {
 });
 
 Template.Profile.onRendered(function () {
+  Meteor.call('topMenu/toggleMenuItem', '#btn-profile');
 });
 
 Template.Profile.onDestroyed(function () {
