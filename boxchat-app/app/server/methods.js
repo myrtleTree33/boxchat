@@ -22,6 +22,10 @@ Meteor.methods({
     } catch(e) {
       console.error(e);
     }
+  },
+
+  'signup/addEmail': function(email) {
+    Accounts.addEmail(Meteor.userId(), email);
   }
 
 });

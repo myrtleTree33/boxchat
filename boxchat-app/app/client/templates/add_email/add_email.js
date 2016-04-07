@@ -7,14 +7,12 @@ Template.AddEmail.events({
     event.preventDefault();
     var obj = event.target;
     var email = obj.emailAddress.value;
-    Meteor.users.update(Meteor.userId(), {
-      $push: {
-        'profile.emails': {
-          $each: [{email: email, verified: false}],
-          $position: 0
-        }
-      }
-    });
+    try {
+      Meteor.call('signup/addEmail', email);
+      Meteor.call('signup/sendVerificationEmail');
+    } catch(e) {
+      console.error(e);
+    }
   }
 });
 
