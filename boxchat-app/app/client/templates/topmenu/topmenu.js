@@ -4,11 +4,15 @@
 
 Template.Topmenu.events({
   'click #btn-logout': function(event) {
-    Router.go('/');
     Meteor.logout(function(err) {
       if (err) {
         throw new Meteor.error("Logout failed");
       }
+      // hotfix to properly allow iron router to go back to home
+      // page, not unauthorized
+      setTimeout(function () {
+        Router.go('/');
+      }, 200);
     });
   },
 
