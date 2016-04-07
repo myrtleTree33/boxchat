@@ -4,12 +4,12 @@
 
 Template.Topmenu.events({
   'click #btn-logout': function(event) {
+    Router.go('/');
     Meteor.logout(function(err) {
       if (err) {
         throw new Meteor.error("Logout failed");
       }
     });
-    Router.go('/');
   },
 
   'click #btn-logo': function(event) {
