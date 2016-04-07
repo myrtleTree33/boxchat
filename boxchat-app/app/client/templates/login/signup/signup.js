@@ -5,15 +5,11 @@ Template.Signup.events({
   'submit #signup': function(event, template) {
     event.preventDefault();
 
-    console.log('clicked');
-
     var user = {
       email: template.find('[name="emailAddress"]').value,
       password: template.find('[name="password"]').value,
       name: template.find('[name="name"]').value
     };
-
-    console.log(user);
 
     Accounts.createUser(user, function(err) {
       if (err) {
