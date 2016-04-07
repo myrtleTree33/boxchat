@@ -9,12 +9,12 @@ Template.Forumbar.events({});
 Template.Forumbar.helpers({
   forums: function() {
     var forums = Forums.find({
-        all: Meteor.userId()
-      },
+      all: Meteor.userId()
+    }, {
       sort: {
         createdAt: -1
       }
-    );
+    });
     return forums;
   }
 });
