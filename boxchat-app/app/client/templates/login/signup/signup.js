@@ -9,7 +9,8 @@ Template.Signup.events({
 
     var user = {
       email: template.find('[name="emailAddress"]').value,
-      password: template.find('[name="password"]').value
+      password: template.find('[name="password"]').value,
+      name: template.find('[name="name"]').value
     };
 
     console.log(user);
@@ -18,13 +19,7 @@ Template.Signup.events({
       if (err) {
         Bert.alert(err.reason, 'danger');
       } else {
-        Meteor.call('signup/sendVerificationEmail', function(err, res) {
-          if (err) {
-            Bert.alert(err.reason, 'danger');
-          } else {
-            Bert.alert('Welcome!', 'success');
-          }
-        });
+        Meteor.call('signup/sendVerificationEmail');
       }
     });
   }

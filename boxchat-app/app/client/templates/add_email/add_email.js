@@ -8,10 +8,10 @@ Template.AddEmail.events({
     var obj = event.target;
     var email = obj.emailAddress.value;
     Meteor.users.update(Meteor.userId(), {
-      $addToSet: {
+      $push: {
         'profile.emails': {
-          email: email,
-          verified: false
+          $each: [{email: email, verified: false}],
+          $position: 0
         }
       }
     });
@@ -21,17 +21,13 @@ Template.AddEmail.events({
 /*****************************************************************************/
 /* AddEmail: Helpers */
 /*****************************************************************************/
-Template.AddEmail.helpers({
-});
+Template.AddEmail.helpers({});
 
 /*****************************************************************************/
 /* AddEmail: Lifecycle Hooks */
 /*****************************************************************************/
-Template.AddEmail.onCreated(function () {
-});
+Template.AddEmail.onCreated(function() {});
 
-Template.AddEmail.onRendered(function () {
-});
+Template.AddEmail.onRendered(function() {});
 
-Template.AddEmail.onDestroyed(function () {
-});
+Template.AddEmail.onDestroyed(function() {});

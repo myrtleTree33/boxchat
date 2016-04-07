@@ -17,8 +17,9 @@ Accounts.onCreateUser(function(options, user) {
 
     user.profile = user.profile || {};
     user.profile['currForum'] = undefined;
-    user.profile['emails'] = [];
+    // user.profile['emails'] = [];
     user.profile['displayedName'] = undefined;
+    user.profile['name'] = undefined;
     user.profile['self_description'] = undefined;
     user.profile['enrolledForums'] = [];
     user.profile['answeredQuestions'] = [];
@@ -31,18 +32,10 @@ Accounts.onCreateUser(function(options, user) {
 
     } else if (service === 'facebook') {
       user.profile['name'] = user.services.facebook.name;
-      user.profile['emails'].push({
-        email: user.services.facebook.email,
-        verified: true
-      });
       user.profile['profileImg'] = 'https://graph.facebook.com/v2.5/' + user.services.facebook.id + '/picture';
 
     } else if (service === 'password') {
-      user.profile['name'] = user.emails[0].address;
-      user.profile['emails'].push({
-        email: user.emails[0].address,
-        verified: true
-      });
+      user.profile['name'] = user.name;
       user.profile['profileImg'] = undefined; //TODO fill in
     }
   }
