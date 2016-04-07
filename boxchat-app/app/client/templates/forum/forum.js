@@ -92,12 +92,6 @@ Template.Forum.helpers({
 /*****************************************************************************/
 Template.Forum.onCreated(function() {
   Session.set("forumQuery", '');
-  var forumId = Router.current().params.id;
-  Meteor.users.update(Meteor.userId(), {
-    $set: {
-      'profile.currForum': forumId
-    }
-  });
 });
 
 Template.Forum.onRendered(function() {
@@ -106,3 +100,12 @@ Template.Forum.onRendered(function() {
 });
 
 Template.Forum.onDestroyed(function() {});
+
+  // var forumId = Router.current().params.id;
+  // Meteor.users.update(Meteor.userId(), {
+  //   $set: {
+  //     'profile.currForum': forumId
+  //   }
+  // });
+  // console.log('updated');
+  // console.log(Meteor.user().profile);
