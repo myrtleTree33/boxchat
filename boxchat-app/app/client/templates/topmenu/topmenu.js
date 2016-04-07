@@ -8,7 +8,8 @@ Template.Topmenu.events({
       if (err) {
         throw new Meteor.error("Logout failed");
       }
-    })
+    });
+    Router.go('/');
   },
 
   'click #btn-logo': function(event) {
