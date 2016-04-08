@@ -115,12 +115,6 @@ Template.Forum.helpers({
 /*****************************************************************************/
 Template.Forum.onCreated(function() {
   Session.set("forumQuery", '');
-  var forumId = Router.current().params.id;
-  Meteor.users.update(Meteor.userId(), {
-    $set: {
-      'profile.currForum': forumId
-    }
-  });
 });
 
 Template.Forum.onRendered(function() {
@@ -128,4 +122,17 @@ Template.Forum.onRendered(function() {
   Meteor.call('topMenu/toggleMenuItem', '#btn-currentForum');
 });
 
+<<<<<<< HEAD
 Template.Forum.onDestroyed(function() {});
+=======
+Template.Forum.onDestroyed(function() {});
+
+  // var forumId = Router.current().params.id;
+  // Meteor.users.update(Meteor.userId(), {
+  //   $set: {
+  //     'profile.currForum': forumId
+  //   }
+  // });
+  // console.log('updated');
+  // console.log(Meteor.user().profile);
+>>>>>>> 560cdfeec99f2a046c0988d845ed5e2cb7a90e08

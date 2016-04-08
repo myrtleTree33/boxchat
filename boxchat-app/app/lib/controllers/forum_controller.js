@@ -32,6 +32,12 @@ ForumController = RouteController.extend({
     this.next();
   },
   onRerun: function() {
+    var forumId = Router.current().params.id;
+    Meteor.users.update(Meteor.userId(), {
+      $set: {
+        'profile.currForum': forumId
+      }
+    });
     this.next();
   },
   onBeforeAction: function() {

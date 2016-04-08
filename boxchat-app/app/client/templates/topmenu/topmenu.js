@@ -8,7 +8,12 @@ Template.Topmenu.events({
       if (err) {
         throw new Meteor.error("Logout failed");
       }
-    })
+      // hotfix to properly allow iron router to go back to home
+      // page, not unauthorized
+      setTimeout(function () {
+        Router.go('/');
+      }, 200);
+    });
   },
 
   'click #btn-logo': function(event) {

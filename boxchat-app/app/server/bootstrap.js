@@ -4,6 +4,7 @@ Meteor.startup(function() {
 
   // sendGrid
   process.env.MAIL_URL = config.sendGrid.MAIL_URL;
+  console.log(process.env.MAIL_URL);
 
 
   ServiceConfiguration.configurations.remove({

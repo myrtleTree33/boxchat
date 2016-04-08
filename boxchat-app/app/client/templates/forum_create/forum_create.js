@@ -11,6 +11,9 @@ Template.ForumCreate.events({
     var description = obj.description.value;
     var tags = obj.stickyTags.value.split(/[ ,]+/).filter(Boolean);
 
+    console.log('-----------')
+    console.log(users);
+
     var escapeTags = function(tags) {
       var output = [];
       for (var i = 0; i < tags.length; i++) {

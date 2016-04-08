@@ -7,31 +7,25 @@ Template.AddEmail.events({
     event.preventDefault();
     var obj = event.target;
     var email = obj.emailAddress.value;
-    Meteor.users.update(Meteor.userId(), {
-      $addToSet: {
-        'profile.emails': {
-          email: email,
-          verified: false
-        }
-      }
-    });
+    try {
+      Meteor.call('signup/addEmail', email);
+      Meteor.call('signup/sendVerificationEmail');
+    } catch(e) {
+      console.error(e);
+    }
   }
 });
 
 /*****************************************************************************/
 /* AddEmail: Helpers */
 /*****************************************************************************/
-Template.AddEmail.helpers({
-});
+Template.AddEmail.helpers({});
 
 /*****************************************************************************/
 /* AddEmail: Lifecycle Hooks */
 /*****************************************************************************/
-Template.AddEmail.onCreated(function () {
-});
+Template.AddEmail.onCreated(function() {});
 
-Template.AddEmail.onRendered(function () {
-});
+Template.AddEmail.onRendered(function() {});
 
-Template.AddEmail.onDestroyed(function () {
-});
+Template.AddEmail.onDestroyed(function() {});
