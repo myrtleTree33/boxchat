@@ -28,7 +28,7 @@ Meteor.startup(function() {
   });
 
   reCAPTCHA.config({
-    privatekey: '6Ldw5BwTAAAAAIOdX4_jGkDbW-koNttBlxHqCd4X'
+    privatekey: config.recaptcha.PRIVATE_KEY
   });
 
 

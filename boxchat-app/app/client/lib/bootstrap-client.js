@@ -1,6 +1,7 @@
 Meteor.startup(function() {
+  var config = Meteor.settings.public;
     reCAPTCHA.config({
-        publickey: '6Ldw5BwTAAAAAKCFsq7d86NTuvTFTxd0X-y5yB1n',
+        publickey: config.recaptcha.PUBLIC_KEY,
         hl: 'en' // optional display language
     });
 });
