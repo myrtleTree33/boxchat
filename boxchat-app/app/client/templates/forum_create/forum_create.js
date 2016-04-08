@@ -75,6 +75,7 @@ Template.ForumCreate.onCreated(function() {});
 
 Template.ForumCreate.onRendered(function() {
 
+
   $('.ui.dropdown').dropdown();
   Meteor.call('topMenu/toggleMenuItem', '#btn-createForum');
 
@@ -140,21 +141,21 @@ Template.ForumCreate.onRendered(function() {
       }
     },
     load: function(query, callback) {
-      var results = Meteor.users.find({
-        'profile.name': {
-          $regex: '.*' + query + '.*',
-          $options: 'i'
+      Meteor.call('forum/createForumFindUsers', query, function(err, data) {
+        if (err) {
+          console.error("Some error occuered: " + err);
+          return;
         }
-      }, {
-        limit: 7
-      }).fetch();
-      var _results = _.map(results, function(user) {
-        return {
-          _id: user._id,
-          name: user.profile['name']
-        }
+
+        var _results = _.map(data, function(user) {
+          return {
+            _id: user._id,
+            name: user.profile['name']
+          }
+        });
+        callback(_results);
       });
-      callback(_results);
+
     }
   });
 });

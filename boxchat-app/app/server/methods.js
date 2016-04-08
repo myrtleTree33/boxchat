@@ -28,6 +28,36 @@ Meteor.methods({
     Accounts.addEmail(Meteor.userId(), email);
   },
 
+  'forum/createForumFindUsers': function(query, limit) {
+
+    var _query = {
+      $or: [{
+        'profile.name': {
+          $regex: '.*' + query + '.*',
+          $options: 'i'
+        }
+      }, {
+        'emails': {
+          $elemMatch: {
+            address: {
+              // $regex: '.*' + query + '.*',
+              // $options: 'i'
+            }
+          }
+        }
+      }]
+    };
+
+    var _formatting = {
+      limit: limit,
+      _id: 1,
+      profile: 1,
+      emails: 0
+    };
+
+    return Meteor.users.find(_query, _formatting).fetch();
+  },
+
   'forum/createForumFormValidify': function(formData, captchaData) {
 
     var verifyCaptchaResponse = reCAPTCHA.verifyCaptcha(this.connection.clientAddress, captchaData);
