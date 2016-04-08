@@ -27,6 +27,9 @@ Meteor.startup(function() {
     secret: config.twitter.SECRET
   });
 
+  reCAPTCHA.config({
+    privatekey: '6Ldw5BwTAAAAAIOdX4_jGkDbW-koNttBlxHqCd4X'
+  });
 
 
   // clear the mongoDB collections

@@ -29,42 +29,37 @@ Template.ForumCreate.events({
     }
 
     var _tags = escapeTags(tags); // properly format hashtag
-
     var allUsers = [Meteor.user()._id].concat(users);
     var adminUsers = [Meteor.user()._id];
 
-    try {
-      var forumId = Forums.insert({
-        createdAt: new Date(),
-        all: allUsers,
-        students: users,
-        admin: adminUsers,
-        title: title,
-        description: description,
-        questionIds: [],
-        tags: _tags
-      });
+    var formData = {
+      createdAt: new Date(),
+      all: allUsers,
+      students: users,
+      admin: adminUsers,
+      title: title,
+      description: description,
+      questionIds: [],
+      tags: _tags
+    };
 
-      Meteor.call('userPermissions/addForum',
-        allUsers, ['all'], forumId);
-      Meteor.call('userPermissions/addForum',
-        adminUsers, ['admin'], forumId);
 
-      try {
+    //get the captcha data
+    var captchaData = grecaptcha.getResponse();
+
+    Meteor.call('forum/createForumFormValidify', formData, captchaData, function(error, forumId) {
+      // reset the captcha
+      grecaptcha.reset();
+      if (error) {
+        Bert.alert('Oops, error creating forum!', 'danger', 'growl-top-right');
+      } else {
+        Bert.alert('Created forum successfully!', 'success', 'growl-top-right');
+
         Router.go('forum', {
           id: forumId
         });
-      } catch (e) {
-        // NOP
       }
-
-      Bert.alert( 'Created forum successfully!', 'success', 'growl-top-right' );
-
-    } catch (err) {
-      Bert.alert( 'Oops, error creating forum!', 'danger', 'growl-top-right' );
-      return;
-    }
-
+    });
   }
 });
 

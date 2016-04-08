@@ -44,3 +44,5 @@ multiply:iron-router-progress
 mushk:sha1
 standard-minifier-css
 standard-minifier-js
+altapp:recaptcha
+ejson
