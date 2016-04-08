@@ -24,11 +24,11 @@ Template.Profile.helpers({
   displayedName: function() {
     return Meteor.user().profile.displayedName;
   },
-
+/*
   self_description: function() {
     return Meteor.user().profile.self_description;
   },
-
+*/
   forums: function() {
     return Forums.find({
       all: Meteor.user()._id
@@ -41,7 +41,7 @@ Template.Profile.helpers({
     var length = Forums.find({
       all: Meteor.user()._id
     }).count();
-    return length;
+    return length > 0 ? length : false;
   },
 
   askedQuestions: function() {
@@ -71,9 +71,9 @@ Template.Profile.helpers({
     var length = Interactions.find({
       authorId:Meteor.user()._id
     }).count();
-    return length;
-  },
-
+    return length > 0 ? length : false;
+  }
+/*
   followedQuestions: function() {
     return Meteor.user().profile.followedQuestions;
   },
@@ -81,9 +81,8 @@ Template.Profile.helpers({
   followNum: function() {
     // var length = Meteor.user().profile.followedQuestions.length;
     // return length > 0 ? length : false;
-    return true;
   }
-
+*/
 });
 
 /*****************************************************************************/
@@ -93,7 +92,7 @@ Template.Profile.onCreated(function () {
 });
 
 Template.Profile.onRendered(function () {
-  Meteor.call('topMenu/toggleMenuItem', '#btn-profile');
+  //Meteor.call('topMenu/toggleMenuItem', '#btn-profile');
 });
 
 Template.Profile.onDestroyed(function () {

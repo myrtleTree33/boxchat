@@ -84,6 +84,29 @@ Template.Forum.helpers({
         createdAt: -1
       }
     });
+  },
+
+  topUsers: function() {
+    var forumUsers = Template.instance().data.all;
+    var rank = [];
+    forumUsers.forEach(function(userId) {
+      rank.push([userId, Interactions.find({
+        authorId: userId,
+        forumId: Template.instance().data._id
+      }).count()]);
+    });
+
+    rank.sort(function(a, b) {
+      return b[1] - a[1];
+    });
+    
+    var ret = [];
+    for (var i = 0; i < 5; i++) {
+      if (rank[i] == null) break;
+      if (rank[i][1] > 0) ret.push([rank[i][0], parseInt(i+1), rank[i][1]]);
+    }
+    
+    return ret;
   }
 });
 

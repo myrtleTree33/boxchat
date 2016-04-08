@@ -111,10 +111,20 @@
           </div>
 
           <div class="ui segment">
-            Trending
+            <h2 class="ui header">Hot Topics</h2>
+              <div>
+                
+              </div>
+            <!--By number of-->
           </div>
           <div class="ui segment">
-            Users
+            <!--By number of interactions in other people's posts-->
+            <h2 class="ui header">Top Users</h2>
+            <div>
+              {{#each topUsers}}
+                {{> TopUsers}}
+              {{/each}}
+            </div>
           </div>
         </div>
       </div>

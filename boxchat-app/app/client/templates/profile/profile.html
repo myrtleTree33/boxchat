@@ -1,7 +1,6 @@
 <template name="Profile">
   <div class="profile ui grid">
-    this is the profile page
-    <!-- <div class="eleven wide computer eleven wide tablet sixteen wide mobile column">
+    <div class="eleven wide computer eleven wide tablet sixteen wide mobile column">
       <div class="column package zc_personal" >
         <h2 class="canOverflow" id="name">{{name}}</h2>
         <h3 class="canOverflow" id="description">{{description}}</h3>
@@ -49,13 +48,13 @@
       <div class="column package">
         <h3>Answers&nbsp;&nbsp;&nbsp;{{answerNum}}</h3>
         <hr />
-        {{#each forums}}
-          {{> answeredQuestions}}
+        {{#each answeredQuestions}}
+          {{> Interaction}}
         {{/each}}
       </div>
       </section>
       {{/if}}
-
+<!--
       {{#if followNum}}
       <section id="followedQuestions">
       <div class="column package">
@@ -67,11 +66,12 @@
       </div>
       </section>
       {{/if}}
+-->
     </div>
 
     <div class="five wide computer only column">
       <div class="column package">
       </div>
-    </div> -->
+    </div>
   </div>
 </template>

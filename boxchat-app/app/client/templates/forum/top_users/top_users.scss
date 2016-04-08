@@ -1,14 +1,8 @@
 /*****************************************************************************/
-/* Interaction: Style */
+/* TopUsers: Style */
 /*****************************************************************************/
-.interaction #profileBar {
-    //background-color:#FFEAD7;
-    //border-radius:2px;
-    //padding:3px;
-}
-
-.interaction.canOverflow {
-     overflow:hidden;
+.top-users h3 {
+    overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
 }
