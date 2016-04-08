@@ -122,9 +122,6 @@ Template.Forum.onRendered(function() {
   Meteor.call('topMenu/toggleMenuItem', '#btn-currentForum');
 });
 
-<<<<<<< HEAD
-Template.Forum.onDestroyed(function() {});
-=======
 Template.Forum.onDestroyed(function() {});
 
   // var forumId = Router.current().params.id;
@@ -135,4 +132,3 @@ Template.Forum.onDestroyed(function() {});
   // });
   // console.log('updated');
   // console.log(Meteor.user().profile);
->>>>>>> 560cdfeec99f2a046c0988d845ed5e2cb7a90e08
