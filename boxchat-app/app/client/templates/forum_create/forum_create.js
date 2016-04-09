@@ -1,6 +1,13 @@
 /*****************************************************************************/
 /* ForumCreate: Event Handlers */
 /*****************************************************************************/
+
+// email validator from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
+function isEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 Template.ForumCreate.events({
   'submit #form-create-forum': function(event, template) {
     event.preventDefault();
@@ -10,9 +17,6 @@ Template.ForumCreate.events({
     var users = obj.users.value.split(/[ ,]+/).filter(Boolean);
     var description = obj.description.value;
     var tags = obj.stickyTags.value.split(/[ ,]+/).filter(Boolean);
-
-    console.log('-----------')
-    console.log(users);
 
     var escapeTags = function(tags) {
       var output = [];
@@ -29,8 +33,8 @@ Template.ForumCreate.events({
     }
 
     var _tags = escapeTags(tags); // properly format hashtag
-    var allUsers = [Meteor.user()._id].concat(users);
-    var adminUsers = [Meteor.user()._id];
+    var allUsers = lodash.union([Meteor.user()._id].concat(users));
+    var adminUsers = lodash.union([Meteor.user()._id]);
 
     var formData = {
       createdAt: new Date(),
@@ -75,6 +79,7 @@ Template.ForumCreate.onCreated(function() {});
 
 Template.ForumCreate.onRendered(function() {
 
+
   $('.ui.dropdown').dropdown();
   Meteor.call('topMenu/toggleMenuItem', '#btn-createForum');
 
@@ -117,8 +122,12 @@ Template.ForumCreate.onRendered(function() {
   $('#forum-users').selectize({
     delimiter: ',',
     persist: false,
+    createFilter: function(input) {
+      return isEmail(input);
+    },
     create: function(input) {
       return {
+        _id: input,
         'name': input
       };
     },
@@ -140,21 +149,21 @@ Template.ForumCreate.onRendered(function() {
       }
     },
     load: function(query, callback) {
-      var results = Meteor.users.find({
-        'profile.name': {
-          $regex: '.*' + query + '.*',
-          $options: 'i'
+      Meteor.call('forum/createForumFindUsers', query, function(err, data) {
+        if (err) {
+          console.error("Some error occuered: " + err);
+          return;
         }
-      }, {
-        limit: 7
-      }).fetch();
-      var _results = _.map(results, function(user) {
-        return {
-          _id: user._id,
-          name: user.profile['name']
-        }
+
+        var _results = _.map(data, function(user) {
+          return {
+            _id: user._id,
+            name: user.profile['name']
+          }
+        });
+        callback(_results);
       });
-      callback(_results);
+
     }
   });
 });

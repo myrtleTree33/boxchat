@@ -15,7 +15,10 @@ Template.Home.helpers({});
 /*****************************************************************************/
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Home.onCreated(function() {});
+Template.Home.onCreated(function() {
+  // on first created, add user to existing forums if needed
+  Meteor.call('signup/addPendingForums', Meteor.userId());
+});
 
 Template.Home.onRendered(function() {
   // go to last opened forum page

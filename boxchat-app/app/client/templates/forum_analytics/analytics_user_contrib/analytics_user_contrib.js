@@ -23,7 +23,7 @@ Template.AnalyticsUserContrib.onRendered(function() {
     data: {
       json: [],
       keys: {
-        x: 'userId',
+        x: 'name',
         value: ['questions', 'interactions', 'likes']
       },
       type: 'bar'
@@ -41,7 +41,7 @@ Template.AnalyticsUserContrib.onRendered(function() {
       userContribChart.load({
         json: result,
         keys: {
-          x: 'userId',
+          x: 'name',
           value: ['questions', 'interactions', 'likes']
         },
         type: 'bar'
