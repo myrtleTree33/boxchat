@@ -121,3 +121,10 @@ Router.route('user_settings', {
   controller: 'UserSettingsController',
   where: 'client'
 });
+
+
+Router.route('main', {
+  name: 'main',
+  controller: 'MainController',
+  where: 'client'
+});

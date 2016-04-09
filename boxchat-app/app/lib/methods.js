@@ -18,9 +18,22 @@ Meteor.methods({
   },
 
   'userPermissions/checkPermissions': function(userId, roles, groupId) {
-    if (!Roles.userIsInRole(userId, roles, groupId)) {
-      Router.go('unauthorized', {});
+    Meteor.call('userPermissions/isLogin', function(err, loggedIn) {
+      if (!loggedIn) {
+        return;
+      }
+      if (!Roles.userIsInRole(userId, roles, groupId)) {
+        Router.go('unauthorized', {});
+      }
+    });
+  },
+
+  'userPermissions/isLogin': function() {
+    if (!Meteor.user()) {
+      Router.go('/', {});
+      return false;
     }
+    return true;
   },
 
   'topMenu/toggleMenuItem': function(selector) {

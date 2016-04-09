@@ -99,13 +99,13 @@ Template.Forum.helpers({
     rank.sort(function(a, b) {
       return b[1] - a[1];
     });
-    
+
     var ret = [];
     for (var i = 0; i < 5; i++) {
       if (rank[i] == null) break;
       if (rank[i][1] > 0) ret.push([rank[i][0], parseInt(i+1), rank[i][1]]);
     }
-    
+
     return ret;
   }
 });
