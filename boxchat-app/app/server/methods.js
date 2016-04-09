@@ -4,8 +4,8 @@
 
 // email validator from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
 function isEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
 }
 
 Meteor.methods({
@@ -68,12 +68,18 @@ Meteor.methods({
       console.log('reCAPTCHA check failed!', verifyCaptchaResponse);
       throw new Meteor.Error(422, 'reCAPTCHA Failed: ' + verifyCaptchaResponse.error);
 
-    } else
+    } else {
       console.log('reCAPTCHA verification passed!');
+    }
+
     var forumId = Forums.insert(formData);
+
+    // get rid of all invalid users, and replace
+    // email ones by ID
 
     for (var i = 0; i < formData.all.length; i++) {
       var entry = formData.all[i];
+
       if (isEmail(entry)) {
         var user = Meteor.users.findOne({
           'emails.address': entry
@@ -81,6 +87,13 @@ Meteor.methods({
         if (user) {
           formData.all[i] = user._id;
         } else {
+          PendingUsers.upsert({
+            email: entry
+          }, {
+            $addToSet: {
+              forumIds: forumId
+            }
+          });
           formData.all[i] = null;
         }
       }
@@ -88,7 +101,6 @@ Meteor.methods({
 
     // remove all undefined ids, and duplciates from set
     formData.all = lodash.compact(lodash.union(formData.all));
-    console.log(formData.all);
 
     // add roles to users
     Meteor.call('userPermissions/addForum', formData.all, ['all'], forumId);
