@@ -34,6 +34,32 @@ Meteor.methods({
     Accounts.addEmail(Meteor.userId(), email);
   },
 
+  'signup/addPendingForums': function(userId) {
+
+    // get the email
+    var email = Meteor.user().emails[0].address;
+
+    var pendingUser = PendingUsers.findOne({
+      email: email
+    });
+    if (!pendingUser) return;
+    if (pendingUser.length === 0) return;
+
+    var forumIds = pendingUser.forumIds;
+
+    // then add user to forums
+    for (var i = 0; i < forumIds.length; i++) {
+      var forumId = forumIds[i]
+      Forums.update(forumId, {
+        $addToSet: {
+          all: userId
+        }
+      });
+      // give user appropriate permissions per forum
+      Meteor.call('userPermissions/addForum', [userId], ['all'], forumId);
+    }
+  },
+
   'forum/createForumFindUsers': function(query, limit) {
 
     var _query = {
