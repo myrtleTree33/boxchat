@@ -1,5 +1,16 @@
 <template name="SettingForums">
   <div class="setting-forums">
-    <h1>Find me in app/client/templates/user_settings/setting_forums/setting_forums</h1>
+    <div class="ws_menu">
+
+    </div>
   </div>
+
+  {{#if forumNum}}
+  <section id="enrolledForums">
+    <div class="column package">
+      <h3>Forums&nbsp;&nbsp;&nbsp;{{forumNum}}</h3>
+      <hr /> {{#each forums}} {{> ForumsBtn}} {{/each}}
+    </div>
+  </section>
+  {{/if}}
 </template>
