@@ -10,7 +10,7 @@ Template.Topmenu.events({
       }
       // hotfix to properly allow iron router to go back to home
       // page, not unauthorized
-      setTimeout(function () {
+      setTimeout(function() {
         Router.go('/');
       }, 200);
     });
@@ -24,7 +24,7 @@ Template.Topmenu.events({
   },
 
   'click #btn-profile': function(event) {
-      Router.go('/profile');
+    Router.go('/profile');
   },
 
   'click #btn-createForum': function(event) {
@@ -35,6 +35,17 @@ Template.Topmenu.events({
     var forumId = Meteor.user().profile.currForum;
     if (forumId) {
       Router.go('forum', {
+        id: forumId
+      });
+    } else { // handle case for new user
+      Router.go('/profile');
+    }
+  },
+
+  'click #btn-forum-settings': function(event) {
+    var forumId = Meteor.user().profile.currForum;
+    if (forumId) {
+      Router.go('forumSettings', {
         id: forumId
       });
     } else { // handle case for new user
