@@ -18,9 +18,6 @@ Template.ForumCreate.events({
     var description = obj.description.value;
     var tags = obj.stickyTags.value.split(/[ ,]+/).filter(Boolean);
 
-    console.log('-----------')
-    console.log(users);
-
     var escapeTags = function(tags) {
       var output = [];
       for (var i = 0; i < tags.length; i++) {
@@ -36,8 +33,8 @@ Template.ForumCreate.events({
     }
 
     var _tags = escapeTags(tags); // properly format hashtag
-    var allUsers = [Meteor.user()._id].concat(users);
-    var adminUsers = [Meteor.user()._id];
+    var allUsers = lodash.union([Meteor.user()._id].concat(users));
+    var adminUsers = lodash.union([Meteor.user()._id]);
 
     var formData = {
       createdAt: new Date(),

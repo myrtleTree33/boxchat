@@ -72,7 +72,23 @@ Meteor.methods({
       console.log('reCAPTCHA verification passed!');
     var forumId = Forums.insert(formData);
 
-    console.log(formData);
+    for (var i = 0; i < formData.all.length; i++) {
+      var entry = formData.all[i];
+      if (isEmail(entry)) {
+        var user = Meteor.users.findOne({
+          'emails.address': entry
+        });
+        if (user) {
+          formData.all[i] = user._id;
+        } else {
+          formData.all[i] = null;
+        }
+      }
+    }
+
+    // remove all undefined ids, and duplciates from set
+    formData.all = lodash.compact(lodash.union(formData.all));
+    console.log(formData.all);
 
     // add roles to users
     Meteor.call('userPermissions/addForum', formData.all, ['all'], forumId);
