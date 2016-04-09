@@ -2,6 +2,12 @@
 /*  Server Methods */
 /*****************************************************************************/
 
+// email validator from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
+function isEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 Meteor.methods({
   'server/method_name': function() {
     // server method logic
@@ -31,19 +37,15 @@ Meteor.methods({
   'forum/createForumFindUsers': function(query, limit) {
 
     var _query = {
-      $or: [{
+      '$or': [{
         'profile.name': {
           $regex: '.*' + query + '.*',
           $options: 'i'
         }
       }, {
-        'emails': {
-          $elemMatch: {
-            address: {
-              // $regex: '.*' + query + '.*',
-              // $options: 'i'
-            }
-          }
+        'emails.address': {
+          $regex: '.*' + query + '.*',
+          $options: 'i'
         }
       }]
     };
@@ -69,6 +71,8 @@ Meteor.methods({
     } else
       console.log('reCAPTCHA verification passed!');
     var forumId = Forums.insert(formData);
+
+    console.log(formData);
 
     // add roles to users
     Meteor.call('userPermissions/addForum', formData.all, ['all'], forumId);

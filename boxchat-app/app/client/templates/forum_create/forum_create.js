@@ -1,6 +1,13 @@
 /*****************************************************************************/
 /* ForumCreate: Event Handlers */
 /*****************************************************************************/
+
+// email validator from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
+function isEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 Template.ForumCreate.events({
   'submit #form-create-forum': function(event, template) {
     event.preventDefault();
@@ -118,8 +125,12 @@ Template.ForumCreate.onRendered(function() {
   $('#forum-users').selectize({
     delimiter: ',',
     persist: false,
+    createFilter: function(input) {
+      return isEmail(input);
+    },
     create: function(input) {
       return {
+        _id: input,
         'name': input
       };
     },
