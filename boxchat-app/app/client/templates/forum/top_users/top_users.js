@@ -8,6 +8,17 @@ Template.TopUsers.events({
 /* TopUsers: Helpers */
 /*****************************************************************************/
 Template.TopUsers.helpers({
+    img: function() {
+      var user = Meteor.users.findOne({
+          _id: Template.instance().data[0]
+      });
+      var img = user.profile.profileImg;
+      if (img == null) {
+          img = "/img/default.jpg";
+      }
+      return img;
+    },
+    
     color: function() {
         var rank = Template.instance().data[1];
         if (rank == 1) {

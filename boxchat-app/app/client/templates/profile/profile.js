@@ -17,6 +17,15 @@ Template.Profile.events({
 /* Profile: Helpers */
 /*****************************************************************************/
 Template.Profile.helpers({
+  img: function() {
+      var user = Meteor.user();
+      var img = user.profile.profileImg;
+      if (img == null) {
+          img = "/img/default.jpg";
+      }
+      return img;
+    },
+  
   name: function() {
     return Meteor.user().profile.name;
   },

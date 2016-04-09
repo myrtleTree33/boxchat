@@ -115,3 +115,9 @@ Router.route('unauthorized', {
   controller: 'UnauthorizedController',
   where: 'client'
 });
+
+Router.route('user_settings', {
+  name: 'userSettings',
+  controller: 'UserSettingsController',
+  where: 'client'
+});
