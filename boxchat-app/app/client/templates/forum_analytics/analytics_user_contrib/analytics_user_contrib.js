@@ -35,7 +35,7 @@ Template.AnalyticsUserContrib.onRendered(function() {
     }
   });
 
-  this.autorun(function(tracker) {
+  // this.autorun(function(tracker) {
     var forumId = Router.current().params.id;
     Meteor.call('analytics/getUserContrib', forumId, function(err, result) {
       userContribChart.load({
@@ -47,7 +47,7 @@ Template.AnalyticsUserContrib.onRendered(function() {
         type: 'bar'
       });
     });
-  });
+  // });
 
 });
 
