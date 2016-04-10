@@ -6,9 +6,9 @@
     </div>
     <div class="ui bottom attached active tab segment " data-tab="account">
       {{#if social}}
-        {{> AccountWithPwd}}
-      {{else}}
         {{> AccountWithoutPwd}}
+      {{else}}
+        {{> AccountWithPwd}}
       {{/if}}
     </div>
     <div class="ui bottom attached tab segment" data-tab="settingsForums">
