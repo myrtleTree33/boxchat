@@ -16,6 +16,9 @@ Template.Home.helpers({});
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Home.onCreated(function() {
+  if (Meteor.userId()) {
+    Router.go('main');
+  }
 });
 
 Template.Home.onRendered(function() {
