@@ -17,8 +17,6 @@ Template.Main.helpers({
 /* Main: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Main.onCreated(function () {
-  // on first created, add user to existing forums if needed
-  Meteor.call('signup/addPendingForums', Meteor.userId());
 });
 
 Template.Main.onRendered(function () {

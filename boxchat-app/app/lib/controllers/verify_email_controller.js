@@ -30,6 +30,8 @@ VerifyEmailController = RouteController.extend({
         console.log('called --- fail');
         Bert.alert(err.reason, 'danger');
       } else {
+        // on first created, and successfully validated, then add user to existing forums if needed
+        Meteor.call('signup/addPendingForums', Meteor.userId());
         console.log('called --- pass');
         Router.go('/');
         Bert.alert('Email verified!', 'success');
