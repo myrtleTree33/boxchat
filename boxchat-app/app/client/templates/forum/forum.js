@@ -24,7 +24,9 @@ Template.Forum.helpers({
 
   forumOwner: function() {
     var adminId = Template.instance().data.admin;
-    var admin = Meteor.users.findOne({_id: adminId[0]});
+    var admin = Meteor.users.findOne({
+      _id: adminId[0]
+    });
     return admin;
   },
 
@@ -86,6 +88,66 @@ Template.Forum.helpers({
     });
   },
 
+  postsPercentHealth: function() {
+
+    function getUserPostsHealth() {
+      var forumId = Template.instance().data._id;
+
+      var posts = Questions.find({
+        authorId: Meteor.userId(),
+        forumId: forumId
+      }).count();
+
+      var totalPosts = Questions.find({
+        forumId: forumId
+      }).count();
+
+      if (totalPosts === 0) {
+        return 0;
+      }
+
+      var totalUsers = Forums.findOne(forumId).all.length;
+      var avgPosts = totalPosts / totalUsers;
+
+      var health = posts - avgPosts;
+      return health;
+    }
+
+    var health = getUserPostsHealth();
+    return numeral(health).format('0.0a');
+
+  },
+
+  interactionsPercentHealth: function() {
+
+    function getUserInteractionsHealth() {
+      var forumId = Template.instance().data._id;
+
+      var interactions = Interactions.find({
+        authorId: Meteor.userId(),
+        forumId: forumId
+      }).count();
+
+      var totalInteractions = Interactions.find({
+        forumId: forumId
+      }).count();
+
+      if (totalInteractions === 0) {
+        return 0;
+      }
+
+      var totalUsers = Forums.findOne(forumId).all.length;
+      var avgInteractions = totalInteractions / totalUsers;
+
+      var health = interactions - avgInteractions;
+      return health;
+    }
+
+    var health = getUserInteractionsHealth();
+    return numeral(health).format('0.0a');
+
+  },
+
   topUsers: function() {
     var forumUsers = Template.instance().data.all;
     var rank = [];
@@ -103,7 +165,7 @@ Template.Forum.helpers({
     var ret = [];
     for (var i = 0; i < 5; i++) {
       if (rank[i] == null) break;
-      if (rank[i][1] > 0) ret.push([rank[i][0], parseInt(i+1), rank[i][1]]);
+      if (rank[i][1] > 0) ret.push([rank[i][0], parseInt(i + 1), rank[i][1]]);
     }
 
     return ret;
@@ -120,15 +182,19 @@ Template.Forum.onCreated(function() {
 Template.Forum.onRendered(function() {
   $('.ui.dropdown').dropdown();
   Meteor.call('topMenu/toggleMenuItem', '#btn-currentForum');
+
+  $('.progress').each(function(i, ele) {
+    $(ele).progress();
+  });
 });
 
 Template.Forum.onDestroyed(function() {});
 
-  // var forumId = Router.current().params.id;
-  // Meteor.users.update(Meteor.userId(), {
-  //   $set: {
-  //     'profile.currForum': forumId
-  //   }
-  // });
-  // console.log('updated');
-  // console.log(Meteor.user().profile);
+// var forumId = Router.current().params.id;
+// Meteor.users.update(Meteor.userId(), {
+//   $set: {
+//     'profile.currForum': forumId
+//   }
+// });
+// console.log('updated');
+// console.log(Meteor.user().profile);

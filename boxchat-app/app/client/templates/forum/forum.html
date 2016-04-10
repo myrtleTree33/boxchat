@@ -94,36 +94,48 @@
               <h4>My stats</h4>
             </div>
 
-            <div class="ui olive tiny progress" data-present="72">
-              <div class="bar">
-                <div class="progress"></div>
-              </div>
-              <div class="label">Number of posts</div>
-            </div>
+            <div class="ui grid">
 
-            <div class="ui blue tiny progress" data-percent="59">
-              <div class="bar">
-                <div class="progress"></div>
+              <div class="ui row">
+                <div class="ui stackable eight wide column">
+                  <div class="ui tiny statistic">
+                    <div class="value">
+                      {{postsPercentHealth}}
+                    </div>
+                    <div class="label">
+                      Questions above average
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ui stackable eight wide column">
+                  <div class="ui tiny statistic">
+                    <div class="value">
+                      {{interactionsPercentHealth}}
+                    </div>
+                    <div class="label">
+                      Interactions above average
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="label">Number of likes</div>
+
             </div>
 
           </div>
 
           <div class="ui segment">
             <h2 class="ui header">Hot Topics</h2>
-              <div>
-                
-              </div>
+            <div>
+
+            </div>
             <!--By number of-->
           </div>
           <div class="ui segment">
             <!--By number of interactions in other people's posts-->
             <h2 class="ui header">Top Users</h2>
             <div>
-              {{#each topUsers}}
-                {{> TopUsers}}
-              {{/each}}
+              {{#each topUsers}} {{> TopUsers}} {{/each}}
             </div>
           </div>
         </div>
