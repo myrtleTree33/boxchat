@@ -36,18 +36,10 @@ Router.route('authenticated', {
   where: 'client'
 });
 
-Router.route('verify-email/:token', function() {
-  console.log('here');
-  Accounts.verifyEmail(this.params.token, function(err){
-    if (err) {
-      console.log('called --- fail');
-      Bert.alert(err.reason, 'danger');
-    } else {
-      console.log('called --- pass');
-      Router.go('/');
-      Bert.alert('Email verified!', 'success');
-    }
-  });
+Router.route('verify-email/:token', {
+  name: 'verifyEmail',
+  controller: 'VerifyEmailController',
+  where: 'client'
 });
 
 

@@ -2,7 +2,7 @@
 /* Home: Event Handlers */
 /*****************************************************************************/
 Template.Home.events({
-  'click #btn-splash-login': function(event, template) {
+  'click .btn-splash-login': function(event, template) {
     Router.go('login');
   }
 });
