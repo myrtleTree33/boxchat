@@ -1,25 +1,46 @@
 <template name="QuestionMain">
-  <div class="ui segment">
-    <div class="question-main ui grid">
+  <div class="question-main ui grid">
 
-      <div class="row">
-        <div class="sixteen wide column left aligned">
-          <div class="ui content">
-            <p>
-              {{content}}{{userName}}
-            </p>
+    <div class="row">
+
+      <div class="two wide column left aligned">
+        <div class="ui stackable grid centered">
+          <a class="btn-upvote" href="#"><i class="large chevron up icon"></i></a>
+        </div>
+
+        <div class="ui stackable grid centered">
+          <div class="ui small statistic">
+            <div class="value">
+              {{prettyVotes}}
+            </div>
+            <div class="label">
+              Votes
+            </div>
           </div>
+        </div>
+
+        <div class="ui stackable grid centered">
+          <a class="btn-downvote"><i class="large chevron down icon" href="#"></i></a>
         </div>
       </div>
 
-      <div class="ui hidden divider"></div>
-
-      <div class="row">
-        <div class="sixteen wide column left aligned">
-          {{#with questionAuthor}} {{> QuestionMainFooter}} {{/with}}
+      <div class="fourteen wide column left aligned">
+        <div class="ui segment content">
+          <p>
+            {{content}}{{userName}}
+          </p>
         </div>
       </div>
 
     </div>
+
+    <div class="ui hidden divider"></div>
+
+    <div class="row">
+      <div class="sixteen wide column left aligned">
+        {{#with questionAuthor}} {{> QuestionMainFooter}} {{/with}}
+      </div>
+    </div>
+
   </div>
 </template>

@@ -25,6 +25,10 @@ Template.QuestionMain.helpers({
       author: author,
       question: question
     };
+  },
+
+  prettyVotes: function() {
+    return numeral(Template.instance().data.votes).format('0a');
   }
 });
 

@@ -17,7 +17,7 @@ Template.Ask.events({
       var output = [];
       for (var i = 0; i < tags.length; i++) {
         var t = tags[i];
-        console.log(t)
+        
         if (t.charAt(0) !== '#') {
           console.log('here');
           t = '#' + t;

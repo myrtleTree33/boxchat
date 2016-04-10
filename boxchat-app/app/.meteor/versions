@@ -91,6 +91,7 @@ multiply:iron-router-progress@1.0.2
 mushk:sha1@0.1.1
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.42
+numeral:numeral@1.5.3_1
 oauth@1.1.9
 oauth1@1.1.8
 oauth2@1.1.8
