@@ -13,6 +13,10 @@ Meteor.methods({
     // server method logic
   },
 
+  'userPermissions/removeForum': function(userIds, roles, forumId) {
+    Roles.removeUsersFromRoles(userIds, roles, forumId);
+  },
+
   'userPermissions/addForum': function(userIds, roles, forumId) {
     Roles.addUsersToRoles(userIds, roles, forumId);
   },

@@ -16,6 +16,21 @@ Template.ForumSettings.events({
     var description = obj.description.value;
     var tags = obj.topics.value.split(',');
 
+    var oldForum = Forums.findOne(forumId);
+    var oldAll = oldForum.all;
+    var oldAdmin = oldForum.admin;
+
+    var diffAll = lodash.difference(oldAll, all);
+    var diffAdmin = lodash.difference(oldAll, admin);
+
+    console.log(diffAll)
+    console.log(diffAdmin)
+
+    Meteor.call('userPermissions/removeForum',
+      diffAll, ['all'], forumId);
+    Meteor.call('userPermissions/removeForum',
+      diffAdmin, ['admin'], forumId);
+
     try {
       Forums.update({
         _id: forumId
