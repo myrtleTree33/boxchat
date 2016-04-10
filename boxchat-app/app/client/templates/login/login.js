@@ -7,7 +7,7 @@ Template.Login.events({
       if (err) {
         throw new Meteor.error("Login failed");
       }
-      Router.go('/', {});
+    Router.go('main', {});
     });
   },
 
@@ -16,7 +16,7 @@ Template.Login.events({
       if (err) {
         throw new Meteor.error("Login failed");
       }
-      Router.go('/', {});
+      Router.go('main', {});
     });
   },
 
@@ -45,7 +45,7 @@ Template.Login.events({
         Bert.alert('Oops, wrong login credentials?', 'danger', 'growl-top-right');
         throw new Meteor.error("Login failed");
       }
-      Router.go('/', {});
+      Router.go('main', {});
     });
   }
 });

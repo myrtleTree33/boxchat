@@ -56,8 +56,8 @@ Template.Topmenu.events({
   'click #btn-settings': function(event) {
     var forumId = Meteor.user().profile.currForum;
     if (forumId) {
-      Router.go('userSettings');
     } else { // handle case for new user
+      Router.go('userSettings');
       Router.go('/profile');
     }
   },
