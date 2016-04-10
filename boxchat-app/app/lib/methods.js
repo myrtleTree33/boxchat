@@ -29,7 +29,8 @@ Meteor.methods({
   },
 
   'userPermissions/isLogin': function() {
-    if (!Meteor.user()) {
+    if (!Meteor.userId()) {
+      console.log('triggered-----------------------');
       Router.go('/', {});
       return false;
     }
