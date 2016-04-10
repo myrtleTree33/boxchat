@@ -25,7 +25,7 @@ Template.Profile.helpers({
       }
       return img;
     },
-  
+
   name: function() {
     return Meteor.user().profile.name;
   },
@@ -101,7 +101,8 @@ Template.Profile.onCreated(function () {
 });
 
 Template.Profile.onRendered(function () {
-  //Meteor.call('topMenu/toggleMenuItem', '#btn-profile');
+  $('.ui.dropdown').dropdown();
+  Meteor.call('topMenu/toggleMenuItem', '#btn-profile');
 });
 
 Template.Profile.onDestroyed(function () {

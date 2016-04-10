@@ -13,9 +13,12 @@
    viewBox="0 0 23.63077 32.000198"
    id="svg2"
    inkscape:version="0.91 r"
-   sodipodi:docname="noun_399284_cc.svg"
+   sodipodi:docname="pencil_box.svg"
    width="23.63077"
-   height="32.000198">
+   height="32.000198"
+   inkscape:export-filename="/home/joel/repos/cs3226/boxchat/boxchat-app/app/public/img/splash/pencil_box.png"
+   inkscape:export-xdpi="3.8085938"
+   inkscape:export-ydpi="3.8085938">
   <metadata
      id="metadata20">
     <rdf:RDF>
@@ -24,7 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -44,7 +47,7 @@
      id="namedview16"
      showgrid="false"
      inkscape:zoom="11.8"
-     inkscape:cx="4.973987"
+     inkscape:cx="-12.059911"
      inkscape:cy="16.835794"
      inkscape:window-x="65"
      inkscape:window-y="24"
@@ -56,7 +59,9 @@
      fit-margin-bottom="0" />
   <g
      transform="translate(-3.9999957,-1020.3622)"
-     id="g4">
+     id="g4"
+     inkscape:export-xdpi="1713.87"
+     inkscape:export-ydpi="1713.87">
     <g
        transform="translate(-0.1874839,-0.08735)"
        id="g6">

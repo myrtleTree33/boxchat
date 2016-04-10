@@ -17,6 +17,8 @@ Template.Unauthorized.onCreated(function () {
 });
 
 Template.Unauthorized.onRendered(function () {
+  $('.ui.dropdown').dropdown();
+  Meteor.call('topMenu/toggleMenuItem', '');
 });
 
 Template.Unauthorized.onDestroyed(function () {

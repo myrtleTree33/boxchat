@@ -1,8 +1,8 @@
 <template name="MasterLayout">
     {{#unless currentUser}}
-      <div class="pusher">
+      <!-- <div class="pusher"> -->
         {{> yield}}
-      </div>
+      <!-- </div> -->
     {{else}}
       {{#unless hasEmail}}
         {{> AddEmail}}
