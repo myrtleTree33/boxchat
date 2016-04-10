@@ -7,6 +7,7 @@ Template.Login.events({
       if (err) {
         throw new Meteor.error("Login failed");
       }
+      Router.go('/', {});
     });
   },
 
@@ -15,6 +16,7 @@ Template.Login.events({
       if (err) {
         throw new Meteor.error("Login failed");
       }
+      Router.go('/', {});
     });
   },
 
@@ -23,6 +25,7 @@ Template.Login.events({
       if (err) {
         throw new Meteor.error("Logout failed");
       }
+      Router.go('/', {});
     })
   },
 
@@ -37,7 +40,13 @@ Template.Login.events({
       email: template.find('[name="emailAddress"]').value,
       password: template.find('[name="password"]').value
     };
-    Meteor.loginWithPassword(user.email, user.password);
+    Meteor.loginWithPassword(user.email, user.password,function(err) {
+      if (err) {
+        Bert.alert('Oops, wrong login credentials?', 'danger', 'growl-top-right');
+        throw new Meteor.error("Login failed");
+      }
+      Router.go('/', {});
+    });
   }
 });
 
