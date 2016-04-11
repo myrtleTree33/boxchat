@@ -16,6 +16,7 @@ Template.Search.events({
     });
     searchFieldSelect.refreshOptions();
     searchFieldSelect.addItem(tag, false);
+    $('#forum-search').submit();
   }
 });
 
