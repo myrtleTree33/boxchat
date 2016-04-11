@@ -89,6 +89,7 @@ mongo@1.1.6
 mongo-id@1.0.3
 multiply:iron-router-progress@1.0.2
 mushk:sha1@0.1.1
+natestrauser:animate-css@3.5.1
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.42
 numeral:numeral@1.5.3_1

@@ -20,6 +20,9 @@ Template.Main.onCreated(function () {
 });
 
 Template.Main.onRendered(function () {
+  $('.ui.dropdown').dropdown();
+  Meteor.call('topMenu/toggleMenuItem', '#btn-currentForum');
+
   // go to last opened forum page
   var currForum = Meteor.user().profile['currForum'];
   if (currForum) {
