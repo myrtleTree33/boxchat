@@ -4,22 +4,6 @@
 
       <div data-class="twelve wide computer sixteen wide tablet sixteen wide mobile column main_forum">
 
-        <div class="mobile only row">
-          <div data-class="sixteen wide column">
-            <button class="fluid ui large orange button" id="btn-ask">
-              Post a question
-            </button>
-          </div>
-        </div>
-
-        <div class="ui hidden divider"></div>
-
-        <div class="row">
-          <div class="sixteen wide column">
-            {{> Search}}
-          </div>
-        </div>
-
         <div class="ui sixteen wide column segment">
           <div class="ui grid">
 
@@ -31,7 +15,7 @@
               </div>
             </div>
 
-            <div class="row">
+            <div class="computer only row">
               <div class="sixteen wide column">
 
                 <div class="ui content">
@@ -59,6 +43,22 @@
               </div>
             </div>
 
+          </div>
+        </div>
+
+        <div class="mobile only row">
+          <div data-class="sixteen wide column">
+            <button class="fluid ui large orange button" id="btn-ask">
+              Post a question
+            </button>
+          </div>
+        </div>
+
+        <div class="ui hidden divider"></div>
+
+        <div class="row">
+          <div class="sixteen wide column">
+            {{> Search}}
           </div>
         </div>
 
