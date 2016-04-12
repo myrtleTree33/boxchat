@@ -17,6 +17,7 @@ Template.Main.helpers({
 /* Main: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Main.onCreated(function () {
+  Meteor.call('signup/addUserToImprovementsForum');
 });
 
 Template.Main.onRendered(function () {

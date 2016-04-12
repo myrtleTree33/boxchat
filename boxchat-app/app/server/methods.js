@@ -135,9 +135,29 @@ Meteor.methods({
     return forumId;
   },
 
+  'signup/addUserToImprovementsForum': function() {
+    var forumId = Forums.findOne({
+      title: 'Improvements forum'
+    })._id;
+
+      Forums.update({
+        _id: forumId
+      }, {
+        $addToSet: {
+          all: Meteor.userId()
+        }
+      });
+
+    // add user to forum
+    // add roles to users
+    Meteor.call('userPermissions/addForum', [Meteor.userId()], ['all'], forumId);
+  },
+
   'analytics/getUserContrib': function(forumId) {
     var output = [];
-    var all = Forums.findOne({_id: forumId}).all;
+    var all = Forums.findOne({
+      _id: forumId
+    }).all;
     for (var i = 0; i < all.length; i++) {
       var user = {};
       var userId = all[i];

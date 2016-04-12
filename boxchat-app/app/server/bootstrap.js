@@ -32,7 +32,19 @@ Meteor.startup(function() {
   });
 
 
-  // clear the mongoDB collections
+  // Add in correct MongoDB
+  var improvementForums = Forums.findOne({
+    title: 'Improvements forum'
+  });
+
+  if (!improvementForums) {
+    Forums.insert({
+      title: 'Improvements forum',
+      description: 'This is the improvements forum.  Feel free to try out NUS Answers in this forum, post your help questions, or simply suggest changes for NUS Forum.',
+      tags: ['#public', '#nusforum', '#nus', '#improvements']
+    });
+  }
+
 
 
 
