@@ -58,6 +58,22 @@ ForumController = RouteController.extend({
   action: function() {
     this.render();
   },
-  onAfterAction: function() {},
+  onAfterAction: function() {
+
+    // hack from https://github.com/Semantic-Org/Semantic-UI/issues/1743
+    // used to solve repetitive class bug with meteor and semantic ui
+    return setTimeout(function() {
+      return $('[data-class]').each(function() {
+        var classes, dataClasses, propClasses;
+        propClasses = $(this).prop('class');
+        dataClasses = $(this).data('class');
+        if (propClasses.indexOf(dataClasses) === -1) {
+          classes = $.trim(propClasses + ' ' + dataClasses);
+          return $(this).prop('class', classes);
+        }
+      });
+    }, 0);
+  },
   onStop: function() {}
+
 });

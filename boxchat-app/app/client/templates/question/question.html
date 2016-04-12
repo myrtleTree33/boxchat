@@ -1,7 +1,7 @@
 <template name="Question">
   <div class="question">
     <div class="ui grid">
-      <div class="eleven wide computer eleven wide tablet sixteen wide mobile column">
+      <div data-class="eleven wide computer eleven wide tablet sixteen wide mobile column">
         <!-- Main question title -->
         {{#with question}} {{> QuestionMainTitle}} {{/with}}
         <!-- Main question -->
@@ -19,7 +19,7 @@
         {{> InteractionEditor}}
 
       </div>
-      <div class="five wide computer eleven wide tablet sixteen wide mobile column">
+      <div data-class="five wide computer eleven wide tablet sixteen wide mobile column">
         <div id="questionRightSidebar">
         <div class="latestTopics">
           <h2><a id="backToForum">{{currentForum}}</a></h2>
