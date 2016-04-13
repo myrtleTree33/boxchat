@@ -10,7 +10,8 @@ Template.AddEmail.events({
     try {
       Meteor.call('signup/addEmail', email);
       Meteor.call('signup/sendVerificationEmail');
-    } catch(e) {
+    } catch (e) {
+      Bert.warning('Invalid email, please use your NUS email', 'danger', 'growl-top-right');
       console.error(e);
     }
   }

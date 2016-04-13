@@ -55,7 +55,8 @@ Template.ForumCreate.events({
       // reset the captcha
       grecaptcha.reset();
       if (error) {
-        Bert.alert('Oops, error creating forum!', 'danger', 'growl-top-right');
+        console.log(error);
+        Bert.alert('Oops, error creating forum: ' + error, 'warning', 'growl-top-right');
       } else {
         Bert.alert('Created forum successfully!', 'success', 'growl-top-right');
 

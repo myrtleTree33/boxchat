@@ -17,9 +17,8 @@ Template.Ask.events({
       var output = [];
       for (var i = 0; i < tags.length; i++) {
         var t = tags[i];
-        
+
         if (t.charAt(0) !== '#') {
-          console.log('here');
           t = '#' + t;
         }
         output.push(t);
@@ -29,7 +28,10 @@ Template.Ask.events({
     tags = escapeTags(tags); // properly format hashtag
 
     _(tags).each(function(tag) {
-      var existingTags = Tags.find({tag: tag, forumId: forumId}).fetch();
+      var existingTags = Tags.find({
+        tag: tag,
+        forumId: forumId
+      }).fetch();
       if (existingTags.length === 0) { // unique tag
         Tags.insert({
           tag: tag,
@@ -38,23 +40,25 @@ Template.Ask.events({
       }
     })
 
-    Questions.insert({
-      authorId: Meteor.user()._id,
-      createdAt: new Date(),
+    var formData = {
       forumId: forumId,
       title: title,
       content: content,
       votes: 0,
       views: 0,
       tags: tags
-    }, function(err, result) {
+    };
+
+    Meteor.call('forum/createQuestion', formData, function(err) {
       if (err) {
-        Bert.alert('Oops, something went wrong', 'danger');
-        return;
+        return Bert.alert('Oops, error creating question: ' + err, 'warning', 'growl-top-right');
       }
-      Bert.alert('Question successfully posted!', 'success');
-      Router.go('forum', {id: forumId});
+      Bert.alert('Question successfully posted!', 'success', 'growl-top-right');
+      Router.go('forum', {
+        id: forumId
+      });
     });
+
   }
 });
 

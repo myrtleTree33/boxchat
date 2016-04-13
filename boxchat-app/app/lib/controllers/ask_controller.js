@@ -23,7 +23,6 @@ AskController = RouteController.extend({
   // return Posts.findOne({_id: this.params._id});
 
   data: function () {
-    console.log(this.params.forumId);
     return {
       forumId: this.params.forumId
     };
@@ -67,7 +66,7 @@ AskController = RouteController.extend({
         }
       });
     }, 0);
-    
+
   },
   onStop: function () {
   }

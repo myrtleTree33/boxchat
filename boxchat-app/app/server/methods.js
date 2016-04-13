@@ -8,6 +8,11 @@ function isEmail(email) {
   return re.test(email);
 }
 
+function isNusEmail(email) {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((u.nus.edu)|(nus.edu.sg))$/;
+  return re.test(email);
+}
+
 Meteor.methods({
   'server/method_name': function() {
     // server method logic
@@ -22,7 +27,7 @@ Meteor.methods({
   },
 
   'signup/sendVerificationEmail': function() {
-    console.log('sending email to: ' + Meteor.userId());
+    // console.log('sending email to: ' + Meteor.userId());
     try {
       Accounts.sendVerificationEmail(Meteor.userId());
     } catch (e) {
@@ -31,6 +36,9 @@ Meteor.methods({
   },
 
   'signup/addEmail': function(email) {
+    if (!isNusEmail(email)) {
+      throw new Meteor.Error(422, 'Invalid email');
+    }
     Accounts.addEmail(Meteor.userId(), email);
   },
 
@@ -86,16 +94,65 @@ Meteor.methods({
     return Meteor.users.find(_query, _formatting).fetch();
   },
 
+  'forum/createQuestion': function(formData) {
+
+    if (!formData.forumId) {
+      throw new Meteor.Error(422, 'Invalid forum ID');
+    }
+    if (!formData.title || formData.title === '') {
+      throw new Meteor.Error(422, 'Please specify a title.');
+    }
+    if (formData.title.length < 10) {
+      throw new Meteor.Error(422, 'Please specify a longer question.');
+    }
+    if (!formData.content || formData.content.length < 20) {
+      throw new Meteor.Error(422, 'Please add details to your question');
+    }
+    if (!formData.tags || formData.tags.length < 2) {
+      throw new Meteor.Error(422, 'Please add a minimum of two tags to your question.');
+    }
+    if (formData.tags.length > 5) {
+      throw new Meteor.Error(422, 'Please limit the number of tags to 5.');
+    }
+
+    Questions.insert({
+      authorId: Meteor.userId(),
+      createdAt: new Date(),
+      forumId: formData.forumId,
+      title: formData.title,
+      content: formData.content,
+      votes: 0,
+      views: 0,
+      tags: formData.tags
+    });
+
+  },
+
   'forum/createForumFormValidify': function(formData, captchaData) {
 
     var verifyCaptchaResponse = reCAPTCHA.verifyCaptcha(this.connection.clientAddress, captchaData);
 
     if (!verifyCaptchaResponse.success) {
-      console.log('reCAPTCHA check failed!', verifyCaptchaResponse);
       throw new Meteor.Error(422, 'reCAPTCHA Failed: ' + verifyCaptchaResponse.error);
 
     } else {
-      console.log('reCAPTCHA verification passed!');
+      // recaptcha check passed
+    }
+
+    if (!formData.title) {
+      throw new Meteor.Error(422, 'Invalid title');
+    } else if (formData.title.length < 5) {
+      throw new Meteor.Error(422, 'Title must be at least 5 characters long.');
+    }
+
+    if (!formData.description) {
+      throw new Meteor.Error(422, 'Invalid description');
+    } else if (formData.description.length < 20) {
+      throw new Meteor.Error(422, 'Description must be at least 20 characters long.');
+    }
+
+    if (!formData.tags || formData.tags.length < 3) {
+      throw new Meteor.Error(422, 'Please use at least 3 tags to describe the forum.');
     }
 
     var forumId = Forums.insert(formData);
@@ -140,13 +197,13 @@ Meteor.methods({
       title: 'Improvements forum'
     })._id;
 
-      Forums.update({
-        _id: forumId
-      }, {
-        $addToSet: {
-          all: Meteor.userId()
-        }
-      });
+    Forums.update({
+      _id: forumId
+    }, {
+      $addToSet: {
+        all: Meteor.userId()
+      }
+    });
 
     // add user to forum
     // add roles to users
