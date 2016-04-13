@@ -25,24 +25,24 @@ VerifyEmailController = RouteController.extend({
   // You can provide any of the hook options
 
   onRun: function() {
-    Accounts.verifyEmail(this.params.token, function(err) {
-      if (err) {
-        console.log('called --- fail');
-        Bert.alert(err.reason, 'danger');
-      } else {
-        // on first created, and successfully validated, then add user to existing forums if needed
-        Meteor.call('signup/addPendingForums', Meteor.userId());
-        console.log('called --- pass');
-        Router.go('/');
-        Bert.alert('Email verified!', 'success');
-      }
-    });
     this.next();
   },
   onRerun: function() {
     this.next();
   },
   onBeforeAction: function() {
+    Accounts.verifyEmail(this.params.token, function(err) {
+      if (err) {
+        console.log('called --- fail');
+        Bert.alert(err.reason, 'danger', 'growl-top-right');
+      } else {
+        // on first created, and successfully validated, then add user to existing forums if needed
+        Meteor.call('signup/addPendingForums', Meteor.userId());
+        console.log('called --- pass');
+        Bert.alert('Email verified!', 'success', 'growl-top-right');
+      }
+      Router.go('/');
+    });
     this.next();
   },
 

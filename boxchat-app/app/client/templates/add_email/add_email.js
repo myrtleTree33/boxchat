@@ -7,13 +7,14 @@ Template.AddEmail.events({
     event.preventDefault();
     var obj = event.target;
     var email = obj.emailAddress.value;
-    try {
-      Meteor.call('signup/addEmail', email);
-      Meteor.call('signup/sendVerificationEmail');
-    } catch (e) {
-      Bert.warning('Invalid email, please use your NUS email', 'danger', 'growl-top-right');
-      console.error(e);
-    }
+    Meteor.call('signup/addEmail', email, function(err) {
+      if (err) {
+        Bert.alert('Invalid email, please use your NUS email', 'danger', 'growl-top-right');
+      } else {
+        Meteor.call('signup/sendVerificationEmail');
+        Bert.alert('Successfully added your NUS email: ' + email, 'success', 'growl-top-right');
+      }
+    });
   }
 });
 

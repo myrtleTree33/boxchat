@@ -36,6 +36,7 @@ Meteor.methods({
   },
 
   'signup/addEmail': function(email) {
+    console.log(isNusEmail(email));
     if (!isNusEmail(email)) {
       throw new Meteor.Error(422, 'Invalid email');
     }
