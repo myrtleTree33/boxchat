@@ -46,6 +46,31 @@ Meteor.startup(function() {
   }
 
 
+  // cron jobs below ------------------------------------------
+  // cron job to purge unverified users from system
+  // http://stackoverflow.com/questions/27009512/remove-unverified-meteor-users-after-certain-time-period
+  SyncedCron.add({
+    name: 'Remove unverified users',
+    schedule: function(parser) {
+      // parser is a later.parse object
+      return parser.text('every day at 12am');
+    },
+    job: function() {
+
+      var removeUnverifiedUsers = function() {
+        console.log('CRON: Removing unverified users..');
+        Meteor.users.remove({
+          'emails.0.verified': false
+        });
+      };
+
+      var numUsersRemoved = removeUnverifiedUsers();
+      return numUsersRemoved;
+    }
+  });
+
+  // start the cron daemon
+  SyncedCron.start();
 
 
 });

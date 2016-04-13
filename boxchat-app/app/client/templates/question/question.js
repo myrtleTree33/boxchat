@@ -14,7 +14,7 @@ Template.Question.helpers({
   question: function() {
     return Template.instance().data;
   },
-  
+
   interactions: function() {
     var questionId = Router.current().params.id;
     return Interactions.find({
@@ -25,24 +25,27 @@ Template.Question.helpers({
       }
     });
   },
-  
+
   interactionsCount: function() {
     var questionId = Router.current().params.id;
     return Interactions.find({
       questionId: questionId
     }).count();
   },
-  
+
   currentForum: function() {
     var forumId = Meteor.user().profile.currForum;
     return Forums.findOne({_id: forumId}).title;
   },
-  
+
   questions: function() {
     return Questions.find({
       forumId: Meteor.user().profile.currForum
     }, {
-      sort: {createdAt: -1}
+      sort: {
+        votes: -1,
+        createdAt: -1
+      }
     });
   }
 });
