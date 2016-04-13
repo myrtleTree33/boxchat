@@ -247,6 +247,29 @@ Meteor.methods({
 
     }
     return output;
+  },
+
+  'interaction/create': function(formData) {
+
+    if (!formData.questionId || !formData.forumId) {
+      throw new Meteor.Error(422, 'Invalid Question of Forum specified');
+    }
+    if (!formData.content || formData.content.length < 15) {
+      throw new Meteor.Error(422, 'Please specify a longer sentence.');
+    }
+
+    Interactions.insert({
+      authorId: Meteor.userId(),
+      createdAt: new Date(),
+      questionId: formData.questionId,
+      forumId: formData.forumId,
+      content: formData.content,
+      votes: 0
+    }, function(err, result) {
+      if (err) {
+        throw new Meteor.Error(422, 'DB Issue');
+      }
+    });
   }
 
 });

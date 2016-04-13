@@ -12,20 +12,22 @@ Template.InteractionEditor.events({
     var content = obj.content.value;
     var questionId = Router.current().params.id;
 
-    Interactions.insert({
+    var formData = {
       authorId: Meteor.user()._id,
       createdAt: new Date(),
       questionId: questionId,
       forumId: Template.instance().data.forumId,
-      content: content,
+      content: content.trim(),
       votes: 0
-    }, function(err, result) {
+    };
+
+    Meteor.call('interaction/create', formData, function(err, result) {
       if (err) {
-        Bert.alert('Oops, something went wrong', 'danger');
+        Bert.alert('Oops, error posting interaction: ' + err, 'warning', 'top-growl-right');
         return;
       }
-      Bert.alert('Question successfully posted!', 'success');
-      obj.content.value = "";  // clear the form if successful
+      Bert.alert('Interaction successfully posted!', 'success', 'top-growl-right');
+      obj.content.value = ""; // clear the form if successful
     });
   }
 });

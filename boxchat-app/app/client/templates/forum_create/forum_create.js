@@ -41,8 +41,8 @@ Template.ForumCreate.events({
       all: allUsers,
       students: users,
       admin: adminUsers,
-      title: title,
-      description: description,
+      title: title.trim(),
+      description: description.trim(),
       questionIds: [],
       tags: _tags
     };

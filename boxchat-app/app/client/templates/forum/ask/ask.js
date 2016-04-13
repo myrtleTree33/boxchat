@@ -8,8 +8,8 @@ Template.Ask.events({
   'submit #form-ask': function(event) {
     event.preventDefault();
     var obj = event.target;
-    var title = obj.title.value;
-    var content = obj.content.value;
+    var title = obj.title.value.trim();
+    var content = obj.content.value.trim();
     var tags = obj.topics.value.split(/[ ,]+/).filter(Boolean);
     var forumId = Router.current().params.forumId;
 
