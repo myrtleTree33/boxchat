@@ -14,35 +14,39 @@
       </div>
       </div> -->
 
-      <div class="item" id="btn-currentForum">
+      <div class="item member" id="btn-currentForum">
         Forum
       </div>
 
-      <div class="item" id="btn-forum-settings">
+      <div class="item member" id="btn-forum-settings">
         Settings
       </div>
 
-      <div class="item" id="btn-analytics">
+      <div class="item member" id="btn-analytics">
         Analytics
       </div>
 
-      <div class="item" id="btn-createForum">
+      <div class="item member" id="btn-createForum">
         Create
       </div>
 
-      <div class="item" id="btn-profile">
+      <div class="item member" id="btn-profile">
         Me
       </div>
+      
+      <div class="item member" id="btn-bazaar">
+        Bazaar
+      </div>
 
-      <div class="right menu">
+      <div class="right menu" id="rightMenu">
       <div class="ui dropdown item" id="info">
         <img class="ui avatar image" src="{{currentUser.profile.profileImg}}">
-        &nbsp;&nbsp;&nbsp;{{name}}
+        &nbsp;&nbsp;&nbsp;{{currentUser.profile.name}}
         <i class="dropdown icon"></i>
         <div class="menu">
-            <div class="item" id="btn-profile">Profile</div>
-            <div class="item" id="btn-settings">User settings</div>
-            <div class="item" id="btn-logout">Signout</div>
+            <div class="item dd" id="btn-profile">Profile</div>
+            <div class="item dd" id="btn-settings">User settings</div>
+            <div class="item dd" id="btn-logout">Signout</div>
         </div>
       </div>
       </div>

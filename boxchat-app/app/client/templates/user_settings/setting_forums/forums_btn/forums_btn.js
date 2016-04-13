@@ -1,7 +1,14 @@
 /*****************************************************************************/
 /* ForumsBtn: Event Handlers */
 /*****************************************************************************/
-Template.ForumsBtn.events({});
+Template.ForumsBtn.events({
+    'click .forums-btn .remove': function(event) {
+        event.preventDefault();
+        Forums.update({_id:Template.instance().data._id}, 
+                      {$pull: {all: Meteor.userId(), admin: Meteor.userId()}}
+        );
+    }
+});
 
 /*****************************************************************************/
 /* ForumsBtn: Helpers */

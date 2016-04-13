@@ -29,7 +29,13 @@ Template.QuestionMain.helpers({
 
   prettyVotes: function() {
     return numeral(Template.instance().data.votes).format('0a');
+  },
+  
+  hasDescription: function() {
+    var c = Template.instance().data.content;
+    return c == null || c == '';
   }
+  
 });
 
 /*****************************************************************************/

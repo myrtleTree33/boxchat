@@ -12,14 +12,15 @@
         <div class="ui horizontal divider">
           <h3 class="ui header">{{interactionsCount}} Interactions</h3>
         </div>
-        <div class="ui hidden divider"></div>
+        
         {{#each interactions}} {{> Interaction}} {{/each}}
 
         <!-- Editor -->
         {{> InteractionEditor}}
 
       </div>
-      <div data-class="five wide computer eleven wide tablet sixteen wide mobile column">
+      
+      <div data-class="five wide column computer only tablet only">
         <div id="questionRightSidebar">
         <div class="latestTopics">
           <h2><a id="backToForum">{{currentForum}}</a></h2>

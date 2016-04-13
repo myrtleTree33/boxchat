@@ -2,12 +2,12 @@
 /* Interaction: Event Handlers */
 /*****************************************************************************/
 Template.Interaction.events({
-  'click .btn-interaction-upvote': function(event, template) {
+  'click #btn-interaction-upvote': function(event, template) {
     event.preventDefault();
     var interactionId = template.data._id;
     Interactions.findOne({_id: interactionId}).upvote(Meteor.user()._id);
   },
-  'click .btn-interaction-downvote': function(event, template) {
+  'click #btn-interaction-downvote': function(event, template) {
     event.preventDefault();
     var interactionId = template.data._id;
     Interactions.findOne({_id: interactionId}).downvote(Meteor.user()._id);
@@ -36,7 +36,7 @@ Template.Interaction.helpers({
     var date = new Date(time);
     var year = date.getFullYear();
     var day = ("0" + date.getDate()).slice(-2);
-    var month = ("0" + date.getMonth()).slice(-2);
+    var month = ("0" + parseInt(date.getMonth() + 1)).slice(-2);
     var hour = ("0" + date.getHours()).slice(-2);
     var minute = ("0" + date.getMinutes()).slice(-2);
     var second = ("0" + date.getSeconds()).slice(-2);
@@ -46,6 +46,10 @@ Template.Interaction.helpers({
   
   content: function() {
     return Template.instance().data.content;
+  },
+  
+  img: function() {
+    return Meteor.user().profile.profileImg;
   }
 });
 

@@ -16,7 +16,14 @@ Template.ForumbarItem.events({
 /*****************************************************************************/
 /* ForumbarItem: Helpers */
 /*****************************************************************************/
-Template.ForumbarItem.helpers({});
+Template.ForumbarItem.helpers({
+  author: function() {
+    var author = Meteor.users.findOne({
+      _id:Template.instance().data.admin
+    }).profile.name;
+    return author == null ? "anonymous" : author;
+  }
+});
 
 /*****************************************************************************/
 /* ForumbarItem: Lifecycle Hooks */
