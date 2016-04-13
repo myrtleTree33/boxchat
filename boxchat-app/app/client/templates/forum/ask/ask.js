@@ -54,9 +54,13 @@ Template.Ask.events({
         return Bert.alert('Oops, error creating question: ' + err, 'warning', 'growl-top-right');
       }
       Bert.alert('Question successfully posted!', 'success', 'growl-top-right');
-      Router.go('forum', {
-        id: forumId
-      });
+      if (forumId != 'bazaar') {
+        Router.go('forum', {
+          id: forumId
+        });
+      } else {
+        Router.go('bazaar');
+      }
     });
 
   }

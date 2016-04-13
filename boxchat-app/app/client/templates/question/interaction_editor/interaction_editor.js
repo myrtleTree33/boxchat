@@ -23,10 +23,10 @@ Template.InteractionEditor.events({
 
     Meteor.call('interaction/create', formData, function(err, result) {
       if (err) {
-        Bert.alert('Oops, error posting interaction: ' + err, 'warning', 'top-growl-right');
+        Bert.alert('Oops, error posting interaction: ' + err, 'warning', 'growl-top-right');
         return;
       }
-      Bert.alert('Interaction successfully posted!', 'success', 'top-growl-right');
+      Bert.alert('Interaction successfully posted!', 'success', 'growl-top-right');
       obj.content.value = ""; // clear the form if successful
     });
   }

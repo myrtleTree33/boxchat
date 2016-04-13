@@ -120,3 +120,10 @@ Router.route('main', {
   controller: 'MainController',
   where: 'client'
 });
+
+
+Router.route('bazaar', {
+  name: 'bazaar',
+  controller: 'BazaarController',
+  where: 'client'
+});
