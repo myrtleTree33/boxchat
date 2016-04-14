@@ -8,7 +8,7 @@ ForumController = RouteController.extend({
 
   subscriptions: function() {},
 
-  // Subscriptions or other things we want to "wait" on. This also
+// Subscriptions or other things we want to "wait" on. This also
   // automatically uses the loading hook. That's the only difference between
   // this option and the subscriptions option above.
   // return Meteor.subscribe('post', this.params._id);
@@ -57,6 +57,7 @@ ForumController = RouteController.extend({
   //  action: 'myActionFunction'
 
   action: function() {
+    GARecordPage('/forum');
     this.render();
   },
   onAfterAction: function() {

@@ -47,6 +47,7 @@ UserSettingsController = RouteController.extend({
   //  action: 'myActionFunction'
 
   action: function () {
+    GARecordPage('/user_settings');
     this.render();
   },
   onAfterAction: function () {

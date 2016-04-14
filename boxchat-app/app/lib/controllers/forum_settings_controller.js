@@ -52,6 +52,7 @@ ForumSettingsController = RouteController.extend({
   //  action: 'myActionFunction'
 
   action: function () {
+    GARecordPage('/forum_settings');
     this.render();
   },
   onAfterAction: function () {

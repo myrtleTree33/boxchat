@@ -49,6 +49,7 @@ QuestionController = RouteController.extend({
   //  action: 'myActionFunction'
 
   action: function () {
+    GARecordPage('/question');
     this.render();
   },
   onAfterAction: function () {

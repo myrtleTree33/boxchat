@@ -52,6 +52,7 @@ ForumAnalyticsController = RouteController.extend({
   //  action: 'myActionFunction'
 
   action: function () {
+    GARecordPage('/analytics');
     this.render();
   },
   onAfterAction: function () {

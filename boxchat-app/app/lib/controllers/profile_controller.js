@@ -47,6 +47,7 @@ ProfileController = RouteController.extend({
   //  action: 'myActionFunction'
 
   action: function () {
+    GARecordPage('/profile');
     this.render();
   },
   onAfterAction: function () {

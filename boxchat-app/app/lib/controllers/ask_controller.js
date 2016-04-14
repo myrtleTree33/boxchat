@@ -49,6 +49,7 @@ AskController = RouteController.extend({
   //  action: 'myActionFunction'
 
   action: function () {
+    GARecordPage('/ask');
     this.render();
   },
   onAfterAction: function () {

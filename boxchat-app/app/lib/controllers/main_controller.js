@@ -47,6 +47,7 @@ MainController = RouteController.extend({
   //  action: 'myActionFunction'
 
   action: function () {
+    GARecordPage('/main');
     this.render();
   },
   onAfterAction: function () {

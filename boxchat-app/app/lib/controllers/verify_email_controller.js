@@ -55,6 +55,7 @@ VerifyEmailController = RouteController.extend({
   //  action: 'myActionFunction'
 
   action: function() {
+    GARecordPage('/verify_email');
     this.render();
   },
   onAfterAction: function() {},
