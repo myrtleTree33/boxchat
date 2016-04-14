@@ -77,7 +77,7 @@ Template.Topmenu.events({
     }
   },
 
-  'click #btn-public_forum': function(event) {
+  'click #btn-public-forum': function(event) {
     var forumId = Forums.findOne({
       title: "Public Forum"
     })._id;

@@ -149,20 +149,20 @@ Template.Forum.helpers({
   },
 
   forumHotTopics: function() {
-      var forumId = Template.instance().data._id;
-      // find hottest trending qns in the past 3 days
-      var hottestQuestions = Questions.find({
-        forumId: forumId,
-        createdAt: {
-          $gte: moment().subtract(3, 'days').toDate()
-        }
-      }, {
-        sort: {
-          votes: -1,
-        },
-        limit: 10
-      }).fetch();
-      return hottestQuestions;
+    var forumId = Template.instance().data._id;
+    // find hottest trending qns in the past 3 days
+    var hottestQuestions = Questions.find({
+      forumId: forumId,
+      createdAt: {
+        $gte: moment().subtract(3, 'days').toDate()
+      }
+    }, {
+      sort: {
+        votes: -1,
+      },
+      limit: 10
+    }).fetch();
+    return hottestQuestions;
   },
 
   topUsers: function() {
@@ -198,7 +198,12 @@ Template.Forum.onCreated(function() {
 
 Template.Forum.onRendered(function() {
   $('.ui.dropdown').dropdown();
-  Meteor.call('topMenu/toggleMenuItem', '#btn-currentForum');
+  var forumTitle = Router.current().params.title;
+  if (forumTitle !== Meteor.settings.public['default_public_forum_name']) {
+    Meteor.call('topMenu/toggleMenuItem', '#btn-currentForum');
+  } else {
+    Meteor.call('topMenu/toggleMenuItem', '#btn-public-forum');
+  }
 
   $('.progress').each(function(i, ele) {
     $(ele).progress();
