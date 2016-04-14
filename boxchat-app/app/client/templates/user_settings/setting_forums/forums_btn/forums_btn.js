@@ -3,18 +3,24 @@
 /*****************************************************************************/
 Template.ForumsBtn.events({
   'click .forums-btn .remove': function(event) {
+    console.log('clicked')
     event.preventDefault();
-    var forumId = Template.instance().data._id;
-    Forums.update({
-      _id: forumId
-    }, {
-      $pull: {
-        all: Meteor.userId(),
-        admin: Meteor.userId()
-      }
-    });
-
-    Meteor.call('userPermissions/removeForum', Meteor.userId(), ['all'], forumId);
+    var forum = Template.instance().data;
+    var forumId = forum._id;
+    if (forum.title === 'Improvements forum') {
+      return Bert.alert('Cannot remove Improvements forum', 'danger', 'growl-top-right');
+    } else {
+      Meteor.call('userPermissions/removeForum', [Meteor.userId()], ['all'], forumId);
+      Forums.update({
+        _id: forumId
+      }, {
+        $pull: {
+          all: Meteor.userId(),
+          admin: Meteor.userId()
+        }
+      });
+      Bert.alert('Successfully removed forum: ' + forum.title, 'success', 'growl-top-right');
+    }
   }
 });
 
