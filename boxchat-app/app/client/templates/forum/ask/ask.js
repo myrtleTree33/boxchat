@@ -59,7 +59,8 @@ Template.Ask.events({
           id: forumId
         });
       } else {
-        Router.go('bazaar');
+        // Router.go('bazaar');
+        Router.go('profile');
       }
     });
 

@@ -8,7 +8,7 @@ Template.Topmenu.events({
     $('.member').removeClass('active');
     $(tgt).addClass('active');
   },
-  
+
   'click #btn-logout': function(event) {
     Meteor.logout(function(err) {
       if (err) {
@@ -76,12 +76,12 @@ Template.Topmenu.events({
       Router.go('/profile');
     }
   },
-  
-  'click #btn-bazaar': function(event) {
-    Meteor.users.update(Meteor.userId(), {$set: {'profile.currForum':'bazaar'}});
-    Router.go('bazaar');
-  },
-  
+
+  // 'click #btn-bazaar': function(event) {
+  //   Meteor.users.update(Meteor.userId(), {$set: {'profile.currForum':'bazaar'}});
+  //   Router.go('bazaar');
+  // },
+
   'click .dd': function(event) {
     $('.topmenu .member').removeClass('active');
   }

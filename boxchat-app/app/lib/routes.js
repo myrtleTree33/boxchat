@@ -11,11 +11,11 @@ Router.route('/', {
   where: 'client'
 });
 
-Router.route('todos', {
-  name: 'todos',
-  controller: 'TodosController',
-  where: 'client'
-});
+// Router.route('todos', {
+//   name: 'todos',
+//   controller: 'TodosController',
+//   where: 'client'
+// });
 
 Router.route('signup', {
   name: 'signup',
@@ -23,11 +23,11 @@ Router.route('signup', {
   where: 'client'
 });
 
-Router.route('task', {
-  name: 'task',
-  controller: 'TaskController',
-  where: 'client'
-});
+// Router.route('task', {
+//   name: 'task',
+//   controller: 'TaskController',
+//   where: 'client'
+// });
 
 
 Router.route('authenticated', {
@@ -122,8 +122,8 @@ Router.route('main', {
 });
 
 
-Router.route('bazaar', {
-  name: 'bazaar',
-  controller: 'BazaarController',
-  where: 'client'
-});
+// Router.route('bazaar', {
+//   name: 'bazaar',
+//   controller: 'BazaarController',
+//   where: 'client'
+// });

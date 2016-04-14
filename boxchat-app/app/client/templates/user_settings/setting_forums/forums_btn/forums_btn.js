@@ -2,12 +2,20 @@
 /* ForumsBtn: Event Handlers */
 /*****************************************************************************/
 Template.ForumsBtn.events({
-    'click .forums-btn .remove': function(event) {
-        event.preventDefault();
-        Forums.update({_id:Template.instance().data._id}, 
-                      {$pull: {all: Meteor.userId(), admin: Meteor.userId()}}
-        );
-    }
+  'click .forums-btn .remove': function(event) {
+    event.preventDefault();
+    var forumId = Template.instance().data._id;
+    Forums.update({
+      _id: forumId
+    }, {
+      $pull: {
+        all: Meteor.userId(),
+        admin: Meteor.userId()
+      }
+    });
+
+    Meteor.call('userPermissions/removeForum', Meteor.userId(), ['all'], forumId);
+  }
 });
 
 /*****************************************************************************/
