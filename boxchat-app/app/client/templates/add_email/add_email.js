@@ -11,8 +11,9 @@ Template.AddEmail.events({
       if (err) {
         Bert.alert('Invalid email, please use your NUS email', 'danger', 'growl-top-right');
       } else {
-        Meteor.call('signup/sendVerificationEmail');
-        Bert.alert('Successfully added your NUS email: ' + email, 'success', 'growl-top-right');
+        Meteor.call('signup/sendVerificationEmail', function(err) {
+          Bert.alert('Successfully added your NUS email: ' + email, 'success', 'growl-top-right');
+        });
       }
     });
   }

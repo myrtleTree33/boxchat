@@ -7,7 +7,7 @@ Template.ForumsBtn.events({
     event.preventDefault();
     var forum = Template.instance().data;
     var forumId = forum._id;
-    if (forum.title === 'Improvements forum') {
+    if (forum.title === Meteor.settings.public['default_public_forum_name']) {
       return Bert.alert('Cannot remove Improvements forum', 'danger', 'growl-top-right');
     } else {
       Meteor.call('userPermissions/removeForum', [Meteor.userId()], ['all'], forumId);

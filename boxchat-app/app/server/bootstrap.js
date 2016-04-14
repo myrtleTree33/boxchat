@@ -34,12 +34,12 @@ Meteor.startup(function() {
 
   // Add in correct MongoDB
   var improvementForums = Forums.findOne({
-    title: 'Improvements forum'
+    title: Meteor.settings.public['default_public_forum_name']
   });
 
   if (!improvementForums) {
     Forums.insert({
-      title: 'Improvements forum',
+      title: Meteor.settings.public['default_public_forum_name'],
       description: 'This is the improvements forum.  Feel free to try out NUS Answers in this forum, post your help questions, or simply suggest changes for NUS Forum.',
       tags: ['#public', '#nusforum', '#nus', '#improvements']
     });
@@ -76,7 +76,8 @@ Meteor.startup(function() {
     return SEO.config({
       title: 'NUS Forum: Better IVLE forums for NUS students.',
       meta: {
-        'description': 'Better IVLE forums for NUS students and instructors.'
+        'description': 'Better IVLE forums for NUS students and instructors.',
+        'keywords': 'NUS, IVLE Forum, NUS Forum, National University of Singapore, Engineering, Year 1, Year 2, Year 3, Year 4, NUS Forum, better NUS Forum, School of Computing, SoC'
       },
       og: {
         'image': 'http://nusforum.com/boxchat-app/app/public/img/logo/logo.png'
