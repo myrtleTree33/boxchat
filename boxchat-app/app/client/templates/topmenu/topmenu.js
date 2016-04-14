@@ -77,10 +77,14 @@ Template.Topmenu.events({
     }
   },
 
-  // 'click #btn-bazaar': function(event) {
-  //   Meteor.users.update(Meteor.userId(), {$set: {'profile.currForum':'bazaar'}});
-  //   Router.go('bazaar');
-  // },
+  'click #btn-public_forum': function(event) {
+    var forumId = Forums.findOne({
+      title: "Public Forum"
+    })._id;
+    Router.go('forum', {
+        id: forumId
+    });
+  },
 
   'click .dd': function(event) {
     $('.topmenu .member').removeClass('active');
