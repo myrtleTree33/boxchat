@@ -32,7 +32,7 @@ Meteor.methods({
     });
   },
 
-  'userPermissions/isLogin': function() {
+  'userPermissi ons/isLogin': function() {
     if (!Meteor.userId()) {
       console.log('triggered-----------------------');
       Router.go('/', {});

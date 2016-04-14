@@ -42,3 +42,10 @@ Accounts.onCreateUser(function(options, user) {
 
   return user;
 });
+
+// do not allow promotion to admin
+Meteor.users.deny({
+  update: function() {
+    return true;
+  }
+});
