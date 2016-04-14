@@ -5,16 +5,14 @@ ForumAnalyticsController = RouteController.extend({
   // // add the subscription to the waitlist
   // this.subscribe('item', this.params._id).wait();
 
-  subscriptions: function() {
-  },
+  subscriptions: function() {},
 
   // Subscriptions or other things we want to "wait" on. This also
   // automatically uses the loading hook. That's the only difference between
   // this option and the subscriptions option above.
   // return Meteor.subscribe('post', this.params._id);
 
-  waitOn: function () {
-  },
+  waitOn: function() {},
 
   // A data function that can be used to automatically set the data context for
   // our layout. This function can also be used by hooks and plugins. For
@@ -22,7 +20,7 @@ ForumAnalyticsController = RouteController.extend({
   // returns a null value, and if so, renders the not found template.
   // return Posts.findOne({_id: this.params._id});
 
-  data: function () {
+  data: function() {
     return Forums.findOne({
       _id: this.params.id
     });
@@ -30,14 +28,23 @@ ForumAnalyticsController = RouteController.extend({
 
   // You can provide any of the hook options
 
-  onRun: function () {
+  onRun: function() {
     this.next();
   },
-  onRerun: function () {
+  onRerun: function() {
     this.next();
   },
-  onBeforeAction: function () {
+  onBeforeAction: function() {
     var forumId = this.params.id;
+
+    var publicForumId = Forums.findOne({
+      title: Meteor.settings.public['default_public_forum_name']
+    })._id;
+    // if they are the same, do not allow user to go to settings page
+    // route back to main page
+    if (forumId === publicForumId) {
+      return Router.go('/', {});
+    }
     Meteor.call('userPermissions/checkPermissions',
       Meteor.userId(), 'admin', forumId);
     this.next();
@@ -51,12 +58,10 @@ ForumAnalyticsController = RouteController.extend({
   // Example:
   //  action: 'myActionFunction'
 
-  action: function () {
+  action: function() {
     GARecordPage('/analytics');
     this.render();
   },
-  onAfterAction: function () {
-  },
-  onStop: function () {
-  }
+  onAfterAction: function() {},
+  onStop: function() {}
 });

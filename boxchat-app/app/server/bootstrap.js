@@ -46,6 +46,22 @@ Meteor.startup(function() {
   }
 
 
+  // add all users to public forum now
+  var allUsers = lodash.map(Meteor.users.find({}).fetch(), '_id');
+    var publicForumId = Forums.findOne({
+      title: Meteor.settings.public['default_public_forum_name']
+    })._id;
+
+    Forums.update({
+      _id: publicForumId
+    }, {
+      $addToSet: {
+        all: allUsers
+      }
+    });
+
+    Meteor.call('userPermissions/addForum', allUsers, ['all'], publicForumId);
+
   // cron jobs below ------------------------------------------
   // cron job to purge unverified users from system
   // http://stackoverflow.com/questions/27009512/remove-unverified-meteor-users-after-certain-time-period
