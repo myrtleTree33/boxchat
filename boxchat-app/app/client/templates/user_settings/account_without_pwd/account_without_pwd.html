@@ -1,49 +1,16 @@
 <template name="AccountWithoutPwd">
   <div class="account-without-pwd">
-    <form class="ui form update_userName">
-      <h4 class="ui dividing header">Basic Account Setting</h4>
+
+    <form class="ui form" id="account-without-pwd-form">
+
       <div class="field">
-        <label>User Name</label>
-        <div class="one fields">
-          <div class="field">
-            <input type="text" name="username" placeholder="User Name">
-          </div>
-        </div>
-      </div>
-      <button class="ui button update_userName" tabindex="0" type="submit">Update</button>
-    </form>
-    
-    <div class="ui hidden divider"></div>
-    <hr>
-    <div class="ui hidden divider"></div>
-    
-    <form class="ui form update_password">  
-      <div class="field">
-        <label>Old Password</label>
-        <div class="fields">
-          <div class="twelve wide field">
-            <input type="text" name="old_password" placeholder="Old Password">
-          </div>
-        </div>
-      </div>
-      <div class="field">
-        <label>New Password</label>
-        <div class="fields">
-          <div class="twelve wide field">
-            <input type="text" name="new_password" placeholder="New Password">
-          </div>
-        </div>
-      </div>
-      <div class="field">
-        <label>Confirm New Password</label>
-        <div class="fields">
-          <div class="twelve wide field">
-            <input type="text" name="confirm_new_password" placeholder="Confirm New Password">
-          </div>
-        </div>
+        <label>Email</label>
+        <input type="email" name="nusEmail" id="user-settings-form-email" placeholder="Your NUS email" value="{{userEmail}}">
       </div>
 
-      <button class="ui button update_password" tabindex="0" type="submit">Submit</button>
+      <button type="submit" class="ui large blue button">Update email</button>
+
     </form>
+
   </div>
 </template>
