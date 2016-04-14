@@ -151,6 +151,8 @@ Meteor.methods({
       throw new Meteor.Error(422, 'Invalid title');
     } else if (formData.title.length < 5) {
       throw new Meteor.Error(422, 'Title must be at least 5 characters long.');
+    } else if (formData.title === 'Improvements forum') {
+      throw new Meteor.Error(422, 'Invalid name, please use a different name.');
     }
 
     if (!formData.description) {

@@ -10,17 +10,16 @@ Template.Main.events({
 /*****************************************************************************/
 /* Main: Helpers */
 /*****************************************************************************/
-Template.Main.helpers({
-});
+Template.Main.helpers({});
 
 /*****************************************************************************/
 /* Main: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Main.onCreated(function () {
+Template.Main.onCreated(function() {
   Meteor.call('signup/addUserToImprovementsForum');
 });
 
-Template.Main.onRendered(function () {
+Template.Main.onRendered(function() {
   $('.ui.dropdown').dropdown();
   Meteor.call('topMenu/toggleMenuItem', '#btn-currentForum');
 
@@ -30,8 +29,17 @@ Template.Main.onRendered(function () {
     Router.go('forum', {
       id: currForum
     });
+  } else {
+    setTimeout(function() {
+      var forumId = Forums.findOne({
+        title: 'Improvements forum'
+      })._id;
+      console.log(forumId);
+      Router.go('forum', {
+        id: forumId
+      });
+    }, 50);
   }
 });
 
-Template.Main.onDestroyed(function () {
-});
+Template.Main.onDestroyed(function() {});
