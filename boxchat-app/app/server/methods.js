@@ -38,8 +38,10 @@ Meteor.methods({
   'signup/addEmail': function(email) {
     // remove all older emails
     var existingEmails = Meteor.user().emails;
-    for (var i = 0; i < existingEmails.length; i++) {
-      Accounts.removeEmail(Meteor.userId(), existingEmails[i].address);
+    if (existingEmails) {
+      for (var i = 0; i < existingEmails.length; i++) {
+        Accounts.removeEmail(Meteor.userId(), existingEmails[i].address);
+      }
     }
 
     if (!isNusEmail(email)) {
