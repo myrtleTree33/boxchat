@@ -48,15 +48,19 @@ Meteor.startup(function() {
 
   // add all users to public forum now
   var allUsers = lodash.map(Meteor.users.find({}).fetch(), '_id');
+  console.log(allUsers);
     var publicForumId = Forums.findOne({
       title: Meteor.settings.public['default_public_forum_name']
     })._id;
+
 
     Forums.update({
       _id: publicForumId
     }, {
       $addToSet: {
-        all: allUsers
+        all: {
+          $each: allUsers
+        }
       }
     });
 

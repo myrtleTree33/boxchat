@@ -11,7 +11,7 @@ if (Meteor.isServer) {
     },
 
     remove: function(userId, doc) {
-      return false;
+      return true;
     }
   });
 
