@@ -5,6 +5,8 @@ HomeController = RouteController.extend({
   // // add the subscription to the waitlist
   // this.subscribe('item', this.params._id).wait();
 
+  fastRender: true,
+
   subscriptions: function() {
   },
 

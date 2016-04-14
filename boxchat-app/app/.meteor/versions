@@ -27,6 +27,7 @@ caching-html-compiler@1.0.5
 callback-hook@1.0.7
 check@1.1.3
 chrisbutler:typed.js@1.1.1
+chuangbo:cookie@1.1.0
 coffeescript@1.0.16
 dbarrett:dropzonejs@4.2.1
 dburles:collection-helpers@1.0.4
@@ -79,6 +80,10 @@ markdown@1.0.8
 mdg:validation-error@0.2.0
 meteor@1.1.13
 meteor-base@1.0.3
+meteorhacks:fast-render@2.13.0
+meteorhacks:inject-data@2.0.0
+meteorhacks:meteorx@1.4.1
+meteorhacks:picker@1.0.3
 minifier-css@1.1.10
 minifier-js@1.1.10
 minimongo@1.0.13
