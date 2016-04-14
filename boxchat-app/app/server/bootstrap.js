@@ -72,5 +72,34 @@ Meteor.startup(function() {
   // start the cron daemon
   SyncedCron.start();
 
+  if (Meteor.isClient) {
+    return SEO.config({
+      title: 'NUS Forum: Better IVLE forums for NUS students.',
+      meta: {
+        'description': 'Better IVLE forums for NUS students and instructors.'
+      },
+      og: {
+        'image': 'http://nusforum.com/boxchat-app/app/public/img/logo/logo.png'
+      }
+    });
+  }
+
+  SeoCollection.update({
+    route_name: 'home'
+  }, {
+    $set: {
+      route_name: 'home',
+      title: 'NUS Forum: Home | Better IVLE forums for NUS students',
+      meta: {
+        'description': 'Better IVLE forums for NUS students and instructors.'
+      },
+      og: {
+        'title': 'NUS Forum | Home page',
+        'image': 'http://nusforum.com/boxchat-app/app/public/img/logo/logo.png'
+      }
+    }
+  }, {
+    upsert: true
+  });
 
 });
