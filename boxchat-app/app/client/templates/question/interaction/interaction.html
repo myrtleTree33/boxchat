@@ -1,5 +1,5 @@
 <template name="Interaction">
-  
+
   <!--
   <div class="ui grid">
     <div class="one wide column">
@@ -19,7 +19,7 @@
         <a id="btn-interaction-downvote"><i class="large chevron down icon" href="#"></i></a>
       </div>
     </div>
-  
+
   <div clas="fifteen wide column">
   <div class="comment">
     <a class="avatar">
@@ -42,10 +42,10 @@
   </div>
 
 -->
-<!--
+  <!--
   <div class="interaction_wrapper">
   <div class="interaction ui grid">
-    
+
 
     <div class="fifteen wide column">
       <div class="column">
@@ -105,21 +105,31 @@
         </div>
 
 
-      <div class="fourteen wide column left aligned">
-        <div class="ui content">
-           {{#markdown}}{{content}}{{/markdown}}
+        <div class="fourteen wide column left aligned">
+          <div class="ui grid">
+
+            <div class="row">
+              <div class="ui content">
+                {{#markdown}}{{content}}{{/markdown}}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="sixteen wide column">
+                {{#with interactionAuthor}} {{> InteractionAuthor}} {{/with}}
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
-      </div>
-<!--
+      <!--
       <div class="four wide column right aligned content">
-          
+
       </div>
 -->
-      <div class="row">
-        {{#with interactionAuthor}} {{> InteractionAuthor}} {{/with}}
-      </div>
-  </div>
+    </div>
   </div>
 
 </template>

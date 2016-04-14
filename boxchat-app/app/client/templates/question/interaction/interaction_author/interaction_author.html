@@ -1,23 +1,53 @@
 <template name="InteractionAuthor">
-  <div class="interaction-author ui grid">
+  <div class="interaction-author">
 
-    <div class="ui row">
-      <div class="sixteen wide column">
-          <a><img class="ui right floated mini image" src="{{author.profile.profileImg}}" alt="" /></a>
-      </div>
-      <div class="sixteen wide column right aligned">
-        <div class="ui content right floated">
-          <a class="ui author">{{author.profile.name}}</a>
+    <div class="ui comments">
+      <div class="comment">
+        <a class="avatar">
+          <img src="{{author.profile.profileImg}}">
+        </a>
+        <div class="content">
+          <a class="author">{{author.profile.name}}</a>
+          <!-- <div class="metadata"> -->
+            <!-- <span class="date">Posted {{creationTime}}</span> -->
+          <!-- </div> -->
+          <!-- <div class="text">
+            How artistic!
+          </div> -->
+          <div class="actions">
+            <span class="date">Posted {{creationTime}}</span>
+          </div>
         </div>
       </div>
-      <div class="sixteen wide column right aligned">
-        <div class="ui content">
-          Posted {{creationTime}}
-        </div>
-      </div>
-  </div>
-
-    <div class="ui hidden divider">
     </div>
+
+    <!-- <div class="ui row">
+      <div class="two wide column">
+        <a>
+          <img class="ui right floated mini image" src="{{author.profile.profileImg}}" alt="" />
+        </a>
+      </div>
+      <div class="fourteen wide column right aligned">
+
+        <div class="ui grid">
+
+          <div class="sixteen wide column">
+            <div class="ui content right floated">
+              <a class="ui author">{{author.profile.name}}</a>
+            </div>
+          </div>
+
+          <div class="sixteen wide column right aligned">
+            <div class="ui content">
+              Posted {{creationTime}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="ui hidden divider"></div> -->
+    <!-- </div> -->
   </div>
 </template>
