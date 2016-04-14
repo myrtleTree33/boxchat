@@ -34,12 +34,12 @@ Meteor.startup(function() {
 
   // Add in correct MongoDB
   var improvementForums = Forums.findOne({
-    title: 'Improvements forum'
+    title: Meteor.settings.public['default_public_forum_name']
   });
 
   if (!improvementForums) {
     Forums.insert({
-      title: 'Improvements forum',
+      title: Meteor.settings.public['default_public_forum_name'],
       description: 'This is the improvements forum.  Feel free to try out NUS Answers in this forum, post your help questions, or simply suggest changes for NUS Forum.',
       tags: ['#public', '#nusforum', '#nus', '#improvements']
     });

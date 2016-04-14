@@ -35,6 +35,17 @@ Meteor.methods({
     }
   },
 
+  'signup/createNewPasswordUser': function(email, password, name) {
+    var user = {
+      email: email,
+      password: password,
+      name: name
+    };
+    if (!isNusEmail(email)) {
+      throw new Meteor.Error(422, 'Please use a valid NUS email');
+    }
+  },
+
   'signup/addEmail': function(email) {
     // remove all older emails
     var existingEmails = Meteor.user().emails;
@@ -151,14 +162,13 @@ Meteor.methods({
       throw new Meteor.Error(422, 'Invalid title');
     } else if (formData.title.length < 5) {
       throw new Meteor.Error(422, 'Title must be at least 5 characters long.');
-    } else if (formData.title === 'Improvements forum') {
+    } else if (formData.title === Meteor.settings.public['default_public_forum_name']) {
       throw new Meteor.Error(422, 'Invalid name, please use a different name.');
     }
 
     if (!formData.description) {
       throw new Meteor.Error(422, 'Invalid description');
     } else if (formData.description.length < 20) {
-      throw new Meteor.Error(422, 'Description must be at least 20 characters long.');
     }
 
     if (!formData.tags || formData.tags.length < 3) {
@@ -204,7 +214,7 @@ Meteor.methods({
 
   'signup/addUserToImprovementsForum': function() {
     var forumId = Forums.findOne({
-      title: 'Improvements forum'
+      title: Meteor.settings.public['default_public_forum_name']
     })._id;
 
     Forums.update({

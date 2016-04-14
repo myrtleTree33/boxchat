@@ -32,13 +32,13 @@ Template.Main.onRendered(function() {
   } else {
     setTimeout(function() {
       var forumId = Forums.findOne({
-        title: 'Improvements forum'
+        title: Meteor.settings.public['default_public_forum_name']
       })._id;
       console.log(forumId);
       Router.go('forum', {
         id: forumId
       });
-    }, 50);
+    }, 200);
   }
 });
 

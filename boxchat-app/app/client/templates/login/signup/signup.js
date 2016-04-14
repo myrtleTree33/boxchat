@@ -11,11 +11,21 @@ Template.Signup.events({
       name: template.find('[name="name"]').value
     };
 
-    Accounts.createUser(user, function(err) {
+    Meteor.call('signup/createNewPasswordUser', user.email, user.password, user.name, function(err) {
       if (err) {
-        Bert.alert(err.reason, 'danger');
+        Bert.alert(err.reason, 'warning', 'growl-top-right');
       } else {
-        Meteor.call('signup/sendVerificationEmail');
+        Accounts.createUser(user, function(err) {
+          if (err) {
+            Bert.alert(err.reason, 'warning', 'growl-top-right');
+          } else {
+            Bert.alert('You are signed in!', 'success', 'growl-top-right');
+            Meteor.call('signup/sendVerificationEmail');
+            setTimeout(function() {
+              Router.go('main', {});
+            }, 200);
+          }
+        });
       }
     });
   }
