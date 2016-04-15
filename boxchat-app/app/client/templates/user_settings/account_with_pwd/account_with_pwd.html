@@ -1,6 +1,6 @@
 <template name="AccountWithPwd">
   <div class="account-with-pwd">
-      <form class="ui form" id="form-update-username">
+    <form class="ui form" id="form-update-username">
       <h4 class="ui dividing header">Basic Account Setting</h4>
       <div class="field">
         <label>User Name</label>
@@ -11,13 +11,13 @@
         </div>
       </div>
       <button class="ui button" type="submit">Update username</button>
-      </form>
+    </form>
 
-      <div class="ui hidden divider"></div>
-      <hr>
-      <div class="ui hidden divider"></div>
+    <div class="ui hidden divider"></div>
+    <hr>
+    <div class="ui hidden divider"></div>
 
-      <form class="ui form" id="form-update-password">
+    <form class="ui form" id="form-update-password">
       <div class="field">
         <label>Old Password</label>
         <div class="fields">
@@ -44,5 +44,21 @@
       </div>
       <button class="ui button" type="submit">Update password</button>
     </form>
+
+    <div class="ui hidden divider"></div>
+
+    <form class="ui form" id="form-update-email">
+
+      <div class="fields">
+        <div class="twelve wide field">
+          <label>Email</label>
+          <input type="email" name="nusEmail" id="user-settings-form-email" placeholder="Your NUS email" value="{{userEmail}}">
+        </div>
+      </div>
+
+      <button type="submit" class="ui button">Update email</button>
+
+    </form>
+
   </div>
 </template>

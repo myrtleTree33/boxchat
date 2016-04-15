@@ -32,6 +32,21 @@ Template.AccountWithPwd.events({
       }
       return Bert.alert('Successfully changed password.', 'success', 'growl-top-right');
     });
+  },
+
+  'submit #form-update-email': function(event, template) {
+    event.preventDefault();
+    var obj = event.target;
+    var email = obj.nusEmail.value;
+
+    Meteor.call('signup/addEmail', email, function(err) {
+      if (err) {
+        Bert.alert('Invalid email, please use your NUS email', 'danger', 'growl-top-right');
+      } else {
+        Meteor.call('signup/sendVerificationEmail');
+        Bert.alert('Successfully added your NUS email: ' + email + ".  Please verify your email to continue.", 'success', 'growl-top-right');
+      }
+    });
   }
 
 });
@@ -40,7 +55,9 @@ Template.AccountWithPwd.events({
 /* AccountWithPwd: Helpers */
 /*****************************************************************************/
 Template.AccountWithPwd.helpers({
-
+  userEmail: function() {
+    return Meteor.user().emails[0].address;
+  }
 });
 
 /*****************************************************************************/
