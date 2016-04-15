@@ -35,7 +35,7 @@ Accounts.onCreateUser(function(options, user) {
       user.profile['profileImg'] = 'https://graph.facebook.com/v2.5/' + user.services.facebook.id + '/picture';
 
     } else if (service === 'password') {
-      user.profile['name'] = user.name;
+      user.profile['name'] = user.username;
       user.profile['profileImg'] = undefined; //TODO fill in
     }
   }

@@ -5,6 +5,21 @@ Template.Ask.events({
   'input #qn-content': function(event, template) {
     template.input.set($('#qn-content').val());
   },
+
+  'click #qn-take-pic': function(event, template) {
+    console.log('clicked');
+    MeteorCamera.getPicture({
+      width: 640,
+      height: 480,
+      quality: 90
+    }, function(err, data) {
+      if (err) {
+        return Bert.alert('Error with camera: ' + err, 'warning', 'growl-top-right');
+      }
+      // TODO use https://atmospherejs.com/vsivsi/file-collection
+    });
+  },
+
   'submit #form-ask': function(event) {
     event.preventDefault();
     var obj = event.target;
