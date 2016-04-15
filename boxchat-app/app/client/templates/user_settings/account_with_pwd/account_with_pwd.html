@@ -1,28 +1,28 @@
 <template name="AccountWithPwd">
   <div class="account-with-pwd">
-      <form class="ui form">
+      <form class="ui form" id="form-update-username">
       <h4 class="ui dividing header">Basic Account Setting</h4>
       <div class="field">
         <label>User Name</label>
         <div class="one fields">
           <div class="field">
-            <input type="text" name="shipping[first-name]" placeholder="User Name">
+            <input type="text" name="name" placeholder="User Name" value="{{currentUser.profile.name}}">
           </div>
         </div>
       </div>
-      <div class="ui button" tabindex="0">Update</div>
+      <button class="ui button" type="submit">Update username</button>
       </form>
-      
+
       <div class="ui hidden divider"></div>
       <hr>
       <div class="ui hidden divider"></div>
-      
-      <form class="ui form">
+
+      <form class="ui form" id="form-update-password">
       <div class="field">
         <label>Old Password</label>
         <div class="fields">
           <div class="twelve wide field">
-            <input type="password" name="shipping[address]" placeholder="Old Password">
+            <input type="password" name="oldPassword" placeholder="Old Password">
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@
         <label>New Password</label>
         <div class="fields">
           <div class="twelve wide field">
-            <input type="password" name="shipping[address]" placeholder="New Password">
+            <input type="password" name="newPassword" placeholder="New Password">
           </div>
         </div>
       </div>
@@ -38,11 +38,11 @@
         <label>Confirm New Password</label>
         <div class="fields">
           <div class="twelve wide field">
-            <input type="password" name="shipping[address]" placeholder="Confirm New Password">
+            <input type="password" name="newPassword2" placeholder="Confirm New Password">
           </div>
         </div>
       </div>
-      <div class="ui button" tabindex="0">Submit</div>
+      <button class="ui button" type="submit">Update password</button>
     </form>
   </div>
 </template>

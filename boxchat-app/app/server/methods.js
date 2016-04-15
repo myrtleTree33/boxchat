@@ -18,6 +18,18 @@ Meteor.methods({
     // server method logic
   },
 
+  'server/userSettings/updateUsername': function(name) {
+    Meteor.users.update(Meteor.userId(), {
+      $set: {
+        'profile.name': name
+      }
+    });
+  },
+
+  'server/userSettings/updatePassword': function(name) {
+
+  },
+
   'server/verify/generateHash': function(userId) {
     var config = Meteor.settings;
     var salt = config.verify.salt;
@@ -168,8 +180,7 @@ Meteor.methods({
 
     if (!formData.description) {
       throw new Meteor.Error(422, 'Invalid description');
-    } else if (formData.description.length < 20) {
-    }
+    } else if (formData.description.length < 20) {}
 
     if (!formData.tags || formData.tags.length < 3) {
       throw new Meteor.Error(422, 'Please use at least 3 tags to describe the forum.');
