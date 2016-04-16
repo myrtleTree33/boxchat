@@ -32,13 +32,27 @@ Meteor.methods({
     });
   },
 
-  'userPermissi ons/isLogin': function() {
+  'userPermissions/isLogin': function() {
     if (!Meteor.userId()) {
       console.log('triggered-----------------------');
       Router.go('/', {});
       return false;
     }
     return true;
+  },
+
+  'markdown/setMarked': function() {
+  // markdown configuration options
+    marked.setOptions({
+      renderer: new marked.Renderer(),
+      gfm: true,
+      tables: true,
+      breaks: false,
+      pedantic: false,
+      sanitize: true,
+      smartLists: true,
+      smartypants: false
+    });
   },
 
   'topMenu/toggleMenuItem': function(selector) {
