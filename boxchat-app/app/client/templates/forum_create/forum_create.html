@@ -8,6 +8,28 @@
           <h2>Create a new forum</h2>
         </div>
 
+          <form class="ui form" id="form-ivle-populate">
+          <div class="fields">
+            <div class="ten wide field">
+              <label>(OPTIONAL) Quick-add users by Module codes</label>
+              <input type="text" name="modules" value="" placeholder="A module to pull users from. e.g. CS3226, NM2213, SSA1202">
+            </div>
+          </div>
+
+          <div class="inline fields">
+            <div class="ten wide field">
+              <button class="ui animated fade blue medium button" type="submit">
+                <div class="visible content">
+                  Quick-add users by a module
+                </div>
+                <div class="hidden content">
+                  Go for it!
+                </div>
+              </button>
+            </div>
+          </div>
+        </form>
+
         <form class="ui form" id="form-create-forum">
 
           <div class="fields">
@@ -42,6 +64,8 @@
 
           {{> reCAPTCHA}}
 
+          <div class="ui hidden divider"></div>
+
           <div class="inline fields">
             <div class="ten wide field">
               <button class="ui animated fade orange big button" type="submit">
@@ -56,6 +80,9 @@
           </div>
 
         </form>
+
+
+
 
       </div>
     </div>

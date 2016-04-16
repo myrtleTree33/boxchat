@@ -14,6 +14,21 @@ Template.ForumAnalytics.helpers({
 /* ForumAnalytics: Lifecycle Hooks */
 /*****************************************************************************/
 Template.ForumAnalytics.onCreated(function () {
+    var forumId = Template.instance().data._id;
+
+    var publicForumId = Forums.findOne({
+      title: Meteor.settings.public['default_public_forum_name']
+    })._id;
+    console.log(publicForumId);
+    // if they are the same, do not allow user to go to settings page
+    // route back to main page
+    if (forumId === publicForumId) {
+      return Router.go('/', {});
+    }
+
+
+    Meteor.call('userPermissions/checkPermissions',
+      Meteor.userId(), 'admin', forumId);
 });
 
 Template.ForumAnalytics.onRendered(function () {

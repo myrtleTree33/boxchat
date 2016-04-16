@@ -78,7 +78,20 @@ Template.ForumSettings.helpers({
 /*****************************************************************************/
 /* ForumSettings: Lifecycle Hooks */
 /*****************************************************************************/
-Template.ForumSettings.onCreated(function() {});
+Template.ForumSettings.onCreated(function() {
+  var forumId = Template.instance().data._id;
+  var publicForumId = Forums.findOne({
+    title: Meteor.settings.public['default_public_forum_name']
+  })._id;
+  // if they are the same, do not allow user to go to settings page
+  // route back to main page
+  if (forumId === publicForumId) {
+    return Router.go('/', {});
+  }
+
+  Meteor.call('userPermissions/checkPermissions',
+    Meteor.userId(), 'admin', forumId);
+});
 
 Template.ForumSettings.onRendered(function() {
 

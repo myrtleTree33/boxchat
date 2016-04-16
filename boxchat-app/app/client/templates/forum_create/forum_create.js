@@ -4,11 +4,38 @@
 
 // email validator from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
 function isEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
 }
 
 Template.ForumCreate.events({
+
+  'submit #form-ivle-populate': function(event, template) {
+    event.preventDefault();
+    var obj = event.target;
+    // get the first module
+    var module = obj.modules.value.split(',')[0].trim().toUpperCase();
+    if (!module || module === '') {
+      Bert.alert('Error: Please specify a valid NUS module code', 'warning', 'growl-top-right');
+    }
+    Meteor.call('lapi/getClassRosterByModule', module, function(err, _emails) {
+      var emails = lodash.map(_emails, function(emailObj) {
+        return {
+          _id: emailObj.userId,
+          name: emailObj.userId
+        };
+      });
+      var select = template.selectizeUsers[0].selectize;
+      select.addOption(emails);
+      select.refreshOptions();
+      for (var i = 0; i < emails.length; i++) {
+        select.addItem(emails[i]._id);
+      }
+        // $('#forum-users').val(emailArr.join());
+      Bert.alert('Added users in NUS module successfully!', 'success', 'growl-top-right');
+    });
+  },
+
   'submit #form-create-forum': function(event, template) {
     event.preventDefault();
     var obj = event.target;
@@ -22,9 +49,7 @@ Template.ForumCreate.events({
       var output = [];
       for (var i = 0; i < tags.length; i++) {
         var t = tags[i];
-        console.log(t)
         if (t.charAt(0) !== '#') {
-          console.log('here');
           t = '#' + t;
         }
         output.push(t);
@@ -55,7 +80,6 @@ Template.ForumCreate.events({
       // reset the captcha
       grecaptcha.reset();
       if (error) {
-        console.log(error);
         Bert.alert('Oops, error creating forum: ' + error, 'warning', 'growl-top-right');
       } else {
         Bert.alert('Created forum successfully!', 'success', 'growl-top-right');
@@ -77,7 +101,7 @@ Template.ForumCreate.helpers({});
 /* ForumCreate: Lifecycle Hooks */
 /*****************************************************************************/
 Template.ForumCreate.onCreated(function() {
-    Meteor.call('userPermissions/isLogin');
+  Meteor.call('userPermissions/isLogin');
 });
 
 Template.ForumCreate.onRendered(function() {
@@ -122,7 +146,7 @@ Template.ForumCreate.onRendered(function() {
     }
   });
 
-  $('#forum-users').selectize({
+  this.selectizeUsers = $('#forum-users').selectize({
     delimiter: ',',
     persist: false,
     createFilter: function(input) {
@@ -154,7 +178,6 @@ Template.ForumCreate.onRendered(function() {
     load: function(query, callback) {
       Meteor.call('forum/createForumFindUsers', query, function(err, data) {
         if (err) {
-          console.error("Some error occuered: " + err);
           return;
         }
 
@@ -162,7 +185,7 @@ Template.ForumCreate.onRendered(function() {
           return {
             _id: user._id,
             name: user.profile['name']
-          }
+          };
         });
         callback(_results);
       });

@@ -331,6 +331,30 @@ Meteor.methods({
     return Meteor.wrapAsync(getModulesSync)();
   },
 
+  'lapi/isUp': function() {
+    var getAliveSync = function(cb) {
+      var lapi = Meteor.settings.public.lapi;
+      var token = Meteor.user().profile.lapiToken;
+      if (!token) {
+        return cb(null, false);
+      }
+      // get class roster
+      var query = lapi.apiDomain + lapi.apiUrl + "UserName_Get?output=json&callback=?&APIKey=" + lapi.apiKey + "&Token=" + token;
+      HTTP.get(query, function(err, res) {
+        if (err) {
+          return cb(null, false); // lapi server err
+        }
+        if (res.content === '_(\"\");') {
+          return cb(null, false); // invalid token, should request new one
+        }
+        return cb(null, true);
+      });
+    };
+
+    return Meteor.wrapAsync(getAliveSync)();
+
+  },
+
   'lapi/getClassRosterByModule': function(module) {
     var getRosterSync = function(cb) {
       var modules = Meteor.wrapAsync(getModulesSync)();

@@ -44,8 +44,8 @@ Accounts.onCreateUser(function(options, user) {
 });
 
 // do not allow promotion to admin
-Meteor.users.deny({
-  update: function() {
-    return true;
-  }
-});
+// Meteor.users.deny({
+//   update: function() {
+//     return true;
+//   }
+// });

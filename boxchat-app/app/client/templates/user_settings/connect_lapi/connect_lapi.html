@@ -7,7 +7,17 @@
     <div class="ui grid">
       <div class="row">
         <div class="sixteen wide column">
+          <div class="ui header">
+            <h4>IVLE integration status</h4>
+          </div>
+
+          {{#if lapiIsUp}}
+          <div class="ui green large label">
+            <i class="checkmark box icon"></i>NUS IVLE connected
+          </div>
+          {{else}}
           <button class="ui huge teal button" id="btn-connect-lapi">Connect with NUS IVLE</button>
+          {{/if}}
         </div>
       </div>
     </div>

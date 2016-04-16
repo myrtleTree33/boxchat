@@ -63,5 +63,4 @@ Meteor.methods({
       // nop, fail silently
     }
   }
-
 });
