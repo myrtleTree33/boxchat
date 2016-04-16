@@ -32,7 +32,6 @@ u2622:persistent-session
 jeremy:selectize
 houston:admin
 simple:highlight.js
-markdown
 reactive-var
 dburles:collection-helpers
 erasaur:meteor-lodash
@@ -57,3 +56,4 @@ meteorhacks:fast-render
 gadicohen:sitemaps
 mdg:camera
 vsivsi:file-collection
+chuangbo:marked

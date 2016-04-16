@@ -49,22 +49,22 @@ Meteor.startup(function() {
   // add all users to public forum now
   var allUsers = lodash.map(Meteor.users.find({}).fetch(), '_id');
   console.log(allUsers);
-    var publicForumId = Forums.findOne({
-      title: Meteor.settings.public['default_public_forum_name']
-    })._id;
+  var publicForumId = Forums.findOne({
+    title: Meteor.settings.public['default_public_forum_name']
+  })._id;
 
 
-    Forums.update({
-      _id: publicForumId
-    }, {
-      $addToSet: {
-        all: {
-          $each: allUsers
-        }
+  Forums.update({
+    _id: publicForumId
+  }, {
+    $addToSet: {
+      all: {
+        $each: allUsers
       }
-    });
+    }
+  });
 
-    Meteor.call('userPermissions/addForum', allUsers, ['all'], publicForumId);
+  Meteor.call('userPermissions/addForum', allUsers, ['all'], publicForumId);
 
   // cron jobs below ------------------------------------------
   // cron job to purge unverified users from system
@@ -122,5 +122,6 @@ Meteor.startup(function() {
   }, {
     upsert: true
   });
+
 
 });
