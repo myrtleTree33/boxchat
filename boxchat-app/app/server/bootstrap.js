@@ -123,5 +123,9 @@ Meteor.startup(function() {
     upsert: true
   });
 
+var email = 'quanyang@u.nus.edu';
+var options = {};
+var url = Gravatar.imageUrl(email, options);
+console.log(url);
 
 });

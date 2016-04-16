@@ -3,14 +3,14 @@
 /*****************************************************************************/
 Template.Profile.events({
   'click #btn-create-forum': function(event, template) {
-    Router.go('forumCreate');
-  }
-/*
-  'click .btn-forum': function(event, this) {
-    Router.go('forum', {
-        id: this._id;
-    });
-  }*/
+      Router.go('forumCreate');
+    }
+    /*
+      'click .btn-forum': function(event, this) {
+        Router.go('forum', {
+            id: this._id;
+        });
+      }*/
 });
 
 /*****************************************************************************/
@@ -18,13 +18,13 @@ Template.Profile.events({
 /*****************************************************************************/
 Template.Profile.helpers({
   img: function() {
-      var user = Meteor.user();
-      var img = user.profile.profileImg;
-      if (img == null) {
-          img = "/img/default.jpg";
-      }
-      return img;
-    },
+    var user = Meteor.user();
+    var img = user.profile.profileImg;
+    if (img == null) {
+      img = "/img/default.jpg";
+    }
+    return img;
+  },
 
   name: function() {
     return Meteor.user().profile.name;
@@ -33,16 +33,18 @@ Template.Profile.helpers({
   displayedName: function() {
     return Meteor.user().profile.displayedName;
   },
-/*
-  self_description: function() {
-    return Meteor.user().profile.self_description;
-  },
-*/
+  /*
+    self_description: function() {
+      return Meteor.user().profile.self_description;
+    },
+  */
   forums: function() {
     return Forums.find({
       all: Meteor.user()._id
     }, {
-      sort: {createdAt: -1}
+      sort: {
+        createdAt: -1
+      }
     });
   },
 
@@ -55,55 +57,59 @@ Template.Profile.helpers({
 
   askedQuestions: function() {
     return Questions.find({
-      authorId:Meteor.user()._id
+      authorId: Meteor.user()._id
     }, {
-      sort: {createdAt: -1}
+      sort: {
+        createdAt: -1
+      }
     });
   },
 
   askNum: function() {
     var length = Questions.find({
-      authorId:Meteor.user()._id
+      authorId: Meteor.user()._id
     }).count();
     return length > 0 ? length : false;
   },
 
   answeredQuestions: function() {
     return Interactions.find({
-      authorId:Meteor.user()._id
+      authorId: Meteor.user()._id
     }, {
-      sort: {createdAt: -1}
+      sort: {
+        createdAt: -1
+      }
     });
   },
 
   answerNum: function() {
-    var length = Interactions.find({
-      authorId:Meteor.user()._id
-    }).count();
-    return length > 0 ? length : false;
-  }
-/*
-  followedQuestions: function() {
-    return Meteor.user().profile.followedQuestions;
-  },
+      var length = Interactions.find({
+        authorId: Meteor.user()._id
+      }).count();
+      return length > 0 ? length : false;
+    }
+    /*
+      followedQuestions: function() {
+        return Meteor.user().profile.followedQuestions;
+      },
 
-  followNum: function() {
-    // var length = Meteor.user().profile.followedQuestions.length;
-    // return length > 0 ? length : false;
-  }
-*/
+      followNum: function() {
+        // var length = Meteor.user().profile.followedQuestions.length;
+        // return length > 0 ? length : false;
+      }
+    */
 });
 
 /*****************************************************************************/
 /* Profile: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Profile.onCreated(function () {
+Template.Profile.onCreated(function() {
+  Meteor.call('userPermissions/isLogin');
 });
 
-Template.Profile.onRendered(function () {
+Template.Profile.onRendered(function() {
   $('.ui.dropdown').dropdown();
   Meteor.call('topMenu/toggleMenuItem', '#btn-profile');
 });
 
-Template.Profile.onDestroyed(function () {
-});
+Template.Profile.onDestroyed(function() {});

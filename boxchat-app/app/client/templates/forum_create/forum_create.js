@@ -76,7 +76,9 @@ Template.ForumCreate.helpers({});
 /*****************************************************************************/
 /* ForumCreate: Lifecycle Hooks */
 /*****************************************************************************/
-Template.ForumCreate.onCreated(function() {});
+Template.ForumCreate.onCreated(function() {
+    Meteor.call('userPermissions/isLogin');
+});
 
 Template.ForumCreate.onRendered(function() {
 

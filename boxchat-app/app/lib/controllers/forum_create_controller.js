@@ -34,7 +34,6 @@ ForumCreateController = RouteController.extend({
     this.next();
   },
   onBeforeAction: function () {
-    Meteor.call('userPermissions/isLogin');
     this.next();
   },
 

@@ -33,7 +33,9 @@ Template.UserSettings.helpers({
 /*****************************************************************************/
 /* UserSettings: Lifecycle Hooks */
 /*****************************************************************************/
-Template.UserSettings.onCreated(function() {});
+Template.UserSettings.onCreated(function() {
+  Meteor.call('userPermissions/isLogin');
+});
 
 Template.UserSettings.onRendered(function() {
   $('.ui.dropdown').dropdown();
