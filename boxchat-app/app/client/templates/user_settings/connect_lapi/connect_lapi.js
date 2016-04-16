@@ -5,6 +5,7 @@ Template.ConnectLapi.events({
   'click #btn-connect-lapi': function(event, template) {
     var lapi = Meteor.settings.public.lapi;
     var loginUrl = lapi.apiDomain + "api/login/?apikey=" + lapi.apiKey + "&url=" + lapi.redirect;
+    window.location = loginUrl;
   }
 });
 

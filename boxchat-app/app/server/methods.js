@@ -301,6 +301,14 @@ Meteor.methods({
         throw new Meteor.Error(422, 'DB Issue');
       }
     });
+  },
+
+  'lapi/addAuthToken': function(token) {
+    Meteor.users.update(Meteor.userId(), {
+      $set: {
+        'profile.lapiToken': token
+      }
+    });
   }
 
 });

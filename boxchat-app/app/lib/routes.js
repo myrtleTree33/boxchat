@@ -42,7 +42,6 @@ Router.route('verify-email/:token', {
   where: 'client'
 });
 
-
 Router.route('login', {
   name: 'login',
   controller: 'LoginController',
@@ -127,3 +126,9 @@ Router.route('main', {
 //   controller: 'BazaarController',
 //   where: 'client'
 // });
+
+Router.route('lapi/auth', {
+  name: 'lapiAuth',
+  controller: 'LapiAuthController',
+  where: 'client'
+});
