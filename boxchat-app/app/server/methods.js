@@ -2,6 +2,22 @@
 /*  Server Methods */
 /*****************************************************************************/
 
+var getModulesSync = function(cb) {
+  var lapi = Meteor.settings.public.lapi;
+  var token = Meteor.user().profile.lapiToken;
+  var query = lapi.apiDomain + lapi.apiUrl + "Modules?APIKey=" + lapi.apiKey + "&AuthToken=" + token + "&Duration=1&IncludeAllInfo=false&output=json&callback=?";
+  HTTP.get(query, function(err, res) {
+    var obj = JSON.parse(res.content.substring(2, res.content.length - 2)).Results;
+    var mods = lodash.map(obj, function(module) {
+      return {
+        ID: module.ID,
+        CourseCode: module.CourseCode
+      }
+    });
+    return cb(null, mods);
+  });
+};
+
 // email validator from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
 function isEmail(email) {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -309,6 +325,35 @@ Meteor.methods({
         'profile.lapiToken': token
       }
     });
+  },
+
+  'lapi/getClassModules': function() {
+    return Meteor.wrapAsync(getModulesSync)();
+  },
+
+  'lapi/getClassRosterByModule': function(module) {
+    var getRosterSync = function(cb) {
+      var modules = Meteor.wrapAsync(getModulesSync)();
+      var moduleIdIdx = lodash.findIndex(modules, ['CourseCode', module]);
+      var moduleId = modules[moduleIdIdx].ID;
+      var lapi = Meteor.settings.public.lapi;
+      var token = Meteor.user().profile.lapiToken;
+      // get class roster
+      var query = lapi.apiDomain + lapi.apiUrl + "Class_Roster?APIKey=" + lapi.apiKey + "&AuthToken=" + token + "&CourseID=" + moduleId + "&output=json&callback=?";
+      HTTP.get(query, function(err, res) {
+        var obj = JSON.parse(res.content.substring(2, res.content.length - 2)).Results;
+        console.log(obj)
+        var users = lodash.map(obj, function(user) {
+          return {
+            userId: user.UserID + '@u.nus.edu'
+          };
+        });
+        cb(null, users);
+      });
+    };
+
+    return Meteor.wrapAsync(getRosterSync)();
   }
+
 
 });

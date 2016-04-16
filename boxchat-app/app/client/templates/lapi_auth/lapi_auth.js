@@ -25,9 +25,24 @@ Template.LapiAuth.onCreated(function() {
     Bert.alert('Issue linking with NUS IVLE.', 'danger', 'growl-top-right');
   }
   // go back to user settings
+  setTimeout(function () {
+
+      // get username
+      // var res = lapi.apiDomain + lapi.apiUrl + "UserName_Get?output=json&callback=?&APIKey=" + lapi.apiKey + "&Token=" + Meteor.user().profile.lapiToken;
+
+      // get class modules ID
+      Meteor.call('lapi/getClassRosterByModule', 'CS3226', function(err, data) {
+        console.log(data);
+      });
+
+
+      // console.log(res);
+
+  }, 1000);
   Router.go('userSettings', {});
 });
 
-Template.LapiAuth.onRendered(function() {});
+Template.LapiAuth.onRendered(function() {
+});
 
 Template.LapiAuth.onDestroyed(function() {});

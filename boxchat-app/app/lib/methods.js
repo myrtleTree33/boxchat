@@ -42,7 +42,7 @@ Meteor.methods({
   },
 
   'markdown/setMarked': function() {
-  // markdown configuration options
+    // markdown configuration options
     marked.setOptions({
       renderer: new marked.Renderer(),
       gfm: true,
@@ -63,6 +63,5 @@ Meteor.methods({
       // nop, fail silently
     }
   }
-
 
 });
