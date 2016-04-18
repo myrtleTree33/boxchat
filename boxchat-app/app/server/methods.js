@@ -75,6 +75,17 @@ Meteor.methods({
   },
 
   'signup/addEmail': function(email) {
+
+    // get unverified emails of all users younger than 5 days
+    var newUsersWithExistingEmail = Meteor.users.find({
+      'emails.address': email,
+    }).count();
+
+    // if new users have pending invites with same email, do not allow
+    if (newUsersWithExistingEmail > 0) {
+      throw new Meteor.Error(422, 'Unable to change email, existing user with email in use.');
+    }
+
     // remove all older emails
     var existingEmails = Meteor.user().emails;
     if (existingEmails) {
@@ -83,8 +94,22 @@ Meteor.methods({
       }
     }
 
+    // remove all unverified emails in use older than one day
+    // var userIdsWithExistingEmail = lodash.map(Meteor.users.find({
+    //   'emails.address': email,
+    //   'emails.verified': false,
+    //   'services.email.verificationTokens.when': {
+    //     $lt: moment().subtract(5, 'days').toDate()
+    //   }
+    // }).fetch(), '_id');
+    //
+    // lodash.each(userIdsWithExistingEmail, function(id) {
+    //   Accounts.removeEmail(id, email);
+    // });
+
+
     if (!isNusEmail(email)) {
-      throw new Meteor.Error(422, 'Invalid email');
+      throw new Meteor.Error(422, 'Invalid email, please use your NUS email.');
     }
     Accounts.addEmail(Meteor.userId(), email);
   },

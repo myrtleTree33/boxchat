@@ -9,7 +9,7 @@ Template.AccountWithoutPwd.events({
 
     Meteor.call('signup/addEmail', email, function(err) {
       if (err) {
-        Bert.alert('Invalid email, please use your NUS email', 'danger', 'growl-top-right');
+        Bert.alert('Error changing email: ' + err, 'danger', 'growl-top-right');
       } else {
         Meteor.call('signup/sendVerificationEmail');
         Bert.alert('Successfully added your NUS email: ' + email + ".  Please verify your email to continue.", 'success', 'growl-top-right');
