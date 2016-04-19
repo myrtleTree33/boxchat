@@ -9,7 +9,6 @@ Template.AnalyticsUserContribTable.events({});
 Template.AnalyticsUserContribTable.helpers({
   getUsersContrib: function() {
     var bla = Template.instance().usersContrib.get();
-    console.log(bla);
     return bla;
   }
 });

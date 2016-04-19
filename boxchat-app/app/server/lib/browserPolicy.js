@@ -20,7 +20,7 @@ var trusted = [
   '*.cloudfront.net',
   '*.akamaihd.net',
   'fonts.googleapis.com',
-  'fonts.gstatic.com'
+  '*.gstatic.com'
 ];
 
 _.each(trusted, function(origin) {

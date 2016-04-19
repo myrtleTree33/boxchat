@@ -256,6 +256,7 @@ Meteor.methods({
           allUsersWithId.push(user._id);
           // no such user as yet, or not verified
         } else {
+
           PendingUsers.upsert({
             email: entry
           }, {
@@ -263,6 +264,14 @@ Meteor.methods({
               forumIds: forumId
             }
           });
+
+          Email.send({
+            to: entry,
+            from: 'no-reply@nusforum.com',
+            subject: 'NUS Forum Notifications: You\'ve been added to a new forum: ' + formData.title,
+            html: 'Hello there, <br><br> You have been added to a new forum on NUS Forum.  To register for a new account and view this forum, please visit <a href="http://www.nusforum.com">http://www.nusforum.com</a>.  Thank you.<br><br>Warm regards,<br>NUS Forum'
+          });
+
         }
         // if valid id then
       } else {
@@ -330,10 +339,6 @@ Meteor.methods({
         forumId: forumId,
         authorId: userId,
       }).count();
-
-      console.log('----------------------------')
-      console.log(all)
-      console.log('----------------------------')
 
       var name = Meteor.users.findOne(userId).profile.name;
 

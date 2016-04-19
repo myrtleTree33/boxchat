@@ -17,7 +17,6 @@ Template.ForumQuestionRight.helpers({
 /* ForumQuestionRight: Lifecycle Hooks */
 /*****************************************************************************/
 Template.ForumQuestionRight.onCreated(function () {
-  console.log(Template.instance().data);
 });
 
 Template.ForumQuestionRight.onRendered(function () {

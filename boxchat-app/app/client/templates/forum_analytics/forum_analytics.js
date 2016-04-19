@@ -35,7 +35,6 @@ Template.ForumAnalytics.onCreated(function () {
     var publicForumId = Forums.findOne({
       title: Meteor.settings.public['default_public_forum_name']
     })._id;
-    console.log(publicForumId);
     // if they are the same, do not allow user to go to settings page
     // route back to main page
     if (forumId === publicForumId) {

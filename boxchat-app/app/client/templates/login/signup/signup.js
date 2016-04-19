@@ -11,8 +11,6 @@ Template.Signup.events({
       name: template.find('[name="name"]').value
     };
 
-    console.log(user);
-
     Meteor.call('signup/createNewPasswordUser', user.email, user.password, user.name, function(err) {
       if (err) {
         Bert.alert(err.reason, 'warning', 'growl-top-right');

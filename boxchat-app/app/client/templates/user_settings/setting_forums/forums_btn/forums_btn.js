@@ -3,7 +3,6 @@
 /*****************************************************************************/
 Template.ForumsBtn.events({
   'click .forums-btn .remove': function(event) {
-    console.log('clicked')
     event.preventDefault();
     var forum = Template.instance().data;
     var forumId = forum._id;

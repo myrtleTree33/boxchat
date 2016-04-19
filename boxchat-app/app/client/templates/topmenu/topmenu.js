@@ -66,7 +66,6 @@ Template.Topmenu.events({
   },
 
   'click #btn-analytics': function(event) {
-    console.log("Pressed");
     var forumId = Meteor.user().profile.currForum;
     if (forumId) {
       Router.go('forumAnalytics', {

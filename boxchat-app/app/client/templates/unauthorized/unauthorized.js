@@ -22,7 +22,7 @@ Template.Unauthorized.onRendered(function() {
     var forumId = Forums.findOne({
       title: Meteor.settings.public['default_public_forum_name']
     })._id;
-    console.log(forumId);
+
     Router.go('forum', {
       id: forumId
     });

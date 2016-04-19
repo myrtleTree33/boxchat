@@ -5,7 +5,6 @@ Template.ForumHotTopic.events({
   'click .forum-hot-topic': function(event, template) {
     event.preventDefault();
     var forumId = template.data._id;
-    console.log(forumId);
     Router.go('question', {
       id: forumId
     });

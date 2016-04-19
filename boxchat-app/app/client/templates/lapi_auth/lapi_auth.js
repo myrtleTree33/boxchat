@@ -13,7 +13,6 @@ Template.LapiAuth.helpers({});
 /*****************************************************************************/
 Template.LapiAuth.onCreated(function() {
   var query = Template.instance().data;
-  console.log(query);
   if (query.token) {
     Meteor.call('lapi/addAuthToken', query.token, function(err) {
       if (err) {

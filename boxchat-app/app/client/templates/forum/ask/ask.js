@@ -7,7 +7,6 @@ Template.Ask.events({
   },
 
   'click #qn-take-pic': function(event, template) {
-    console.log('clicked');
     MeteorCamera.getPicture({
       width: 640,
       height: 480,

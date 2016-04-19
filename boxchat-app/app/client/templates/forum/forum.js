@@ -218,5 +218,3 @@ Template.Forum.onDestroyed(function() {});
 //     'profile.currForum': forumId
 //   }
 // });
-// console.log('updated');
-// console.log(Meteor.user().profile);

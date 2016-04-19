@@ -6,8 +6,6 @@ Template.Todos.events({
     event.preventDefault();
     var text = event.target.text.value;
 
-    console.log(text);
-
     Task.insert({
       text: text,
       createdAt: new Date()

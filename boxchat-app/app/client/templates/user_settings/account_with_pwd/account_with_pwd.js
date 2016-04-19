@@ -66,7 +66,6 @@ Template.AccountWithPwd.helpers({
 Template.AccountWithPwd.onCreated(function() {});
 
 Template.AccountWithPwd.onRendered(function() {
-  console.log(Meteor.user().profile);
 });
 
 Template.AccountWithPwd.onDestroyed(function() {});

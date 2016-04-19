@@ -23,9 +23,6 @@ Template.ForumSettings.events({
     var diffAll = lodash.difference(oldAll, all);
     var diffAdmin = lodash.difference(oldAll, admin);
 
-    console.log(diffAll)
-    console.log(diffAdmin)
-
     Meteor.call('userPermissions/removeForum',
       diffAll, ['all'], forumId);
     Meteor.call('userPermissions/removeForum',

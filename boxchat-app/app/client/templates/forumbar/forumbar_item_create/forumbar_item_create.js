@@ -7,7 +7,6 @@ Template.ForumbarItemCreate.events({
     $('.forumbar.sidebar')
       .sidebar('setting', 'transition', 'push')
       .sidebar('toggle');
-    console.log('hello world');
     Router.go('forumCreate');
   }
 });
