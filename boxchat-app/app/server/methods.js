@@ -119,17 +119,9 @@ Meteor.methods({
     // get the email
     var email = Meteor.user().emails[0].address;
 
-    console.log('**********************')
-    console.log('CALLED')
-    console.log(email)
-    console.log('**********************')
-
     var pendingUser = PendingUsers.findOne({
       email: email
     });
-    console.log('**********************')
-    console.log(pendingUser);
-    console.log('**********************')
     if (!pendingUser) return;
     // if (pendingUser.length === 0) return;
 
@@ -140,7 +132,8 @@ Meteor.methods({
       var forumId = forumIds[i]
       Forums.update(forumId, {
         $addToSet: {
-          all: userId
+          all: userId,
+          students: userId
         }
       });
       // give user appropriate permissions per forum
@@ -235,20 +228,33 @@ Meteor.methods({
       throw new Meteor.Error(422, 'Please use at least 3 tags to describe the forum.');
     }
 
+    var students = [];
+    for (var i = 0; i < formData.students.length; i++) {
+      var curr = formData.students[i];
+      if (!isEmail(curr)) {
+        students.push(curr);
+      }
+    }
+
     var forumId = Forums.insert(formData);
 
     // get rid of all invalid users, and replace
     // email ones by ID
+
+    var allUsersWithId = [];
 
     for (var i = 0; i < formData.all.length; i++) {
       var entry = formData.all[i];
 
       if (isEmail(entry)) {
         var user = Meteor.users.findOne({
-          'emails.address': entry
+          'emails.address': entry,
+          'emails.verified': true,
         });
+        // if email associated with verified user ID then
         if (user) {
-          formData.all[i] = user._id;
+          allUsersWithId.push(user._id);
+          // no such user as yet, or not verified
         } else {
           PendingUsers.upsert({
             email: entry
@@ -257,17 +263,26 @@ Meteor.methods({
               forumIds: forumId
             }
           });
-          formData.all[i] = null;
         }
+        // if valid id then
+      } else {
+        allUsersWithId.push(entry);
       }
     }
 
     // remove all undefined ids, and duplciates from set
-    formData.all = lodash.compact(lodash.union(formData.all));
+    allUsersWithId = lodash.compact(lodash.union(allUsersWithId));
 
     // add roles to users
-    Meteor.call('userPermissions/addForum', formData.all, ['all'], forumId);
+    Meteor.call('userPermissions/addForum', allUsersWithId, ['all'], forumId);
     Meteor.call('userPermissions/addForum', formData.admin, ['admin'], forumId);
+
+    Forums.update(forumId, {
+      $set: {
+        'all': allUsersWithId,
+        'students': students
+      }
+    });
 
     return forumId;
   },
