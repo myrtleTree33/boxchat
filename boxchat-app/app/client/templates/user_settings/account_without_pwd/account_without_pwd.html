@@ -12,5 +12,13 @@
 
     </form>
 
+      {{#unless isVerified}}
+      <p>
+        Your email address is not verified.
+      </p>
+      <button class="ui large blue button" id="btn-resend-verify-email">Resend verification email</button>
+      {{/unless}}
+
+
   </div>
 </template>

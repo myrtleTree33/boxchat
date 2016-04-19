@@ -17,7 +17,17 @@ Template.AccountWithoutPwd.events({
         Router.go('main');
       }
     });
+  },
+
+  'click #btn-resend-verify-email': function(event, template) {
+    Meteor.call('signup/sendVerificationEmail', function(err) {
+      if (err) {
+        return Bert.alert('Error sending verification email.', 'warning', 'growl-top-right');
+      }
+      Bert.alert('Successfully sent verification email.', 'success', 'growl-top-right');
+    });
   }
+
 });
 
 /*****************************************************************************/
@@ -26,6 +36,10 @@ Template.AccountWithoutPwd.events({
 Template.AccountWithoutPwd.helpers({
   userEmail: function() {
     return Meteor.user().emails[0].address;
+  },
+
+  isVerified: function() {
+    return Meteor.user().emails[0].verified;
   }
 });
 
