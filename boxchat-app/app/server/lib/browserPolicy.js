@@ -17,7 +17,10 @@ var trusted = [
   '*.mxpnl.com',
   '*.zendesk.com',
   '*.imgur.com',
-  '*.akamaihd.net'
+  '*.cloudfront.net',
+  '*.akamaihd.net',
+  'fonts.googleapis.com',
+  'fonts.gstatic.com'
 ];
 
 _.each(trusted, function(origin) {
