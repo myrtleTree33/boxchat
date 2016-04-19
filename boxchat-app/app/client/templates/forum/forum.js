@@ -24,6 +24,14 @@ Template.Forum.helpers({
 
   forumOwner: function() {
     var adminId = Template.instance().data.admin;
+    if (!adminId) {
+      return {
+        profile: {
+          profileImg: 'http://www.i2clipart.com/cliparts/8/a/9/7/clipart-rubber-duck-8a97.png',
+          name: 'Bot'
+        }
+      };
+    }
     var admin = Meteor.users.findOne({
       _id: adminId[0]
     });

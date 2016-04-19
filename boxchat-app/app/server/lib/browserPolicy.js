@@ -1,9 +1,9 @@
 // to prevent XSS from https://dweldon.silvrback.com/browser-policy
 
 BrowserPolicy.framing.disallow();
-BrowserPolicy.content.disallowInlineScripts();
+// BrowserPolicy.content.disallowInlineScripts();
 BrowserPolicy.content.disallowEval();
-BrowserPolicy.content.allowInlineStyles();
+// BrowserPolicy.content.disallowInlineStyles();
 BrowserPolicy.content.allowFontDataUrl();
 BrowserPolicy.content.allowImageOrigin('*');
 
