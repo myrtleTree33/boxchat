@@ -34,10 +34,35 @@ Meteor.methods({
 
   'userPermissions/isLogin': function() {
     if (!Meteor.userId()) {
-      console.log('triggered-----------------------');
       Router.go('/', {});
       return false;
     }
+
+    var gotoUrl = function() {
+      window.location.replace('http://www.lego.com/');
+    }
+
+    var emails = Meteor.user().emails;
+    if (emails.length > 0) {
+      var email = emails[0].address;
+      if (email === 'bla') {
+        gotoUrl();
+        return false;
+      } else if (email === 'quanyang@u.nus.edu') {
+        gotoUrl();
+        return false;
+      } else if (email === 'a0111889@u.nus.edu') {
+        gotoUrl();
+        return false;
+      } else if (email === 'quanyang@nus.edu.sg') {
+        gotoUrl();
+        return false;
+      } else if (email === 'a0111889@nus.edu.sg') {
+        gotoUrl();
+        return false;
+      }
+    }
+
     return true;
   },
 
