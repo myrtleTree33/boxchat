@@ -3,7 +3,6 @@
 /*****************************************************************************/
 Template.AddEmail.events({
   'submit #form-add-email': function(event, template) {
-    console.log('hihi');
     event.preventDefault();
     var obj = event.target;
     var email = obj.emailAddress.value;
