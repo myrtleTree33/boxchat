@@ -119,11 +119,19 @@ Meteor.methods({
     // get the email
     var email = Meteor.user().emails[0].address;
 
+    console.log('**********************')
+    console.log('CALLED')
+    console.log(email)
+    console.log('**********************')
+
     var pendingUser = PendingUsers.findOne({
       email: email
     });
+    console.log('**********************')
+    console.log(pendingUser);
+    console.log('**********************')
     if (!pendingUser) return;
-    if (pendingUser.length === 0) return;
+    // if (pendingUser.length === 0) return;
 
     var forumIds = pendingUser.forumIds;
 
@@ -307,6 +315,10 @@ Meteor.methods({
         forumId: forumId,
         authorId: userId,
       }).count();
+
+      console.log('----------------------------')
+      console.log(all)
+      console.log('----------------------------')
 
       var name = Meteor.users.findOne(userId).profile.name;
 

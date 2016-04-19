@@ -20,7 +20,11 @@ VerifyEmailController = RouteController.extend({
   // returns a null value, and if so, renders the not found template.
   // return Posts.findOne({_id: this.params._id});
 
-  data: function() {},
+  data: function() {
+    return {
+      token: this.params.token
+    };
+  },
 
   // You can provide any of the hook options
 
@@ -31,18 +35,6 @@ VerifyEmailController = RouteController.extend({
     this.next();
   },
   onBeforeAction: function() {
-    Accounts.verifyEmail(this.params.token, function(err) {
-      if (err) {
-        console.log('called --- fail');
-        Bert.alert(err.reason, 'danger', 'growl-top-right');
-      } else {
-        // on first created, and successfully validated, then add user to existing forums if needed
-        Meteor.call('signup/addPendingForums', Meteor.userId());
-        console.log('called --- pass');
-        Bert.alert('Email verified!', 'success', 'growl-top-right');
-      }
-      Router.go('/');
-    });
     this.next();
   },
 
