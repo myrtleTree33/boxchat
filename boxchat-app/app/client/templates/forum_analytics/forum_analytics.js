@@ -8,6 +8,22 @@ Template.ForumAnalytics.events({
 /* ForumAnalytics: Helpers */
 /*****************************************************************************/
 Template.ForumAnalytics.helpers({
+  forumHotTopics: function() {
+    var forumId = Template.instance().data._id;
+    // find hottest trending qns in the past 3 days
+    var hottestQuestions = Questions.find({
+      forumId: forumId,
+      createdAt: {
+        $gte: moment().subtract(3, 'days').toDate()
+      }
+    }, {
+      sort: {
+        votes: -1,
+      },
+      limit: 10
+    }).fetch();
+    return hottestQuestions;
+  }
 });
 
 /*****************************************************************************/

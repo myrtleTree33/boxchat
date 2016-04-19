@@ -38,7 +38,6 @@ Template.AnalyticsUserContrib.onRendered(function() {
   // this.autorun(function(tracker) {
     var forumId = Router.current().params.id;
     Meteor.call('analytics/getUserContrib', forumId, function(err, result) {
-      console.log(result);
       userContribChart.load({
         json: result,
         keys: {

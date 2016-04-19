@@ -1,0 +1,10 @@
+<template name="AnalyticsUserContribTable">
+  <div class="analytics-user-contrib-table ui segment">
+    <div class="ui header">
+      <h2>User participation</h2>
+    </div>
+    <div class="ui content">
+      {{> reactiveTable class="ui selectable celled table" collection=getUsersContrib }}
+    </div>
+  </div>
+</template>
