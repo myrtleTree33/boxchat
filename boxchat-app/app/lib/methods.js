@@ -60,9 +60,9 @@ Meteor.methods({
       } else if (email === 'a0111889@nus.edu.sg') {
         gotoUrl();
         return false;
-      } else if (email === 'stevenha@comp.nus.edu.sg') {
-        gotoUrl();
-        return false;
+      // } else if (email === 'stevenha@comp.nus.edu.sg') {
+      //   gotoUrl();
+      //   return false;
       }
     }
 
