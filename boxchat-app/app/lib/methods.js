@@ -27,17 +27,17 @@ Meteor.methods({
         return;
       }
 
-      // HOTFIX go to public forum
-      var forumId = Forums.findOne({
-        title: "Public Forum"
-      })._id;
-      return Router.go('forum', {
-        id: forumId
-      });
-
-      // if (!Roles.userIsInRole(userId, roles, groupId)) {
-      //   Router.go('unauthorized', {});
-      // }
+      // // HOTFIX go to public forum
+      // var forumId = Forums.findOne({
+      //   title: "Public Forum"
+      // })._id;
+      // return Router.go('forum', {
+      //   id: forumId
+      // });
+      //
+      if (!Roles.userIsInRole(userId, roles, groupId)) {
+        Router.go('unauthorized', {});
+      }
     });
   },
 
