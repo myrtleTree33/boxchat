@@ -31,13 +31,13 @@ Meteor.methods({
       var forumId = Forums.findOne({
         title: "Public Forum"
       })._id;
-      Router.go('forum', {
+      return Router.go('forum', {
         id: forumId
       });
 
-      if (!Roles.userIsInRole(userId, roles, groupId)) {
-        Router.go('unauthorized', {});
-      }
+      // if (!Roles.userIsInRole(userId, roles, groupId)) {
+      //   Router.go('unauthorized', {});
+      // }
     });
   },
 
