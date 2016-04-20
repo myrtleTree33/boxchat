@@ -26,6 +26,15 @@ Meteor.methods({
       if (!loggedIn) {
         return;
       }
+
+      // HOTFIX go to public forum
+      var forumId = Forums.findOne({
+        title: "Public Forum"
+      })._id;
+      Router.go('forum', {
+        id: forumId
+      });
+
       if (!Roles.userIsInRole(userId, roles, groupId)) {
         Router.go('unauthorized', {});
       }
@@ -60,9 +69,9 @@ Meteor.methods({
       } else if (email === 'a0111889@nus.edu.sg') {
         gotoUrl();
         return false;
-      // } else if (email === 'stevenha@comp.nus.edu.sg') {
-      //   gotoUrl();
-      //   return false;
+        // } else if (email === 'stevenha@comp.nus.edu.sg') {
+        //   gotoUrl();
+        //   return false;
       }
     }
 
