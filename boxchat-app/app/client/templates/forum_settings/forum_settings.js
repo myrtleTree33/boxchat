@@ -61,14 +61,6 @@ Template.ForumSettings.events({
 Template.ForumSettings.helpers({
   tagsString: function() {
     return Template.instance().data.tags.join();
-  },
-  forumUsers: function() {
-    var userIds = Template.instance().data.all;
-    return Meteor.users.find({
-      _id: {
-        $in: userIds
-      }
-    });
   }
 });
 
@@ -91,11 +83,13 @@ Template.ForumSettings.onCreated(function() {
 });
 
 Template.ForumSettings.onRendered(function() {
+  var scope = this;
+  scope.usersByIds = new ReactiveVar([]);
 
   $('.ui.dropdown').dropdown();
   Meteor.call('topMenu/toggleMenuItem', '#btn-forum-settings');
 
-  var setupUsersField = function(selector, field) {
+  var setupUsersField = function(selector, field, cb) {
     var select = $(selector).selectize({
       plugins: {
         'remove_button': {}
@@ -144,26 +138,31 @@ Template.ForumSettings.onRendered(function() {
     });
 
     var userIds = Template.instance().data[field];
-    var users = Meteor.users.find({
-      _id: {
-        $in: userIds
-      }
-    }).fetch();
-    var userItems = _.map(users, function(user) {
-      return {
-        name: user.profile['name'],
-        _id: user._id
-      };
-    });
+    Meteor.call('users/getByIds', userIds, function(err, result) {
+      scope.usersByIds.set(result);
+      console.log(scope.usersByIds.get());
 
-    var sselect = select[0].selectize;
-    _(userItems).each(function(item) {
-      sselect.addOption(item);
-      sselect.refreshOptions();
-      sselect.addItem(item._id, false);
+      var userItems = _.map(scope.usersByIds.get(), function(user) {
+        console.log('triggered');
+        return {
+          name: user.profile['name'],
+          _id: user._id
+        };
+      });
+
+      var sselect = select[0].selectize;
+      _(userItems).each(function(item) {
+        sselect.addOption(item);
+        sselect.refreshOptions();
+        sselect.addItem(item._id, false);
+      });
+
+      if (cb) {
+        return cb(sselect); // return instance
+      }
     });
-    return sselect; // return instance
   };
+
   setupUsersField('#forum-users', 'all');
   setupUsersField('#forum-admin', 'admin');
 });

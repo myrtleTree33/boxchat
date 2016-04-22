@@ -34,6 +34,17 @@ Meteor.methods({
     // server method logic
   },
 
+  'users/getByIds': function(ids) {
+    if (!ids || ids.constructor !== Array) {
+      return Meteor.users.find({}).fetch();
+    }
+    return Meteor.users.find({
+      _id: {
+        $in: ids
+      }
+    }).fetch();
+  },
+
   'server/userSettings/updateUsername': function(name) {
     Meteor.users.update(Meteor.userId(), {
       $set: {
